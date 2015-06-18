@@ -1,0 +1,33 @@
+# Settings
+record(longout, "$(DEV):c$(SIG)-w")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(EGU, "$(EGU)")
+  field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+}
+
+record(ao, "$(DEV):c$(SIG)-fw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(EGU, "$(EGU)")
+  field(LINR, "SLOPE")
+  field(EOFF, "0")
+  field(ESLO, "$(ESLO)")
+  field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+}
+
+record(ai, "$(DEV):c$(SIG)-fr")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(EGU, "$(EGU)")
+  field(LINR, "SLOPE")
+  field(EOFF, "0")
+  field(ESLO, "$(ESLO)")
+  field(INP, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+}

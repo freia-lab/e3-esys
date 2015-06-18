@@ -1,0 +1,30 @@
+record(longin, "$(DEV):$(SIG)")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
+  field(FLNK, "$(DEV):$(SIG1)")
+}
+
+record(calc, "$(DEV):$(SIG1)")
+{
+  field(INPA, "$(DEV):$(SIG)")
+  field(INPB, "$(SCAL1)")
+  field(INPC, "0xFFFF")
+  field(PREC, "$(PREC1)")
+  field(EGU, "$(EGU1)")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "$(DEV):$(SIG2)")
+}
+
+record(calc, "$(DEV):$(SIG2)")
+{
+  field(INPA, "$(DEV):$(SIG)")
+  field(INPB, "$(SCAL2)")
+  field(INPC, "0xFFFF")
+  field(INPD, "$(OFFS2)")
+  field(PREC, "$(PREC2)")
+  field(EGU, "$(EGU2)")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}

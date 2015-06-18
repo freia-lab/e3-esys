@@ -1,0 +1,2043 @@
+ESSV500-1-0 DEFINITIONS ::= BEGIN
+
+          IMPORTS
+                  OBJECT-TYPE
+                      FROM RFC-1212             
+                  enterprises
+                      FROM SNMPv2-SMI;
+
+
+          --    CCU-Northia (up to 6 H.P.A.) MODULE-IDENTITY          
+          --
+          --    LAST-UPDATED "16052013"
+          --
+          --    ORGANIZATION "Electrosys S.r.l."
+          --
+          --    CONTACT-INFO
+          --       Electrosys S.r.l.       www.electrosys.it                    
+          --       Stefano Dilio           s.dilio@electrosys.it                                           
+          --    DESCRIPTION
+          --        "Electrosys Supervisory System: SNMP Agent
+          --         ASN.1 - Management Information Base          
+          --         SNMP Version 1          
+          --    REVISION "02" 
+          --    ELECTROSYS PRIVATE-ID      (assigned by I.A.N.A.)
+                                               
+          electrosys       OBJECT IDENTIFIER ::= { enterprises 21138 }
+              
+          
+          -- OBJECT'S GROUPS                     
+          txNorthia         OBJECT IDENTIFIER ::= { electrosys   100   }
+          txVersion         OBJECT IDENTIFIER ::= { txNorthia      1   }
+          tx                OBJECT IDENTIFIER ::= { txVersion      1   }
+          eventTrap         OBJECT IDENTIFIER ::= { tx             7   }
+          commands          OBJECT IDENTIFIER ::= { tx             9   }
+          txStatus          OBJECT IDENTIFIER ::= { tx            11   }
+          txCooling         OBJECT IDENTIFIER ::= { tx            12   }
+          exciterA          OBJECT IDENTIFIER ::= { tx            13   }
+          exciterB          OBJECT IDENTIFIER ::= { tx            14   }
+          dualDriveSystem   OBJECT IDENTIFIER ::= { tx            15   }
+          hpa1              OBJECT IDENTIFIER ::= { tx            21   }
+          hpa2              OBJECT IDENTIFIER ::= { tx            31   }
+          hpa3              OBJECT IDENTIFIER ::= { tx            41   }
+          hpa4              OBJECT IDENTIFIER ::= { tx            51   }
+          hpa5              OBJECT IDENTIFIER ::= { tx            61   }
+          hpa6              OBJECT IDENTIFIER ::= { tx            71   }
+          
+                              
+          -- OBJECTS
+          txCanBusCommunicationStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx CAN BUS Communication Status Bit Mask: 
+              0x00000001: P.I.B. 1 Communication OK(1) Fault(0)
+              0x00000002: EXCITER A Communication OK(1) Fault(0)
+              0x00000004: EXCITER B Communication OK(1) Fault(0)
+              0x00000008: P.I.B. 4 Communication OK(1) Fault(0)
+              0x00000010: P.I.B. 5 Communication OK(1) Fault(0)
+              0x00000020: P.I.B. 6 Communication OK(1) Fault(0)
+              0x00000040: P.I.B. 7 Communication OK(1) Fault(0)
+              0x00000080: P.I.B. 8 Communication OK(1) Fault(0)
+              0x00010000: H.P.A. 1 Communication OK(1) Fault(0)
+              0x00020000: H.P.A. 2 Communication OK(1) Fault(0)
+              0x00040000: H.P.A. 3 Communication OK(1) Fault(0)
+              0x00080000: H.P.A. 4 Communication OK(1) Fault(0)
+              0x00100000: H.P.A. 5 Communication OK(1) Fault(0)
+              0x00200000: H.P.A. 6 Communication OK(1) Fault(0)"
+              ::= {txStatus 1}          
+		
+		  txOperationMode OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+              					remote       (0),
+              					local        (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Operation Mode  (0: REMOTE  1: LOCAL)"
+              ::= {txStatus 2}
+              
+          txStatusRF OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+              					absent  (0),
+              					present (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Status RF (0: ABSENT  1: PRESENT)"
+              ::= {txStatus 3}
+
+		  txGlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+              					normal    (0),
+              					fault     (1),
+              					warning   (2),
+              					off       (3)								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Status (0: NORMAL  1: FAULT   2: WARNING   3: OFF)"
+              ::= {txStatus 4}
+
+	      txPowerSet OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Power Set (Watt)"
+              ::= {txStatus 5}
+
+		  txForward OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Transmitter Forward Power (Watt) when Transmission mode is DTV; Transmitter Vision Power (Watt) when Transmission mode is ATV."
+              ::= {txStatus 6}
+
+          txReflected OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Transmitter Reflected Power (Watt)"
+              ::= {txStatus 7}
+
+          txControl OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Control (0: STOP   1: START)"
+              ::= {txStatus 10}
+			  
+		  txUserControl OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+			  ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx User Control (0: STOP   1: START)"
+              ::= {txStatus 11}
+		
+          txForwardStatus OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    off     (0),
+			                    alarm   (1),
+			                    warning (2),
+			                    normal  (3),
+			                    on      (4)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Forward Status (0: OFF   1: ALARM   2: WARNING   3: NORMAL   4: 0N)"
+              ::= {txStatus 12}
+			  
+		  txRefelectedStatus OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    off     (0),
+			                    alarm   (1),
+			                    warning (2),
+			                    normal  (3),
+			                    on      (4)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Reflected Status (0: OFF   1: ALARM   2: WARNING   3: NORMAL   4: 0N)"
+              ::= {txStatus 13}
+		  
+		  txTripLockOut OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    absent  (0),
+			                    present (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Trip Lock Out (0: ABSENT   1: PRESENT)"
+              ::= {txStatus 16}
+		  
+          txCabinetTemperature OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Cabinet Temperature (° C)"
+              ::= {txStatus 17}
+		  
+		  txWaterTemperature OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Water Temperature (° C)"
+              ::= {txStatus 18}
+		  
+		  txHourElapsed OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx RF Present Hour Elapsed (h)"
+              ::= {txStatus 19}
+		  
+		  txExternalInterlock1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+              					open   (0),
+              					closed (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx External Interlock 1 (0: OPEN   1: CLOSED)"
+              ::= {txStatus 20}
+			  
+		  txExternalInterlock2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+              					open   (0),
+              					closed (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx External Interlock 2 (0: OPEN   1: CLOSED)"
+              ::= {txStatus 21}
+          
+		  txPhase OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Phase (0: NOT ACK   1: ACK)"
+              ::= {txStatus 22}
+		    
+		  txFlow1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Flow 1 (0: NOT ACK   1: ACK)"
+              ::= {txStatus 24}
+		  
+		  txFlow2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Flow 2 (0: NOT ACK   1: ACK)"
+              ::= {txStatus 25}
+
+          txPump1InUse OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-in-use (0),
+			                    in-use     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump 1 In Use (0: NOT IN USE   1: IN USE)"
+              ::= {txCooling 1}
+		  
+		  txPump2InUse OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-in-use (0),
+			                    in-use     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump 2 In Use (0: NOT IN USE   1: IN USE)"
+              ::= {txCooling 2}
+		  
+		  txWaterLevel OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    normal (0),
+			                    alarm  (1),
+			                    low    (2)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Water Level (0: NORMAL   1: ALARM   2: LOW)"
+              ::= {txCooling 3}
+		  
+		  txWaterFlow OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Water Flow (0: NOT ACK   1: ACK)"
+              ::= {txCooling 4}
+		  
+		  txHeatExchanger1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Heat Exchanger 1 (0: NOT ACK   1: ACK)"
+              ::= {txCooling 5}
+		  
+		  txHeatExchanger2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Heat Exchanger 2 (0: NOT ACK   1: ACK)"
+              ::= {txCooling 6}
+		  
+		  txPump1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump 1 (0: NOT ACK   1: ACK)"
+              ::= {txCooling 7}
+		  
+		  txPump2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-ack (0),
+			                    ack     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump 2 (0: NOT ACK   1: ACK)"
+              ::= {txCooling 8}
+		  
+		  txCoolingOperationMode OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    by-ccu (0),
+			                    manual (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Coolong Operation Mode (0: BY CCU   1: NORMAL)"
+              ::= {txCooling 9}
+		  
+		  txStatusPump1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Status Pump 1 (0: STOP   1: START)"
+              ::= {txCooling 10}
+		  
+		  txStatusPump2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Status Pump 2 (0: STOP   1: START)"
+              ::= {txCooling 11}
+		  
+		  txStatusHeatExchanger1 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx StatusHeat Exchanger 1 (0: STOP   1: START)"
+              ::= {txCooling 12}
+		  
+		  txStatusHeatExchanger2 OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    stop  (0),
+			                    start (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Status Heat Exchanger 2 (0: STOP   1: START)"
+              ::= {txCooling 13}
+		  
+		  txPumpSystem OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    normal (0),
+			                    autochange-Pump-2 (1),
+			                    autochange-Pump-1 (2)
+			                    }
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump System (0: NORMAL   1: AUTO CHANGE PUMP 2   2: AUTO CHANGE PUMP 1)"
+              ::= {txCooling 14}
+		  
+		  txPumpPreselected OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+                                unknown (0),
+                                pump-1  (1),
+                                pump-2  (2)
+                                }         
+
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Pump Preselected (0: ?   1: 1   2: 2)"
+              ::= {txCooling 15}
+		  
+          txExciterAControl OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    off (0),
+			                    on  (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter A Control (0: RF OFF   1: RF ON)"
+              ::= {exciterA 1}
+			  
+		  txExciterAOperationMode OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    remote       (0),
+              					local        (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter A Operation Mode  (0: REMOTE  1: LOCAL)"
+              ::= {exciterA 2}
+			  
+		  txExciterAMuting OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    muting-absent  (0),
+								muting-present (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter A MUTING (0: ABSENT   1: PRESENT)"
+              ::= {exciterA 3}
+		  
+		  txExciterAStatusRF OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    normal (0),
+              					fault  (1)
+              					}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter A RF (0: NORMAL   1: FAULT)"
+              ::= {exciterA 4}
+		  
+		  txExciterAPowered OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-connected (0),
+			                    connected     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter A Powered (0: NOT CONNECTED   1: CONNECTED)"
+              ::= {exciterA 5}
+		  
+		  txExciterBControl OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    off (0),
+			                    on  (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter B Control (0: RF OFF   1: RF ON)"
+              ::= {exciterB 1}
+			  
+		  txExciterBOperationMode OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    remote (0),
+              					local  (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter B Operation Mode  (0: REMOTE   1: LOCAL)"
+              ::= {exciterB 2}
+			  
+		  txExciterBMuting OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    muting-absent  (0),
+								muting-present (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter B MUTING (0: ABSENT   1: PRESENT)"
+              ::= {exciterB 3}
+		  
+		  txExciterBStatusRF OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    normal (0),
+              					fault  (1)
+              					}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter B RF (0: NORMAL   1: FAULT)"
+              ::= {exciterB 4}
+		  
+		  txExciterBPowered OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    not-connected (0),
+			                    connected     (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter B Powered (0: NOT CONNECTED   1: CONNECTED)"
+              ::= {exciterB 5}
+		  
+          txExciterAutochange OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    no-autochange        (0),
+			                    autochange-exciter-A (1),
+			                    autochange-exciter-B (2)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter Autochange (0: NO AUTOCHANGE   1: AUTOCHANGE EXCITER A   2: AUTOCHANGE EXCITER B)"
+              ::= {dualDriveSystem 1}
+			  
+		  txExciterOnAir OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    exciter-B (0),
+			                    exciter-A (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Exciter Exciter On Air (0: EXCITER B   1: EXCITER A)"
+              ::= {dualDriveSystem 2}
+			  
+		  txMode OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    automatic (0),
+			                    manual    (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Mode (0: AUTOMATIC    1: MANUAL)"
+              ::= {dualDriveSystem 3}
+		  
+		  txPreselection OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    exciter-B (0),
+			                    exciter-A (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Preselection (0: EXCITER B   1: EXCITER A)"
+              ::= {dualDriveSystem 4}
+		  
+		  txReserve OBJECT-TYPE
+              SYNTAX  INTEGER 	{
+			                    available     (0),
+			                    not-available (1)
+								}
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Reserve (0: AVAILABLE   1: NOT AVAILABLE)"
+              ::= {dualDriveSystem 5}
+			  
+		  txHPA1InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Input Power (mW)"
+              ::= {hpa1 1}
+		  
+		  txHPA1OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Output Power (Watt)"
+              ::= {hpa1 2}
+		  
+		  txHPA1ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Reflected Power (Watt)"
+              ::= {hpa1 3}
+			  
+		  txHPA1GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa1 4}                        
+              
+		  txHPA1Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 1 Current (A/100)"
+              ::= {hpa1 9}
+              
+		  txHPA1Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 2 Current (A/100)"
+              ::= {hpa1 10}
+
+		  txHPA1Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 3 Current (A/100)"
+              ::= {hpa1 11}
+
+		  txHPA1Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 4 Current (A/100)"
+              ::= {hpa1 12}
+
+		  txHPA1Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 5 Current (A/100)"
+              ::= {hpa1 13}
+
+		  txHPA1Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Final 6 Current (A/100)"
+              ::= {hpa1 14}
+              
+		  txHPA1TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 1 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa1 15}              
+              
+		  txHPA2InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Input Power (mW)"
+              ::= {hpa2 1}
+		  
+		  txHPA2OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Output Power (Watt)"
+              ::= {hpa2 2}
+		  
+		  txHPA2ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Reflected Power (Watt)"
+              ::= {hpa2 3}
+			  
+		  txHPA2GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa2 4}                        
+              
+		  txHPA2Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 1 Current (A/100)"
+              ::= {hpa2 9}
+              
+		  txHPA2Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 2 Current (A/100)"
+              ::= {hpa2 10}
+
+		  txHPA2Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 3 Current (A/100)"
+              ::= {hpa2 11}
+
+		  txHPA2Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 4 Current (A/100)"
+              ::= {hpa2 12}
+
+		  txHPA2Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 5 Current (A/100)"
+              ::= {hpa2 13}
+
+		  txHPA2Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Final 6 Current (A/100)"
+              ::= {hpa2 14}              
+              
+          txHPA2TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 2 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa2 15}                            
+              
+		  txHPA3InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Input Power (mW)"
+              ::= {hpa3 1}
+		  
+		  txHPA3OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Output Power (Watt)"
+              ::= {hpa3 2}
+		  
+		  txHPA3ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Reflected Power (Watt)"
+              ::= {hpa3 3}
+			  
+		  txHPA3GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa3 4}                        
+              
+		  txHPA3Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 1 Current (A/100)"
+              ::= {hpa3 9}
+              
+		  txHPA3Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 2 Current (A/100)"
+              ::= {hpa3 10}
+
+		  txHPA3Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 3 Current (A/100)"
+              ::= {hpa3 11}
+
+		  txHPA3Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 4 Current (A/100)"
+              ::= {hpa3 12}
+
+		  txHPA3Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 5 Current (A/100)"
+              ::= {hpa3 13}
+
+		  txHPA3Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Final 6 Current (A/100)"
+              ::= {hpa3 14}
+              
+		  txHPA3TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 3 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa3 15}                            
+
+		  txHPA4InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Input Power (mW)"
+              ::= {hpa4 1}
+		  
+		  txHPA4OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Output Power (Watt)"
+              ::= {hpa4 2}
+		  
+		  txHPA4ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Reflected Power (Watt)"
+              ::= {hpa4 3}
+			  
+		  txHPA4GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa4 4}                        
+              
+		  txHPA4Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 1 Current (A/100)"
+              ::= {hpa4 9}
+              
+		  txHPA4Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 2 Current (A/100)"
+              ::= {hpa4 10}
+
+		  txHPA4Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 3 Current (A/100)"
+              ::= {hpa4 11}
+
+		  txHPA4Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 4 Current (A/100)"
+              ::= {hpa4 12}
+
+		  txHPA4Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 5 Current (A/100)"
+              ::= {hpa4 13}
+
+		  txHPA4Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Final 6 Current (A/100)"
+              ::= {hpa4 14}          
+              
+		  txHPA4TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 4 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa4 15}                            
+              
+		  txHPA5InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Input Power (mW)"
+              ::= {hpa5 1}
+		  
+		  txHPA5OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Output Power (Watt)"
+              ::= {hpa5 2}
+		  
+		  txHPA5ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Reflected Power (Watt)"
+              ::= {hpa5 3}
+			  
+		  txHPA5GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa5 4}                        
+              
+		  txHPA5Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 1 Current (A/100)"
+              ::= {hpa5 9}
+              
+		  txHPA5Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 2 Current (A/100)"
+              ::= {hpa5 10}
+
+		  txHPA5Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 3 Current (A/100)"
+              ::= {hpa5 11}
+
+		  txHPA5Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 4 Current (A/100)"
+              ::= {hpa5 12}
+
+		  txHPA5Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 5 Current (A/100)"
+              ::= {hpa5 13}
+
+		  txHPA5Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Final 6 Current (A/100)"
+              ::= {hpa5 14}          
+              
+		  txHPA5TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 5 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa5 15}                                          
+              
+		  txHPA6InputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Input Power (mW)"
+              ::= {hpa6 1}
+		  
+		  txHPA6OutputPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Output Power (Watt)"
+              ::= {hpa6 2}
+		  
+		  txHPA6ReflectedPower OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Reflected Power (Watt)"
+              ::= {hpa6 3}
+			  
+		  txHPA6GlobalStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Global Status Bit Mask:
+              0x00000001: HPA: (0) STOP   - (1) START 
+              0x00000002: VSWR: (0) NORMAL - (1) ALARM
+              0x00000004: OVERDRIVE: (0) NORMAL - (1) ALARM
+              0x00000008: POWER SUPPLY 1 STATUS: (0) NORMAL - (1) ALARM
+              0x00000010: POWER SUPLLY 1 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000020: POWER SUPLLY 1 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000040: POWER SUPPLY 2 STATUS: (0) NORMAL - (1) ALARM
+              0x00000080: POWER SUPLLY 2 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000100: POWER SUPLLY 2 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00000200: POWER SUPPLY 3 STATUS: (0) NORMAL - (1) ALARM
+              0x00000400: POWER SUPLLY 3 TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00000800: POWER SUPLLY 3 CROWBAR: (0) NORMAL - (1) ALARM
+              0x00001000: WATER IN TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00002000: WATER OUT TEMPERATURE: (0) NORMAL - (1) ALARM
+              0x00004000: TRIP LOCK OUT: (0) NORMAL - (1) ALARM
+              0x00008000: HUMIDITY STATUS: (0) NORMAL - (1) ALARM
+              0x00010000: MODULE INTERLOCK: (0) NORMAL - (1) ALARM
+              0x00020000: INHIBIT: (0) NORMAL - (1) ALARM
+              0x00040000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00080000: RF OUT: (0) PRESENT - (1) ABSENT
+              0x00100000: not used
+              0x00200000: not used
+              0x00400000: RF POWER GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x00800000: POWER SUPLLY GLOBAL STATUS: (0) NORMAL - (1) ALARM
+              0x01000000: TEMPERATURE GLOBAL STATUS: (0) NORMAL - (1) ALARM"
+              ::= {hpa6 4}                        
+              
+		  txHPA6Final1Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 1 Current (A/100)"
+              ::= {hpa6 9}
+              
+		  txHPA6Final2Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 2 Current (A/100)"
+              ::= {hpa6 10}
+
+		  txHPA6Final3Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 3 Current (A/100)"
+              ::= {hpa6 11}
+
+		  txHPA6Final4Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 4 Current (A/100)"
+              ::= {hpa6 12}
+
+		  txHPA6Final5Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 5 Current (A/100)"
+              ::= {hpa6 13}
+
+		  txHPA6Final6Current OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Final 6 Current (A/100)"
+              ::= {hpa6 14}          
+              
+		  txHPA6TransistorStatus OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx HPA 6 Transistor Status Bit Mask: 
+              0x00000001: PREDRIVER: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000002: PREDRIVER: (0) I NORMAL - (1) I MAX
+              0x00000004: PREDRIVER: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000008: DRIVER 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000010: DRIVER 1: (0) I NORMAL - (1) I MAX
+              0x00000020: DRIVER 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000040: DRIVER 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000080: DRIVER 2: (0) I NORMAL - (1) I MAX
+              0x00000100: DRIVER 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00000200: FINAL 1: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00000400: FINAL 1: (0) I NORMAL - (1) I MAX
+              0x00000800: FINAL 1: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00001000: FINAL 2: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00002000: FINAL 2: (0) I NORMAL - (1) I MAX
+              0x00004000: FINAL 2: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00008000: FINAL 3: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00010000: FINAL 3: (0) I NORMAL - (1) I MAX
+              0x00020000: FINAL 3: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00040000: FINAL 4: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00080000: FINAL 4: (0) I NORMAL - (1) I MAX
+              0x00100000: FINAL 4: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x00200000: FINAL 5: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x00400000: FINAL 5: (0) I NORMAL - (1) I MAX
+              0x00800000: FINAL 5: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT
+              0x01000000: FINAL 6: (0) 1TRANSISTOR OK - (1) 1TRANSISTOR FAULT 
+              0x02000000: FINAL 6: (0) I NORMAL - (1) I MAX
+              0x04000000: FINAL 6: (0) 2TRANSISTORs OK - (1) 2TRANSISTORs FAULT"
+              ::= {hpa6 15}                                          
+              
+		  
+		  -- COMMANDS
+
+          cmdTxStart OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Start"
+              ::= {commands 1}
+
+          cmdTxStop OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Tx Stop"
+              ::= {commands 2}
+              
+          cmdTxResetTrip OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Reset TripLockOut"
+              ::= {commands 3}
+              
+          cmdTxChangeOverAuto OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Dual Exciter Changeover in Auto mode"
+              ::= {commands 4}
+
+          cmdTxChangeOverManual OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Dual Exciter Changeover in Manual mode"
+              ::= {commands 5}
+              
+          cmdTxChangeOverSetAonair OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter A on air"
+              ::= {commands 6}
+                             
+          cmdTxChangeOverSetBonair OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter B on air"
+              ::= {commands 7}
+                             
+          cmdExcAon OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter A RF on"
+              ::= {commands 8}
+                             
+          cmdExcAoff OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter A RF off"
+              ::= {commands 9}
+                             
+          cmdExcBon OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter B RF on"
+              ::= {commands 10}
+                             
+          cmdExcBoff OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Exciter B RF off"
+              ::= {commands 11}
+              
+          cmdSetPump1 OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Pump 1"
+              ::= {commands 12}
+              
+          cmdSetPump2 OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Pump 2"
+              ::= {commands 13}
+                             
+          cmdTxPowerSet OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Power Set (W)"
+              ::= {commands 14}    
+              
+          cmdSetOperationModeRemote OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Operation mode Remote"
+              ::= {commands 15}        
+              
+          cmdSetOperationModeLocal OBJECT-TYPE
+              SYNTAX  INTEGER
+              ACCESS  read-write
+              STATUS  mandatory
+              DESCRIPTION
+              "Set Operation mode Local"
+              ::= {commands 16}
+                                          
+                              
+		  -- TRAPS
+                              
+          trap001 TRAP-TYPE     
+              ENTERPRISE eventTrap        
+              DESCRIPTION "Phase Not Ack"
+              ::= 1                              
+                        	
+          trap002 TRAP-TYPE           
+              ENTERPRISE eventTrap           
+              DESCRIPTION "Phase Ack"
+              ::= 2                              
+         
+          trap003 TRAP-TYPE                
+              ENTERPRISE eventTrap          
+              DESCRIPTION "Ext.Interlock 1 Open"
+              ::= 3                              
+                        	
+          trap004 TRAP-TYPE              
+              ENTERPRISE eventTrap
+              DESCRIPTION "Ext.Interlock 1 Closed"
+              ::= 4                              
+
+          trap005 TRAP-TYPE              
+              ENTERPRISE eventTrap
+              DESCRIPTION "Ext.Interlock 2 Open"
+              ::= 5                              
+                        	
+          trap006 TRAP-TYPE              
+              ENTERPRISE eventTrap
+              DESCRIPTION "Ext.Interlock 2 Closed"
+              ::= 6                              
+		
+          trap007 TRAP-TYPE              
+              ENTERPRISE eventTrap
+              DESCRIPTION "Unbalance Load Not Ack"
+              ::= 7                              
+                        	
+          trap008 TRAP-TYPE              
+              ENTERPRISE eventTrap
+              DESCRIPTION "Unbalance Load Ack"
+              ::= 8                              
+		
+		  trap009 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Trip Lock Out Alarm"
+			::= 9
+			
+		  trap010 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Trip Lock Out Absent"
+			::= 10
+				
+		  trap011 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Flow 1 Not Ack"
+			::= 11
+			
+		  trap012 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Flow 1 Ack"
+			::= 12
+			
+		  trap013 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Flow 2 Not Ack"
+			::= 13
+			
+		  trap020 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Flow 2 Ack"
+			::= 20
+			
+		  trap021 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Forward Not Alarm"
+			::= 21
+			
+		  trap022 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Forward Alarm"
+			::= 22
+			
+		  trap023 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Forward Not Warning"
+			::= 23
+			
+		  trap024 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Forward Warning"
+			::= 24
+			
+		  trap025 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Reflected Not Alarm"
+			::= 25
+			
+		  trap026 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Reflected Alarm"
+			::= 26
+			
+		  trap027 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Reflected Not Warning"
+			::= 27
+			
+		  trap028 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Reflected Warning"
+			::= 28
+			
+		  trap033 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Pump 1 Not Ack"
+			::= 33
+			
+		  trap034 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Pump 1 Ack"
+			::= 34
+			
+		  trap035 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Pump 2 Not Ack"
+			::= 35
+			
+		  trap036 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Pump 2 Ack"
+			::= 36
+			
+		  trap037 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Heat Exchanger 1 Not Ack"
+			::= 37
+			
+		  trap038 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Heat Exchanger 1 Ack"
+			::= 38
+			
+		  trap039 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Heat Exchanger 2 Not Ack"
+			::= 39
+			
+		  trap040 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Heat Exchanger 2 Ack"
+			::= 40
+			
+		  trap045 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Water Flow Not Ack"
+			::= 45
+			
+		  trap046 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Water Flow Ack"
+			::= 46
+			
+		  trap047 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Autochange Exciter A"
+			::= 47
+			
+		  trap048 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "No Autochange Exciter A"
+			::= 48
+			
+		  trap049 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Autochange Exciter B"
+			::= 49
+			
+		  trap050 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "No Autochange Exciter B"
+			::= 50
+			
+		  trap051 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter A Fault"
+			::= 51
+			
+		  trap052 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter A Normal"
+			::= 52
+			
+		  trap053 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter B Fault"
+			::= 53
+			
+		  trap054 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter B Normal"
+			::= 54
+			
+		  trap055 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter A Muting Present"
+			::= 55
+			
+		  trap056 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter A Muting Absent"
+			::= 56
+			
+		  trap057 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter B Muting Present"
+			::= 57
+			
+		  trap058 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "Exciter B Muting Absent"
+			::= 58
+			
+		  trap099 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "TestTrap"
+			::= 99
+			
+		  trap129 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 1 Not Connected"
+			::= 129
+			
+		  trap130 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 1 Connected"
+			::= 130
+			
+		  trap131 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 2 Not Connected"
+			::=  131
+			
+		  trap132 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 2 Connected"
+			::= 132
+			
+		  trap133 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 3 Not Connected"
+			::= 133
+			
+		  trap134 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 3 Connected"
+			::= 134
+			
+		  trap135 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 4 Not Connected"
+			::= 135
+			
+		  trap136 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 4 Connected"
+			::= 136
+			
+		  trap137 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 5 Not Connected"
+			::= 137
+			
+		  trap138 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 5 Connected"
+			::= 138
+			
+		  trap139 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 6 Not Connected"
+			::= 139
+			
+		  trap140 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 6 Connected"
+			::= 140
+			
+		  trap141 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 7 Not Connected"
+			::= 141
+			
+		  trap142 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 7 Connected"
+			::= 142
+			
+		  trap143 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 8 Not Connected"
+			::= 143
+			
+		  trap144 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "P.I.B. 8 Connected"
+			::= 144
+			
+		  trap193 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 1 Not Connected"
+			::= 193
+			
+		  trap194 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 1 Connected"
+			::= 194
+			
+		  trap195 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 1 Fault"
+			::= 195
+			
+		  trap196 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 1 Normal"
+			::= 196
+			
+		  trap197 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 2 Not Connected"
+			::= 197
+			
+		  trap198 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 2 Connected"
+			::= 198
+			
+		  trap199 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 2 Fault"
+			::= 199
+			
+		  trap200 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 2 Normal"
+			::= 200
+			
+		  trap201 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 3 Not Connected"
+			::= 201
+			
+		  trap202 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 3 Connected"
+			::= 202
+			
+		  trap203 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 3 Fault"
+			::= 203
+			
+		  trap204 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 3 Normal"
+			::= 204
+			
+		  trap205 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 4 Not Connected"
+			::= 205
+			
+		  trap206 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 4 Connected"
+			::= 206
+			
+		  trap207 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 4 Fault"
+			::= 207
+			
+		  trap208 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 4 Normal"
+			::= 208
+			
+		  trap209 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 5 Not Connected"
+			::= 209
+			
+		  trap210 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 5 Connected"
+			::= 210
+			
+		  trap211 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 5 Fault"
+			::= 211
+			
+		  trap212 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 5 Normal"
+			::= 212
+			
+		  trap213 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 6 Not Connected"
+			::= 213
+			
+		  trap214 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 6 Connected"
+			::= 214
+			
+		  trap215 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 6 Fault"
+			::= 215
+			
+		  trap216 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 6 Normal"
+			::= 216
+			
+		  trap217 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 7 Not Connected"
+			::= 217
+			
+		  trap218 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 7 Connected"
+			::= 218
+			
+		  trap219 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 7 Fault"
+			::= 219
+			
+		  trap220 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 7 Normal"
+			::= 220
+			
+		  trap221 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 8 Not Connected"
+			::= 221
+			
+		  trap222 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 8 Connected"
+			::= 222
+			
+		  trap223 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 8 Fault"
+			::= 223
+			
+		  trap224 TRAP-TYPE
+			ENTERPRISE eventTrap
+			DESCRIPTION "H.P.A. 8 Normal"
+			::= 224
+		
+          END

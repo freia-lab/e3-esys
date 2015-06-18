@@ -1,0 +1,991 @@
+ESSV900-1-0 DEFINITIONS ::= BEGIN
+
+          IMPORTS
+                  OBJECT-TYPE
+                      FROM RFC-1212             
+                  enterprises
+                      FROM SNMPv2-SMI;
+
+
+          --    CCU - 400kW RF Power Station MODULE-IDENTITY          
+          --
+          --    LAST-UPDATED "27052015"
+          --
+          --    ORGANIZATION "Itelco-Electrosys"
+          --
+          --    CONTACT-INFO
+          --       Itelco-Electrosys       www.itelco-electrosys.com                    
+          --       Stefano Dilio           s.dilio@itelco-electrosys.com 
+          --    DESCRIPTION
+          --        "Supervisory System: SNMP Agent (EPICS interface)
+          --         Uppsala University - 400kW RF Power Station
+          --         ASN.1 - Management Information Base          
+          --         SNMP Version 1          
+          --    REVISION "01" 
+          --    ELECTROSYS PRIVATE-ID      (assigned by I.A.N.A.)
+                                               
+          electrosys       OBJECT IDENTIFIER ::= { enterprises 21138 }              
+          
+          -- OBJECT'S GROUPS                     
+          rfPowerStation OBJECT IDENTIFIER ::= { electrosys   101   }
+          ifaceVersion   OBJECT IDENTIFIER ::= { rfPowerStation 1   }
+          ifaceSubset    OBJECT IDENTIFIER ::= { ifaceVersion   1   }          
+          commands       OBJECT IDENTIFIER ::= { ifaceSubset    9   }
+          system         OBJECT IDENTIFIER ::= { ifaceSubset   11   }
+          hpa1           OBJECT IDENTIFIER ::= { ifaceSubset   12   }
+          hpa2           OBJECT IDENTIFIER ::= { ifaceSubset   13   } 
+          centralSection OBJECT IDENTIFIER ::= { ifaceSubset   14   }
+                        
+                                
+                                        
+          -- OBJECTS    
+        
+          
+          
+          -- SYSTEM
+          
+	sysGlobalStatus OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   Operation Mode (0:Local  1:Remote)
+	0x00000010   HPA1-PIB CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00000020   HPA2-PIB CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00000040   HVCS-PIB CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00000100   HPA1-Driver Module 1 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00000200   HPA1-Driver Module 2 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00000400   HPA1-Driver Module 3 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00001000   HPA2-Driver Module 1 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00002000   HPA2-Driver Module 2 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00004000   HPA2-Driver Module 3 CAN Bus Communication  (0:Communication OK  1:No Communication)
+	0x00030000   HPA1 Global Status  (0:No Communication  1:Normal  2:Alarm  3:Warning)
+	0x000C0000   HPA2 Global Status  (0:No Communication  1:Normal  2:Alarm  3:Warning)                           
+	0x00100000   HPA1 Start-Stop User Command   (0:Stop  1:Start)
+	0x00200000   HPA1 Start-Stop Ack (0:Stop  1:Start)
+	0x00400000   HPA2 Start-Stop User Command   (0:Stop  1:Start)
+	0x00800000   HPA2 Start-Stop Ack (0:Stop  1:Start)                           
+	0x01000000   HPA1 PowerOn-StandBy User Command   (0:StandBy  1:PowerOn)
+	0x02000000   HPA1 PowerOn-StandBy Ack  (0:StandBy  1:PowerOn)
+	0x04000000   HPA2 PowerOn-StandBy User Command   (0:StandBy  1:PowerOn)
+	0x08000000   HPA2 PowerOn-StandBy Ack  (0:StandBy  1:PowerOn)                           
+	0x10000000   HPA1 RF Enable Status  (0:Disabled  1:Enabled)
+	0x20000000   HPA2 RF Enable Status  (0:Disabled  1:Enabled)"
+	::= {system 1}
+	
+	sysRfPower OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   System Forward Power Measure (Watt / 10) - example : 20122 --> 201.22 kW
+	0xFFFF0000   System Reflected Power Measure (Watt / 10)"              
+	::= {system 2}
+
+	
+	
+                          
+          -- HPA 1
+          
+	hpa1RfPower OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Forward Power (Watt / 10) - example : 20000 --> 200.00 kW
+	0xFFFF0000   HPA1 Reflected Power (Watt / 10)"
+	::= {hpa1 1}	
+	
+	hpa1DriverRfPower OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Forward Power (Watt / 10)
+	0xFFFF0000   HPA1 Driver Reflected Power (Watt / 10)"
+	::= {hpa1 2}	
+	
+	hpa1FilamentMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Filament Voltage (Volt * 100) - example 821 --> 8.21 V
+	0xFFFF0000   HPA1 Filament Current (Ampere)"
+	::= {hpa1 3}	
+	
+	hpa1ControlGridMeas1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Control Grid Operative Voltage (Volt * (-1)) - example 400 --> -400 V
+	0xFFFF0000   HPA1 Control Grid Operative Current (Ampere * 100) - example 104 --> 1.04 A"
+	::= {hpa1 4}	
+	
+	hpa1ControlGridMeas2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Control Grid Blanking Voltage (Volt * (-1)) - example 400 --> -400 V
+	0xFFFF0000   HPA1 Control Grid Blanking Current (Ampere * 100) - example 104 --> 1.04 A"
+	::= {hpa1 5}	
+	
+	hpa1AnodeMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Anode Voltage (kiloVolt * 100) - example 1578 --> 15.78 kV
+	0xFFFF0000   HPA1 Anode Current (Ampere * 100)"
+	::= {hpa1 6}                  
+	
+	hpa1ScreenGridMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Screen Grid Voltage (V)
+	0xFFFF0000   HPA1 Screen Grid Current (mA)"
+	::= {hpa1 7}                     
+	
+	hpa1Status1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000002   HPA1 Filament Ready (0:Not Ready  1:Ready)
+	0x00000004   HPA1 Filament Status (0:Alarm  1:Ok)
+	0x00000008   HPA1 Filament V Protection (0:Absent  1:Present)
+	0x00000070   HPA1 Filament V Ramp Status (0:Idle  1:Up  2:Down  3:Up Completed  4:Down Completed)
+	0x0000FF00   HPA1 Filament V Ramp Progress Percentage ([0..100]%)
+	0x00010000   HPA1 Filament Cooling Status (0:Alarm  1:Ok)
+	0x00020000   HPA1 Filament Voltage Status (0:Overvoltage  1:Ok)                           
+	0x00040000   HPA1 Control Grid Start-Stop (0:Stop  1:Start)
+	0x00080000   HPA1 Control Grid Ready (0:Not Ready  1:Ready)
+	0x00100000   HPA1 Control Grid Status (0:Alarm  1:Ok)
+	0x00200000   HPA1 Control Grid Temperature Status (0:OverTemperature  1:Temp.Ok)
+	0x00400000   HPA1 Control Grid Current Status (0:OverCurrent  1:Current Ok)
+	0x00800000   HPA1 Control Grid Pulsing Status (0:Pulse Lack  1:Pulsing Ok)
+	0x01000000   HPA1 Anode Start-Stop (0:Stop  1:Start)
+	0x02000000   HPA1 Anode Ready (0:Not Ready  1:Ready)
+	0x04000000   HPA1 Anode Status (0:Alarm  1:Ok)
+	0x08000000   HPA1 Anode Peak Current Status (0:Alarm  1:Ok)
+	0x10000000   HPA1 Anode dV/dT Status (0:Alarm  1:Ok)
+	0x20000000   HPA1 Anode Voltage Status (0:OverVoltage  1:Ok)
+	0x40000000   HPA1 Anode Average Power Status (0:High  1:Ok)
+	0x80000000   HPA1 Anode Cooling Status (0:Alarm  1:Ok)"
+	::= {hpa1 8}  
+	
+	hpa1Status2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA1 Screen Grid Start-Stop (0:Stop  1:Start)
+	0x00000002   HPA1 Screen Grid Ready (0:Not Ready  1:Ready)
+	0x00000004   HPA1 Screen Grid Status (0:Alarm  1:Ok)
+	0x00000008   HPA1 Screen Grid Power Status (0:Alarm  1:Ok)
+	0x00000010   HPA1 Screen Grid Current Status (0:OverCurrent  1:Ok)
+	0x00000020   HPA1 Screen Grid Arc Detection (0:Arc Detected  1:No Arc Detected)
+	0x00000040   HPA1 HV Series Switch (0:Open  1:Closed)
+	0x00000080   HPA1 HV Series Switch Status (0:Alarm  1:Ok)                           
+	0x00000100   HPA1 HV External Interlock Status (0:Alarm  1:Ok)
+	0x00000200   HPA1 RF External Interlock Status (0:Alarm  1:Ok)
+	0x00000400   HPA1 Cavity Interlock Status (0:Alarm  1:Ok)
+	0x00000800   HPA1 Mains Voltage Status (0:Alarm  1:Ok)                           
+	0x00001000   HPA1 Mains Phase Status (0:Alarm  1:Ok)
+	0x00002000   HPA1 Reflected Power Status (0:Alarm  1:Ok)                           
+	0x00004000   HPA1 Cooling Status (0:Alarm  1:Ok)
+	0x00008000   HPA1 Cooling Start-Stop (cmd) (0:Stop  1:Start)
+	0x00010000   HPA1 Cooling Start-Stop (ack) (0:Stop Ack  1:Start Ack)
+	0x00020000   HPA1 Rack Blower Status (0:Alarm  1:Ok)
+	0x00040000   HPA1 Cooling Mains Status (0:Overload  1:Ok)
+	0x00080000   HPA1 Anode Cooling Status (0:Alarm  1:Ok)
+	0x00100000   HPA1 Air Pressure Status (0:Alarm  1:Ok)
+	0x00200000   HPA1 Temperature Detector Status (0:Alarm  1:Ok)
+	0x00400000   HPA1 Water Flow Status (0:Alarm  1:Ok)
+	0x00800000   HPA1 Delayed Water Flow Status (0:Alarm  1:Ok)
+	0x01000000   HPA1 Anode In Water Temperature Status (0:Alarm  1:Ok)
+	0x02000000   HPA1 Anode Out Water Temperature Status (0:Alarm  1:Ok)
+	0x04000000   HPA1 Water Pressure Status (0:Alarm  1:Ok)
+	0x08000000   HPA1 Water Conductivity Status (0:Alarm  1:Ok)
+	0x10000000   HPA1 Driver Status (0:Alarm  1:Ok)
+	0x20000000   HPA1 Driver Water Flow Status (0:Alarm  1:Ok)
+	0x40000000   HPA1 Driver Unbalance Load Status (0:Alarm  1:Ok)"
+	::= {hpa1 9}                     
+	
+	hpa1ScreenGridMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA1 Anode In Water Temp (°C)
+	0x0000FF00   HPA1 Anode Out Water Temp (°C)
+	0xFFFF0000   HPA1 Air Pressure (mBar)"
+	::= {hpa1 10}
+
+	hpa1DriverMod1Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA1 Driver Module1 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA1 Driver Module1 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA1 Driver Module1 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA1 Driver Module1 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA1 Driver Module1 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA1 Driver Module1 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA1 Driver Module1 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa1 11}
+	
+	hpa1DriverMod1Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : Forward Power (W)
+	0xFFFF0000   HPA1 Driver Module1 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa1 12}
+	
+	hpa1DriverMod1Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : Reflected Power (W)
+	0xFFFF0000   HPA1 Driver Module1 : V Amplifier (V * 10)"
+	::= {hpa1 13}
+	
+	hpa1DriverMod1Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : V Service (V * 10)
+	0xFFFF0000   HPA1 Driver Module1 : PreDriver Current (A * 10)"	
+	::= {hpa1 14}
+	
+	hpa1DriverMod1Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA1 Driver Module1 : In Water Temperature (°C)
+	0x0000FF00   HPA1 Driver Module1 : V Amplifier (V * 10)
+	0xFFFF0000   HPA1 Driver Module1 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa1 15}
+	
+	hpa1DriverMod1Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module1 : Driver2 Current (A * 10)"	
+	::= {hpa1 16}
+	
+	hpa1DriverMod1Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : Final1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module1 : Final2 Current (A * 10)"	
+	::= {hpa1 17}
+	
+	hpa1DriverMod1Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module1 : Final3 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module1 : Final4 Current (A * 10)"	
+	::= {hpa1 18}
+	
+	hpa1DriverMod2Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA1 Driver Module2 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA1 Driver Module2 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA1 Driver Module2 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA1 Driver Module2 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA1 Driver Module2 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA1 Driver Module2 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA1 Driver Module2 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa1 19}
+	
+	hpa1DriverMod2Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : Forward Power (W)
+	0xFFFF0000   HPA1 Driver Module2 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa1 20}
+	
+	hpa1DriverMod2Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : Reflected Power (W)
+	0xFFFF0000   HPA1 Driver Module2 : V Amplifier (V * 10)"
+	::= {hpa1 21}
+	
+	hpa1DriverMod2Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : V Service (V * 10)
+	0xFFFF0000   HPA1 Driver Module2 : PreDriver Current (A * 10)"	
+	::= {hpa1 22}
+	
+	hpa1DriverMod2Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA1 Driver Module2 : In Water Temperature (°C)
+	0x0000FF00   HPA1 Driver Module2 : V Amplifier (V * 10)
+	0xFFFF0000   HPA1 Driver Module2 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa1 23}
+	
+	hpa1DriverMod2Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module2 : Driver2 Current (A * 10)"	
+	::= {hpa1 24}
+	
+	hpa1DriverMod2Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : Final1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module2 : Final2 Current (A * 10)"	
+	::= {hpa1 25}
+	
+	hpa1DriverMod2Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module2 : Final3 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module2 : Final4 Current (A * 10)"	
+	::= {hpa1 26}
+
+	hpa1DriverMod3Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA1 Driver Module3 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA1 Driver Module3 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA1 Driver Module3 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA1 Driver Module3 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA1 Driver Module3 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA1 Driver Module3 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA1 Driver Module3 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa1 27}
+	
+	hpa1DriverMod3Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : Forward Power (W)
+	0xFFFF0000   HPA1 Driver Module3 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa1 28}
+	
+	hpa1DriverMod3Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : Reflected Power (W)
+	0xFFFF0000   HPA1 Driver Module3 : V Amplifier (V * 10)"
+	::= {hpa1 29}
+	
+	hpa1DriverMod3Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : V Service (V * 10)
+	0xFFFF0000   HPA1 Driver Module3 : PreDriver Current (A * 10)"	
+	::= {hpa1 30}
+	
+	hpa1DriverMod3Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA1 Driver Module3 : In Water Temperature (°C)
+	0x0000FF00   HPA1 Driver Module3 : V Amplifier (V * 10)
+	0xFFFF0000   HPA1 Driver Module3 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa1 31}
+	
+	hpa1DriverMod3Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module3 : Driver2 Current (A * 10)"	
+	::= {hpa1 32}
+	
+	hpa1DriverMod3Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : Final1 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module3 : Final2 Current (A * 10)"	
+	::= {hpa1 33}
+	
+	hpa1DriverMod3Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA1 Driver Module3 : Final3 Current (A * 10)
+	0xFFFF0000   HPA1 Driver Module3 : Final4 Current (A * 10)"	
+	::= {hpa1 34}
+
+
+	
+
+          -- HPA 2
+          
+	hpa2RfPower OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Forward Power (Watt / 10) - example : 20000 --> 200.00 kW
+	0xFFFF0000   HPA2 Reflected Power (Watt / 10)"
+	::= {hpa2 1}	
+	
+	hpa2DriverRfPower OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Forward Power (Watt / 10)
+	0xFFFF0000   HPA2 Driver Reflected Power (Watt / 10)"
+	::= {hpa2 2}	
+	
+	hpa2FilamentMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Filament Voltage (Volt * 100) - example 821 --> 8.21 V
+	0xFFFF0000   HPA2 Filament Current (Ampere)"
+	::= {hpa2 3}	
+	
+	hpa2ControlGridMeas1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Control Grid Operative Voltage (Volt * (-1)) - example 400 --> -400 V
+	0xFFFF0000   HPA2 Control Grid Operative Current (Ampere * 100) - example 104 --> 1.04 A"
+	::= {hpa2 4}	
+	
+	hpa2ControlGridMeas2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Control Grid Blanking Voltage (Volt * (-1)) - example 400 --> -400 V
+	0xFFFF0000   HPA2 Control Grid Blanking Current (Ampere * 100) - example 104 --> 1.04 A"
+	::= {hpa2 5}	
+	
+	hpa2AnodeMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Anode Voltage (kiloVolt * 100) - example 1578 --> 15.78 kV
+	0xFFFF0000   HPA2 Anode Current (Ampere * 100)"
+	::= {hpa2 6}                  
+	
+	hpa2ScreenGridMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Screen Grid Voltage (V)
+	0xFFFF0000   HPA2 Screen Grid Current (mA)"
+	::= {hpa2 7}                     
+	
+	hpa2Status1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000002   HPA2 Filament Ready (0:Not Ready  1:Ready)
+	0x00000004   HPA2 Filament Status (0:Alarm  1:Ok)
+	0x00000008   HPA2 Filament V Protection (0:Absent  1:Present)
+	0x00000070   HPA2 Filament V Ramp Status (0:Idle  1:Up  2:Down  3:Up Completed  4:Down Completed)
+	0x0000FF00   HPA2 Filament V Ramp Progress Percentage ([0..100]%)
+	0x00010000   HPA2 Filament Cooling Status (0:Alarm  1:Ok)
+	0x00020000   HPA2 Filament Voltage Status (0:Overvoltage  1:Ok)                           
+	0x00040000   HPA2 Control Grid Start-Stop (0:Stop  1:Start)
+	0x00080000   HPA2 Control Grid Ready (0:Not Ready  1:Ready)
+	0x00100000   HPA2 Control Grid Status (0:Alarm  1:Ok)
+	0x00200000   HPA2 Control Grid Temperature Status (0:OverTemperature  1:Temp.Ok)
+	0x00400000   HPA2 Control Grid Current Status (0:OverCurrent  1:Current Ok)
+	0x00800000   HPA2 Control Grid Pulsing Status (0:Pulse Lack  1:Pulsing Ok)
+	0x01000000   HPA2 Anode Start-Stop (0:Stop  1:Start)
+	0x02000000   HPA2 Anode Ready (0:Not Ready  1:Ready)
+	0x04000000   HPA2 Anode Status (0:Alarm  1:Ok)
+	0x08000000   HPA2 Anode Peak Current Status (0:Alarm  1:Ok)
+	0x10000000   HPA2 Anode dV/dT Status (0:Alarm  1:Ok)
+	0x20000000   HPA2 Anode Voltage Status (0:OverVoltage  1:Ok)
+	0x40000000   HPA2 Anode Average Power Status (0:High  1:Ok)
+	0x80000000   HPA2 Anode Cooling Status (0:Alarm  1:Ok)"
+	::= {hpa2 8}  
+	
+	hpa2Status2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA2 Screen Grid Start-Stop (0:Stop  1:Start)
+	0x00000002   HPA2 Screen Grid Ready (0:Not Ready  1:Ready)
+	0x00000004   HPA2 Screen Grid Status (0:Alarm  1:Ok)
+	0x00000008   HPA2 Screen Grid Power Status (0:Alarm  1:Ok)
+	0x00000010   HPA2 Screen Grid Current Status (0:OverCurrent  1:Ok)
+	0x00000020   HPA2 Screen Grid Arc Detection (0:Arc Detected  1:No Arc Detected)
+	0x00000040   HPA2 HV Series Switch (0:Open  1:Closed)
+	0x00000080   HPA2 HV Series Switch Status (0:Alarm  1:Ok)                           
+	0x00000100   HPA2 HV External Interlock Status (0:Alarm  1:Ok)
+	0x00000200   HPA2 RF External Interlock Status (0:Alarm  1:Ok)
+	0x00000400   HPA2 Cavity Interlock Status (0:Alarm  1:Ok)
+	0x00000800   HPA2 Mains Voltage Status (0:Alarm  1:Ok)                           
+	0x00001000   HPA2 Mains Phase Status (0:Alarm  1:Ok)
+	0x00002000   HPA2 Reflected Power Status (0:Alarm  1:Ok)                           
+	0x00004000   HPA2 Cooling Status (0:Alarm  1:Ok)
+	0x00008000   HPA2 Cooling Start-Stop (cmd) (0:Stop  1:Start)
+	0x00010000   HPA2 Cooling Start-Stop (ack) (0:Stop Ack  1:Start Ack)
+	0x00020000   HPA2 Rack Blower Status (0:Alarm  1:Ok)
+	0x00040000   HPA2 Cooling Mains Status (0:Overload  1:Ok)
+	0x00080000   HPA2 Anode Cooling Status (0:Alarm  1:Ok)
+	0x00100000   HPA2 Air Pressure Status (0:Alarm  1:Ok)
+	0x00200000   HPA2 Temperature Detector Status (0:Alarm  1:Ok)
+	0x00400000   HPA2 Water Flow Status (0:Alarm  1:Ok)
+	0x00800000   HPA2 Delayed Water Flow Status (0:Alarm  1:Ok)
+	0x01000000   HPA2 Anode In Water Temperature Status (0:Alarm  1:Ok)
+	0x02000000   HPA2 Anode Out Water Temperature Status (0:Alarm  1:Ok)
+	0x04000000   HPA2 Water Pressure Status (0:Alarm  1:Ok)
+	0x08000000   HPA2 Water Conductivity Status (0:Alarm  1:Ok)
+	0x10000000   HPA2 Driver Status (0:Alarm  1:Ok)
+	0x20000000   HPA2 Driver Water Flow Status (0:Alarm  1:Ok)
+	0x40000000   HPA2 Driver Unbalance Load Status (0:Alarm  1:Ok)"
+	::= {hpa2 9}                     
+	
+	hpa2ScreenGridMeasures OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA2 Anode In Water Temp (°C)
+	0x0000FF00   HPA2 Anode Out Water Temp (°C)
+	0xFFFF0000   HPA2 Air Pressure (mBar)"
+	::= {hpa2 10}
+
+	hpa2DriverMod1Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA2 Driver Module1 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA2 Driver Module1 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA2 Driver Module1 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA2 Driver Module1 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA2 Driver Module1 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA2 Driver Module1 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA2 Driver Module1 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa2 11}
+	
+	hpa2DriverMod1Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : Forward Power (W)
+	0xFFFF0000   HPA2 Driver Module1 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa2 12}
+	
+	hpa2DriverMod1Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : Reflected Power (W)
+	0xFFFF0000   HPA2 Driver Module1 : V Amplifier (V * 10)"
+	::= {hpa2 13}
+	
+	hpa2DriverMod1Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : V Service (V * 10)
+	0xFFFF0000   HPA2 Driver Module1 : PreDriver Current (A * 10)"	
+	::= {hpa2 14}
+	
+	hpa2DriverMod1Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA2 Driver Module1 : In Water Temperature (°C)
+	0x0000FF00   HPA2 Driver Module1 : V Amplifier (V * 10)
+	0xFFFF0000   HPA2 Driver Module1 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa2 15}
+	
+	hpa2DriverMod1Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module1 : Driver2 Current (A * 10)"	
+	::= {hpa2 16}
+	
+	hpa2DriverMod1Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : Final1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module1 : Final2 Current (A * 10)"	
+	::= {hpa2 17}
+	
+	hpa2DriverMod1Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module1 : Final3 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module1 : Final4 Current (A * 10)"	
+	::= {hpa2 18}
+	
+	hpa2DriverMod2Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA2 Driver Module2 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA2 Driver Module2 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA2 Driver Module2 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA2 Driver Module2 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA2 Driver Module2 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA2 Driver Module2 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA2 Driver Module2 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa2 19}
+	
+	hpa2DriverMod2Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : Forward Power (W)
+	0xFFFF0000   HPA2 Driver Module2 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa2 20}
+	
+	hpa2DriverMod2Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : Reflected Power (W)
+	0xFFFF0000   HPA2 Driver Module2 : V Amplifier (V * 10)"
+	::= {hpa2 21}
+	
+	hpa2DriverMod2Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : V Service (V * 10)
+	0xFFFF0000   HPA2 Driver Module2 : PreDriver Current (A * 10)"	
+	::= {hpa2 22}
+	
+	hpa2DriverMod2Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA2 Driver Module2 : In Water Temperature (°C)
+	0x0000FF00   HPA2 Driver Module2 : V Amplifier (V * 10)
+	0xFFFF0000   HPA2 Driver Module2 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa2 23}
+	
+	hpa2DriverMod2Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module2 : Driver2 Current (A * 10)"	
+	::= {hpa2 24}
+	
+	hpa2DriverMod2Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : Final1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module2 : Final2 Current (A * 10)"	
+	::= {hpa2 25}
+	
+	hpa2DriverMod2Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module2 : Final3 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module2 : Final4 Current (A * 10)"	
+	::= {hpa2 26}
+
+	hpa2DriverMod3Status OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   HPA2 Driver Module3 : Interlock (0:Open  1:Closed)
+	0x00000002   HPA2 Driver Module3 : VSWR (0:Alarm  1:Ok)
+	0x00000004   HPA2 Driver Module3 : Overdrive (0:Alarm  1:Ok)
+	0x00000008   HPA2 Driver Module3 : Inhibit (0:Present  1:Absent)
+	0x00000010   HPA2 Driver Module3 : Power Supply (0:Alarm  1:Ok)
+	0x00000020   HPA2 Driver Module3 : RF Out (0:Alarm  1:Ok)
+	0x00000040   HPA2 Driver Module3 : Power Supply Enable (0:Disabled  1:Enabled)"
+	::= {hpa2 27}
+	
+	hpa2DriverMod3Measure1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : Forward Power (W)
+	0xFFFF0000   HPA2 Driver Module3 : Input Power (microWatt * 10) example 118 --> 11.8uW"
+	::= {hpa2 28}
+	
+	hpa2DriverMod3Measure2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : Reflected Power (W)
+	0xFFFF0000   HPA2 Driver Module3 : V Amplifier (V * 10)"
+	::= {hpa2 29}
+	
+	hpa2DriverMod3Measure3 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : V Service (V * 10)
+	0xFFFF0000   HPA2 Driver Module3 : PreDriver Current (A * 10)"	
+	::= {hpa2 30}
+	
+	hpa2DriverMod3Measure4 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x000000FF   HPA2 Driver Module3 : In Water Temperature (°C)
+	0x0000FF00   HPA2 Driver Module3 : V Amplifier (V * 10)
+	0xFFFF0000   HPA2 Driver Module3 : Gain (dB * 10) example 699 --> 69.9dB"
+	::= {hpa2 31}
+	
+	hpa2DriverMod3Measure5 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : Driver1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module3 : Driver2 Current (A * 10)"	
+	::= {hpa2 32}
+	
+	hpa2DriverMod3Measure6 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : Final1 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module3 : Final2 Current (A * 10)"	
+	::= {hpa2 33}
+	
+	hpa2DriverMod3Measure7 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   HPA2 Driver Module3 : Final3 Current (A * 10)
+	0xFFFF0000   HPA2 Driver Module3 : Final4 Current (A * 10)"	
+	::= {hpa2 34}
+	
+	
+	
+	
+          -- CENTRAL SECTION
+
+	csStatus OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x00000001   Central Section : Capacitor Charge HV (0:Alarm  1:Ok)
+	0x00000002   Central Section : Crowbar (0:Not Ready  1:Ready) 
+	0x00000004   Central Section : HV Door Interlock (0:Alarm  1:Ok)
+	0x00000008   Central Section : HV Air Temperature (0:Alarm  1:Ok)
+	0x00000010   Central Section : Heat Exchanger 1 (0:Alarm  1:Ok)
+	0x00000020   Central Section : Heat Exchanger 2 (0:Alarm  1:Ok)
+	0x00000040   Central Section : Unbalance Load Water Flow (0:Alarm  1:Ok)
+	0x00000080   Central Section : Unbalance Load Power (0:Alarm  1:Ok)
+	0x00000100   Central Section : Heat Exchanger Flow (0:Absent  1:Present)"
+	::= {centralSection 1}
+                           
+	csMeasures1 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   Central Section : Unbalance Load Power (Watt / 10) - example : 19056 --> 190.56kW
+	0xFFFF0000   Central Section : Capacitor Charging Power (Watt / 10)"
+	::= {centralSection 2}
+
+	csMeasures2 OBJECT-TYPE
+	SYNTAX  INTEGER 
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION                                                 
+	" Bit Mask :
+	0x0000FFFF   Central Section : Capacitor Charging Voltage (V / 10) - example : 1707 --> 17.07kV
+	0xFFFF0000   Central Section : Capacitor Charging Current (mA(rms) / 10)"
+	::= {centralSection 3}                    
+	
+                    
+
+
+	-- COMMANDS
+
+	cmdSystemStart OBJECT-TYPE
+	SYNTAX  INTEGER
+	ACCESS  read-write
+	STATUS  mandatory
+	DESCRIPTION
+	"Set System Start"
+	::= {commands 1}
+	
+	cmdSystemStop OBJECT-TYPE
+	SYNTAX  INTEGER
+	ACCESS  read-write
+	STATUS  mandatory
+	DESCRIPTION
+	"Set System Stop"
+	::= {commands 2}
+	
+	cmdResetSystem OBJECT-TYPE
+	SYNTAX  INTEGER
+	ACCESS  read-write
+	STATUS  mandatory
+	DESCRIPTION
+	"Execute Reset System (reset the latched alarms and the crowbar)"
+	::= {commands 3}
+	
+	cmdSystemStandByPowerOn OBJECT-TYPE
+	SYNTAX  INTEGER
+	ACCESS  read-write
+	STATUS  mandatory
+	DESCRIPTION
+	"StandBy-PowerOn toggle"
+	::= {commands 4}    
+                             		  
+          			
+END

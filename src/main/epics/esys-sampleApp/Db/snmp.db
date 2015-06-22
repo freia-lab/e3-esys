@@ -51,21 +51,21 @@ record(longout, "$(DEV):cmdStandby")
   field(OUT, "@$(HOST) public %(E)cmdSystemStandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):cmdStartHpa1")
+record(longout, "$(DEV):Hpa1:cmdStart")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Start.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdStopHpa1")
+record(longout, "$(DEV):Hpa1:cmdStop")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Stop.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdResetHpa1")
+record(longout, "$(DEV):Hpa1:cmdReset")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -73,7 +73,7 @@ record(longout, "$(DEV):cmdResetHpa1")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa1.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):cmdStandbyHpa1")
+record(longout, "$(DEV):Hpa1:cmdStandby")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -81,21 +81,21 @@ record(longout, "$(DEV):cmdStandbyHpa1")
   field(OUT, "@$(HOST) public %(E)cmdHpa1StandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):cmdStartHpa2")
+record(longout, "$(DEV):Hpa2:cmdStart")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Start.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdStopHpa2")
+record(longout, "$(DEV):Hpa2:cmdStop")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Stop.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdResetHpa2")
+record(longout, "$(DEV):Hpa2:cmdReset")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -103,7 +103,7 @@ record(longout, "$(DEV):cmdResetHpa2")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa2.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):cmdStandbyHpa2")
+record(longout, "$(DEV):Hpa2:cmdStandby")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -120,29 +120,23 @@ record(longout, "$(DEV):cmdSaveHistoryLog")
   field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
 }
 
-#record(longout, "$(DEV):cmdTxChangeOverAuto")
-#{
-#  field(DESC, "SNMP channel")
-#  field(SCAN, "Passive")
-#  field(DTYP, "Snmp")
-#  field(OUT, "@$(HOST) public %(E)cmdTxChangeOverAuto.$(CHAN) INTEGER: 100 i")
-#}
-#record(longout, "$(DEV):cmdTxChangeOverManual")
-#{
-#  field(DESC, "SNMP channel")
-#  field(SCAN, "Passive")
-#  field(DTYP, "Snmp")
-#  field(OUT, "@$(HOST) public %(E)cmdTxChangeOverManual.$(CHAN) INTEGER: 100 i"#)
-#}
+# Automatic gain control
+record(longout, "$(DEV):cmdAGCOn")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSetAgcEnabled.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):cmdAGCOff")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSetAgcDisabled.$(CHAN) INTEGER: 100 i")
+}
 
 
-#record(longout, "$(DEV):cmdSetOperationModeLocal")
-#{
-#  field(DESC, "SNMP channel")
-#  field(SCAN, "Passive")
-#  field(DTYP, "Snmp")
-#  field(OUT, "@$(HOST) public %(E)cmdSetOperationModeLocal.$(CHAN) INTEGER: 100 i")
-#}
 
 #record(longout, "$(DEV):txPowerSet-w")
 #{
@@ -173,9 +167,18 @@ record(stringin, "$(DEV):sysDescr")
 
 # History buffer related records
 
-record(longout, "$(DEV):cGetHistoryPage")
+record(longout, "$(DEV):Log:cmdReset")
 {
-  field(DESC, "SNMP channel- select page")
+  field(DESC, "SNMP channel- clear history log")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdResetHistoryLog.$(CHAN) INTEGER: 100 i")
+}
+
+# Download the history log page: data - start page (starting from 0, 3 entries in page)
+record(longout, "$(DEV):Log:cDownloadPage")
+{
+  field(DESC, "SNMP channel- select page to read")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
@@ -188,6 +191,7 @@ record(longin, "$(DEV):sysHistBufLen")
   field(DTYP, "Snmp")
   field(INP, "@$(HOST) public %(E)sysHistoryLogRecordCount.$(CHAN) INTEGER: 100 i")
 }
+
 
 #record(waveform, "$(DEV):sysHistoryBuf-wfm")
 #{

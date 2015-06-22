@@ -103,3 +103,20 @@ file "write.template" { pattern
 {TestChan, SetHVpower, 192.168.10.200, public, "kW", 0.01}
 {TestChan, SetHV, 192.168.10.200, public, "kV", 0.01}
 }
+
+file "hlogtstamp.template" { pattern
+{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
+{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.200, public, 0}
+{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.200, public, 0}
+{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.200, public, 0}
+{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.200, public, 0}
+{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.200, public, 0}
+{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.200, public, 0}
+}
+
+file "hlogcode.template" { pattern
+{DEV,      SIG,			PV_SIG,		HOST,	     PASSWD, CHAN}
+{TestChan, sysHLogRecord1code,	R1code,		192.168.10.200, public, 0}
+{TestChan, sysHLogRecord2code,	R2code,		192.168.10.200, public, 0}
+{TestChan, sysHLogRecord3code,	R3code,		192.168.10.200, public, 0}
+}

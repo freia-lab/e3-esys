@@ -1,0 +1,7 @@
+record(longin, "$(DEV):Log:$(PV_SIG)")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "2 second")
+  field(DTYP, "Snmp")
+  field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
+}

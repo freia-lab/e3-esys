@@ -15,6 +15,8 @@ DB += integer.template
 DB += 3integer.template
 DB += states.template
 DB += write.template
+DB += hlogtstamp.template
+DB += hlogcode.template
 DB += txinput.substitutions
 
 #----------------------------------------------------

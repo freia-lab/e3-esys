@@ -5,6 +5,8 @@ record(longout, "$(DEV):c$(SIG)-w")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(EGU, "$(EGU)")
+  field(LOPR, "$(LOPR)")
+  field(HOPR, "$(HOPR)")
   field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
 }
 

@@ -174,7 +174,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
     </font>
     <width>236</width>
     <border_style>13</border_style>
@@ -435,7 +435,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
     </font>
     <width>251</width>
     <border_style>12</border_style>
@@ -1252,7 +1252,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
     </font>
     <width>246</width>
     <border_style>12</border_style>
@@ -2040,64 +2040,6 @@ $(pv_value)</tooltip>
 $(pv_value)</tooltip>
       <x>79</x>
     </widget>
-    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
-      <border_alarm_sensitive>true</border_alarm_sensitive>
-      <visible>true</visible>
-      <vertical_alignment>0</vertical_alignment>
-      <show_units>true</show_units>
-      <wuid>20cc3228:14da01c427d:-2f15</wuid>
-      <auto_size>false</auto_size>
-      <rotation_angle>0.0</rotation_angle>
-      <scripts />
-      <height>20</height>
-      <name>Text Update Template_2</name>
-      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-      <scale_options>
-        <width_scalable>true</width_scalable>
-        <height_scalable>true</height_scalable>
-        <keep_wh_ratio>false</keep_wh_ratio>
-      </scale_options>
-      <format_type>3</format_type>
-      <precision_from_pv>true</precision_from_pv>
-      <transparent>false</transparent>
-      <pv_name>$(P):sysGeneralInfo</pv_name>
-      <background_color>
-        <color name="IO InputPV Bg" red="255" green="255" blue="255" />
-      </background_color>
-      <foreground_color>
-        <color name="IO InputPV Fg" red="0" green="32" blue="92" />
-      </foreground_color>
-      <widget_type>Text Update</widget_type>
-      <enabled>true</enabled>
-      <text>######</text>
-      <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-      <precision>0</precision>
-      <font>
-        <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
-      </font>
-      <width>90</width>
-      <border_style>3</border_style>
-      <rules>
-        <rule name="BorderRule" prop_id="border_style" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>9</value>
-          </exp>
-          <pv trig="true">$(pv_name).SIMM</pv>
-        </rule>
-      </rules>
-      <pv_value />
-      <border_width>2</border_width>
-      <border_color>
-        <color name="IO Border" red="215" green="215" blue="215" />
-      </border_color>
-      <horizontal_alignment>0</horizontal_alignment>
-      <actions hook="false" hook_all="false" />
-      <y>725</y>
-      <wrap_words>false</wrap_words>
-      <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-      <x>134</x>
-    </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
       <visible>true</visible>
       <vertical_alignment>1</vertical_alignment>
@@ -2139,6 +2081,64 @@ $(pv_value)</tooltip>
       <tooltip></tooltip>
       <x>25</x>
     </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <visible>true</visible>
+      <vertical_alignment>0</vertical_alignment>
+      <show_units>true</show_units>
+      <wuid>8dd571f:14e1fe3882b:-77c5</wuid>
+      <auto_size>false</auto_size>
+      <rotation_angle>0.0</rotation_angle>
+      <scripts />
+      <height>20</height>
+      <name>Text Update Template_2</name>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <format_type>0</format_type>
+      <precision_from_pv>true</precision_from_pv>
+      <transparent>false</transparent>
+      <pv_name>$(P):Log:sBufLen</pv_name>
+      <background_color>
+        <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+      </background_color>
+      <foreground_color>
+        <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+      </foreground_color>
+      <widget_type>Text Update</widget_type>
+      <enabled>true</enabled>
+      <text>############</text>
+      <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+      <precision>0</precision>
+      <font>
+        <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+      </font>
+      <width>66</width>
+      <border_style>5</border_style>
+      <rules>
+        <rule name="BorderRule" prop_id="border_style" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>9</value>
+          </exp>
+          <pv trig="true">$(pv_name).SIMM</pv>
+        </rule>
+      </rules>
+      <pv_value />
+      <border_width>2</border_width>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215" />
+      </border_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <actions hook="false" hook_all="false" />
+      <y>727</y>
+      <wrap_words>true</wrap_words>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <x>128</x>
+    </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
       <border_alarm_sensitive>true</border_alarm_sensitive>
       <read_only>false</read_only>
@@ -2166,7 +2166,7 @@ $(pv_value)</tooltip>
       <border_width>2</border_width>
       <next_focus>0</next_focus>
       <show_units>true</show_units>
-      <wuid>20cc3228:14da01c427d:-2e88</wuid>
+      <wuid>8dd571f:14e1fe3882b:-6fa0</wuid>
       <style>1</style>
       <name>Text Input Template</name>
       <format_type>0</format_type>
@@ -2175,7 +2175,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):</pv_name>
+      <pv_name>$(P):cSetHV-w</pv_name>
       <foreground_color>
         <color name="IO OutputPV Fg" red="255" green="255" blue="255" />
       </foreground_color>
@@ -2195,52 +2195,11 @@ $(pv_value)</tooltip>
       <border_color>
         <color name="IO Border" red="215" green="215" blue="215" />
       </border_color>
-      <y>761</y>
+      <y>821</y>
       <actions hook="false" hook_all="false" />
-      <x>129</x>
+      <x>72</x>
       <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    </widget>
-    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
-      <visible>true</visible>
-      <vertical_alignment>1</vertical_alignment>
-      <wuid>20cc3228:14da01c427d:-2e7e</wuid>
-      <auto_size>true</auto_size>
-      <scripts />
-      <height>16</height>
-      <name>Label Template_1</name>
-      <scale_options>
-        <width_scalable>true</width_scalable>
-        <height_scalable>true</height_scalable>
-        <keep_wh_ratio>false</keep_wh_ratio>
-      </scale_options>
-      <transparent>true</transparent>
-      <show_scrollbar>false</show_scrollbar>
-      <background_color>
-        <color name="IO Background" red="255" green="255" blue="205" />
-      </background_color>
-      <foreground_color>
-        <color name="IO Text Fg" red="0" green="32" blue="92" />
-      </foreground_color>
-      <widget_type>Label</widget_type>
-      <enabled>false</enabled>
-      <text>Page #</text>
-      <font>
-        <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
-      </font>
-      <width>41</width>
-      <border_style>0</border_style>
-      <rules />
-      <border_width>2</border_width>
-      <border_color>
-        <color name="IO Border" red="215" green="215" blue="215" />
-      </border_color>
-      <horizontal_alignment>0</horizontal_alignment>
-      <actions hook="false" hook_all="false" />
-      <y>766</y>
-      <wrap_words>true</wrap_words>
-      <tooltip></tooltip>
-      <x>30</x>
     </widget>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.tab" version="1.0.0">
@@ -2365,7 +2324,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -2406,7 +2365,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>627</width>
         <border_style>0</border_style>
@@ -9531,7 +9490,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -9956,7 +9915,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>342</width>
         <border_style>0</border_style>
@@ -10642,7 +10601,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>281</width>
         <border_style>0</border_style>
@@ -11156,7 +11115,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>407</width>
         <border_style>13</border_style>
@@ -11291,7 +11250,7 @@ $(pv_value)</tooltip>
             <height_scalable>true</height_scalable>
             <keep_wh_ratio>false</keep_wh_ratio>
           </scale_options>
-          <pv_name>$(P):Hpa1$(nr):cmdStart</pv_name>
+          <pv_name>$(P):Hpa$(nr):cmdStart</pv_name>
           <background_color>
             <color name="IO Button" red="178" green="178" blue="178" />
           </background_color>
@@ -11418,7 +11377,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -11459,7 +11418,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>246</width>
         <border_style>0</border_style>
@@ -11693,7 +11652,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>226</width>
         <border_style>0</border_style>
@@ -11928,7 +11887,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12138,7 +12097,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12348,7 +12307,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12557,7 +12516,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -12598,7 +12557,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>627</width>
         <border_style>0</border_style>
@@ -19723,7 +19682,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -20148,7 +20107,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -20834,7 +20793,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -20875,7 +20834,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>246</width>
         <border_style>0</border_style>
@@ -21109,7 +21068,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>226</width>
         <border_style>0</border_style>
@@ -21344,7 +21303,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -21554,7 +21513,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -21764,7 +21723,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -21973,7 +21932,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -22013,7 +21972,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>272</width>
         <border_style>12</border_style>
@@ -22162,7 +22121,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Download page #</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -22203,7 +22162,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text># of log records:</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -22242,7 +22201,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):Log:sysHistBufLen</pv_name>
+          <pv_name>$(P):Log:sBufLen</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -22251,7 +22210,7 @@ $(pv_value)</tooltip>
           </foreground_color>
           <widget_type>Text Update</widget_type>
           <enabled>true</enabled>
-          <text>######</text>
+          <text>############</text>
           <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
           <precision>0</precision>
           <font>
@@ -22306,7 +22265,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
         </font>
         <width>572</width>
         <border_style>0</border_style>
@@ -22401,7 +22360,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Code</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -22442,7 +22401,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Start</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -22483,7 +22442,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Stop</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>

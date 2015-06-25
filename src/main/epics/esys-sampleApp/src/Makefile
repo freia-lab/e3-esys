@@ -27,6 +27,11 @@ include $(TOP)/configure/CONFIG
 
 #=============================
 # Build the IOC support library
+LIBRARY_IOC += esys-sampleSupport
+
+esys-sampleSupport_SRCS += subRecordFunctions.c
+
+esys-sampleSupport_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 PROD_IOC += esys-sample
 
@@ -39,12 +44,17 @@ esys-sample_DBD += base.dbd
 # esys-sample_registerRecordDeviceDriver.cpp derives from esys-sample.dbd
 esys-sample_SRCS += esys-sample_registerRecordDeviceDriver.cpp
 
+
 # Build the main IOC entry point on workstation OSs.
 esys-sample_SRCS_DEFAULT += esys-sampleMain.cpp
 esys-sample_SRCS_vxWorks += -nil-
 
 #=============================
 # Add support for the following uncommented modules:
+
+# subRecord support
+esys-sample_DBD += subRecordFunctions.dbd
+esys-sample_LIBS += esys-sampleSupport
 
 # # AUTOSAVE
 esys-sample_DBD += asSupport.dbd

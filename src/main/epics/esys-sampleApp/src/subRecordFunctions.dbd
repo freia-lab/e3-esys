@@ -1,0 +1,5 @@
+variable(mySubDebug)
+function(mysubInit)
+function(mysubProcess)
+function(myAsubInit)
+function(myAsubProcess)

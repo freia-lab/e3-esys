@@ -203,3 +203,11 @@ record(longin, "$(DEV):Log:sBufLen")
 #  field(NELM, "500")
 #  field(FTVL, "STRING")
 #}
+
+record(sub, "$(DEV):subr1")
+{
+   field (INAM, "mysubInit")
+   field (SNAM, "mysubProcess")
+   field (SCAN, "1 second")
+   field (INPA, "1")
+}

@@ -3,8 +3,6 @@ record(longin, "$(DEV):Log:$(PV_SIG)")
   field(DESC, "SNMP channel")
   field(SCAN, "2 second")
   field(DTYP, "Snmp")
-  field(SIMM, 1)
-  field(SIOL, "0x171e90cf")
   field(FLNK, "$(DEV):Log:$(PV_SIG)-aSub")
   field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
 }

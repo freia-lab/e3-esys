@@ -185,13 +185,13 @@ record(longout, "$(DEV):Log:cDownloadPage")
   field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
 }
 
-record(longin, "$(DEV):Log:sBufLen")
-{
-  field(DESC, "SNMP channel- # of history records")
-  field(SCAN, ".5 second")
-  field(DTYP, "Snmp")
-  field(INP, "@$(HOST) public %(E)sysHistoryLogRecordCount.$(CHAN) INTEGER: 100 i")
-}
+#record(longin, "$(DEV):Log:sBufLen")
+#{
+#  field(DESC, "SNMP channel- # of history records")
+#  field(SCAN, ".5 second")
+#  field(DTYP, "Snmp")
+#  field(INP, "@$(HOST) public %(E)sysHistoryLogRecordCount.$(CHAN) INTEGER: 100 i")
+#}
 
 
 #record(waveform, "$(DEV):sysHistoryBuf-wfm")

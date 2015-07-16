@@ -5,21 +5,32 @@ record(longout, "$(DEV):c$(SIG)-w")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(EGU, "$(EGU)")
-  field(LOPR, "$(LOPR)")
-  field(HOPR, "$(HOPR)")
   field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
 }
+
+record(longin, "$(DEV):c$(SIG)-r")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(EGU, "$(EGU)")
+  field(INP, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+}
+
 
 record(ao, "$(DEV):c$(SIG)-fw")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(LOPR, "$(LOPR)")
+  field(HOPR, "$(HOPR)")
+  field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
-  field(LINR, "SLOPE")
+  field(LINR, "LINEAR")
   field(EOFF, "0")
-  field(ESLO, "$(ESLO)")
-  field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+  field(ASLO, "$(ESLO)")
+  field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
 }
 
 record(ai, "$(DEV):c$(SIG)-fr")
@@ -27,9 +38,12 @@ record(ai, "$(DEV):c$(SIG)-fr")
   field(DESC, "SNMP channel")
   field(SCAN, "1 second")
   field(DTYP, "Snmp")
+  field(LOPR, "$(LOPR)")
+  field(HOPR, "$(HOPR)")
   field(EGU, "$(EGU)")
-  field(LINR, "SLOPE")
+  field(PREC, "$(PREC)")
+  field(LINR, "LINEAR")
   field(EOFF, "0")
-  field(ESLO, "$(ESLO)")
-  field(INP, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+  field(ASLO, "$(ESLO)")
+  field(INP, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
 }

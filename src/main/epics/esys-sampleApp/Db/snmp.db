@@ -204,10 +204,10 @@ record(longout, "$(DEV):Log:cDownloadPage")
 #  field(FTVL, "STRING")
 #}
 
-record(sub, "$(DEV):subr1")
-{
-   field (INAM, "mysubInit")
-   field (SNAM, "mysubProcess")
-   field (SCAN, "1 second")
-   field (INPA, "1")
-}
+#record(sub, "$(DEV):subr1")
+#{
+#   field (INAM, "mysubInit")
+#   field (SNAM, "mysubProcess")
+#   field (SCAN, "1 second")
+#   field (INPA, "1")
+#}

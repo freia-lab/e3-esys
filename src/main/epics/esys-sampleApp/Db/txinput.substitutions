@@ -92,32 +92,32 @@ file "states.template" { pattern
 }
 
 file "write.template" { pattern
-{DEV,      SIG,		       HOST,	     PASSWD, EGU, ESLO, LOPR,	HOPR}
-{TestChan, SetScreenGridVhpa1, 192.168.10.40, public, "V", 1, 0, 100000}
-{TestChan, SetCtrlGridOVhpa1, 192.168.10.40, public, "V", -1, 0, 100000}
-{TestChan, SetCtrlGridBVhpa1, 192.168.10.40, public, "V", -1, 0, 100000}
-{TestChan, SetFilamentVhpa1, 192.168.10.40, public, "V", 0.01, 0, 100000}
-{TestChan, SetScreenGridVhpa2, 192.168.10.40, public, "V", 1, 0, 100000}
-{TestChan, SetCtrlGridOVhpa2, 192.168.10.40, public, "V", -1, 0, 100000}
-{TestChan, SetCtrlGridBVhpa2, 192.168.10.40, public, "V", -1, 0, 100000}
-{TestChan, SetFilamentVhpa2, 192.168.10.40, public, "V", 0.01, 0, 100000}
-{TestChan, SetHVpower, 192.168.10.40, public, "kW", 0.01, 0, 100000}
-{TestChan, SetHV, 192.168.10.40, public, "kV", 0.01, 0, 100000}
+{DEV,      SIG,		       HOST,	     PASSWD, EGU, ESLO, LOPR,	HOPR, PREC}
+{TestChan, SetScreenGridVhpa1, 192.168.10.40, public, "V", 1, 0, 1200, 0}
+{TestChan, SetCtrlGridOVhpa1, 192.168.10.40, public, "V", -1, -400, 0, 0}
+{TestChan, SetCtrlGridBVhpa1, 192.168.10.40, public, "V", -1, -400, 0, 0}
+{TestChan, SetFilamentVhpa1, 192.168.10.40, public, "V", 0.01, 0, 50, 2}
+{TestChan, SetScreenGridVhpa2, 192.168.10.40, public, "V", 1, 0, 1200, 0}
+{TestChan, SetCtrlGridOVhpa2, 192.168.10.40, public, "V", -1, -400, 0, 0}
+{TestChan, SetCtrlGridBVhpa2, 192.168.10.40, public, "V", -1, -400, 0, 0}
+{TestChan, SetFilamentVhpa2, 192.168.10.40, public, "V", 0.01, 0, 50, 2}
+{TestChan, SetHVpower, 192.168.10.40, public, "kW", 0.01, 0, 400, 2}
+{TestChan, SetHV, 192.168.10.40, public, "kV", 0.01, 0, 100, 2}
 }
 
-file "hlogtstamp.template" { pattern
-{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
-{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
-}
+#file "hlogtstamp.template" { pattern
+#{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
+#{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
+#}
 
-file "hlogcode.template" { pattern
-{DEV,      SIG,			PV_SIG,		HOST,	     PASSWD, CHAN}
-{TestChan, sysHLogRecord1code,	R1code,		192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2code,	R2code,		192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3code,	R3code,		192.168.10.40, public, 0}
-}
+#file "hlogcode.template" { pattern
+#{DEV,      SIG,			PV_SIG,		HOST,	     PASSWD, CHAN}
+#{TestChan, sysHLogRecord1code,	R1code,		192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord2code,	R2code,		192.168.10.40, public, 0}
+#{TestChan, sysHLogRecord3code,	R3code,		192.168.10.40, public, 0}
+#}

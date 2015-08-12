@@ -174,7 +174,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
     </font>
     <width>236</width>
     <border_style>13</border_style>
@@ -435,7 +435,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
     </font>
     <width>251</width>
     <border_style>12</border_style>
@@ -878,7 +878,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):csUnbalLdPwr</pv_name>
+      <pv_name>$(P):CentrS:sUnbalLdPwr</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -970,7 +970,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):csCapChargePwr</pv_name>
+      <pv_name>$(P):CentrS:CapChargePwr</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1062,7 +1062,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):csCapChargeV</pv_name>
+      <pv_name>$(P):CentrS:sCapChargeV</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1154,7 +1154,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):csCapChargeI</pv_name>
+      <pv_name>$(P):CentrS:sCapChargeI</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1252,7 +1252,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <widget_type>Grouping Container</widget_type>
     <font>
-      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+      <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
     </font>
     <width>246</width>
     <border_style>12</border_style>
@@ -2420,7 +2420,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -2461,7 +2461,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>627</width>
         <border_style>0</border_style>
@@ -3202,7 +3202,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3294,7 +3294,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3485,7 +3485,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3577,7 +3577,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3768,7 +3768,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3860,7 +3860,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4334,7 +4334,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4426,7 +4426,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4617,7 +4617,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4709,7 +4709,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4900,7 +4900,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4992,7 +4992,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6315,7 +6315,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6407,7 +6407,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6598,7 +6598,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6690,7 +6690,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8013,7 +8013,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8105,7 +8105,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8296,7 +8296,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8388,7 +8388,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9586,7 +9586,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -9761,7 +9761,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeInWtrT:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)Anode:sInWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9853,7 +9853,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeOutWtrT:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)Anode:sOutWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -10011,7 +10011,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>342</width>
         <border_style>0</border_style>
@@ -10166,7 +10166,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -10325,7 +10325,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -10484,7 +10484,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -10643,7 +10643,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -10697,7 +10697,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>281</width>
         <border_style>0</border_style>
@@ -11053,7 +11053,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -11109,7 +11109,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -11165,7 +11165,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -11211,7 +11211,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>407</width>
         <border_style>13</border_style>
@@ -11473,7 +11473,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -11514,7 +11514,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>246</width>
         <border_style>0</border_style>
@@ -11748,7 +11748,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>226</width>
         <border_style>0</border_style>
@@ -11983,7 +11983,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12193,7 +12193,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12403,7 +12403,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -12612,7 +12612,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -12653,7 +12653,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>627</width>
         <border_style>0</border_style>
@@ -13394,7 +13394,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -13486,7 +13486,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -13677,7 +13677,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -13769,7 +13769,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -13960,7 +13960,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -14052,7 +14052,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -14526,7 +14526,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -14618,7 +14618,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridI:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -14809,7 +14809,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -14901,7 +14901,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -15092,7 +15092,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -15184,7 +15184,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM1V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -16507,7 +16507,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -16599,7 +16599,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -16790,7 +16790,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -16882,7 +16882,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM2V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -18205,7 +18205,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3FwdPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -18297,7 +18297,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3InPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sInPwr:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -18488,7 +18488,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3ReflPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -18580,7 +18580,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvM3V:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sV:sRdV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -19778,7 +19778,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -19953,7 +19953,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeInWtrT:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)Anode:sInWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -20045,7 +20045,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeOutWtrT:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)Anode:sOutWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -20203,7 +20203,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>732</width>
         <border_style>0</border_style>
@@ -20358,7 +20358,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)SGridV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -20517,7 +20517,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridOpV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -20676,7 +20676,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)CGridBlV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -20835,7 +20835,7 @@ $(pv_value)</tooltip>
           </scale_options>
           <selector_type>0</selector_type>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
           <foreground_color>
             <color name="IO InputPV Fg" red="0" green="32" blue="92" />
           </foreground_color>
@@ -20889,7 +20889,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -20930,7 +20930,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>246</width>
         <border_style>0</border_style>
@@ -21164,7 +21164,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>226</width>
         <border_style>0</border_style>
@@ -21399,7 +21399,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -21609,7 +21609,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -21819,7 +21819,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>231</width>
         <border_style>0</border_style>
@@ -22028,7 +22028,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
       <font>
-        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+        <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
       </font>
       <width>745</width>
       <border_style>0</border_style>
@@ -22068,7 +22068,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>272</width>
         <border_style>12</border_style>
@@ -22360,7 +22360,7 @@ $(pv_value)</tooltip>
         <enabled>true</enabled>
         <widget_type>Grouping Container</widget_type>
         <font>
-          <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+          <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
         <width>726</width>
         <border_style>0</border_style>

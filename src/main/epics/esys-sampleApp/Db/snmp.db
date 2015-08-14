@@ -21,21 +21,21 @@
 
 # Commands
 
-record(longout, "$(DEV):cmdStart")
+record(longout, "$(DEV):Ampl:cmdStart")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdSystemStart.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdStop")
+record(longout, "$(DEV):Ampl:cmdStop")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdSystemStop.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdReset")
+record(longout, "$(DEV):Ampl:cmdReset")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -43,7 +43,7 @@ record(longout, "$(DEV):cmdReset")
   field(OUT, "@$(HOST) public %(E)cmdResetSystem.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):cmdStandby")
+record(longout, "$(DEV):Ampl:cmdStandby")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -51,21 +51,21 @@ record(longout, "$(DEV):cmdStandby")
   field(OUT, "@$(HOST) public %(E)cmdSystemStandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):Hpa1:cmdStart")
+record(longout, "$(DEV):hpa1:cmdStart")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Start.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):Hpa1:cmdStop")
+record(longout, "$(DEV):hpa1:cmdStop")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Stop.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):Hpa1:cmdReset")
+record(longout, "$(DEV):hpa1:cmdReset")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -73,7 +73,7 @@ record(longout, "$(DEV):Hpa1:cmdReset")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa1.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):Hpa1:cmdStandby")
+record(longout, "$(DEV):hpa1:cmdStandby")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -81,21 +81,21 @@ record(longout, "$(DEV):Hpa1:cmdStandby")
   field(OUT, "@$(HOST) public %(E)cmdHpa1StandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):Hpa2:cmdStart")
+record(longout, "$(DEV):hpa2:cmdStart")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Start.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):Hpa2:cmdStop")
+record(longout, "$(DEV):hpa2:cmdStop")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Stop.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):Hpa2:cmdReset")
+record(longout, "$(DEV):hpa2:cmdReset")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -103,7 +103,7 @@ record(longout, "$(DEV):Hpa2:cmdReset")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa2.$(CHAN) INTEGER: 100 i")
 }
 
-record(longout, "$(DEV):Hpa2:cmdStandby")
+record(longout, "$(DEV):hpa2:cmdStandby")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -121,14 +121,14 @@ record(longout, "$(DEV):cmdSaveHistoryLog")
 }
 
 # Automatic gain control
-record(longout, "$(DEV):cmdAGCOn")
+record(longout, "$(DEV):Ampl:cmdAGCOn")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
   field(OUT, "@$(HOST) public %(E)cmdSetAgcEnabled.$(CHAN) INTEGER: 100 i")
 }
-record(longout, "$(DEV):cmdAGCOff")
+record(longout, "$(DEV):Ampl:cmdAGCOff")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -146,7 +146,7 @@ record(longout, "$(DEV):cmdAGCOff")
 #  field(OUT, "@$(HOST) public %(E)cmdTxPowerSet.$(CHAN) INTEGER: 100 i")
 #}
 
-record(stringin, "$(DEV):sysContact")
+record(stringin, "$(DEV):Ampl:sysContact")
 {
   field(DESC, "SNMP channel")
   field(SCAN, ".5 second")
@@ -155,7 +155,7 @@ record(stringin, "$(DEV):sysContact")
 }
 
 
-record(stringin, "$(DEV):sysDescr")
+record(stringin, "$(DEV):Ampl:sysDescr")
 {
   field(DESC, "SNMP channel")
   field(SCAN, ".5 second")

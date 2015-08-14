@@ -1,4 +1,4 @@
-record(longin, "$(DEV):$(SIG)")
+record(longin, "$(DEV):$(PVSIG)")
 {
   field(DESC, "SNMP channel")
   field(SCAN, ".5 second")

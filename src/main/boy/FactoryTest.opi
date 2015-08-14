@@ -53,7 +53,7 @@
     <format_type>0</format_type>
     <precision_from_pv>true</precision_from_pv>
     <transparent>false</transparent>
-    <pv_name>$(P):sysDescr</pv_name>
+    <pv_name>$(P):Ampl:sysDescr</pv_name>
     <background_color>
       <color name="IO InputPV Bg" red="255" green="255" blue="255" />
     </background_color>
@@ -111,7 +111,7 @@ $(pv_value)</tooltip>
     <format_type>0</format_type>
     <precision_from_pv>true</precision_from_pv>
     <transparent>false</transparent>
-    <pv_name>$(P):sysContact</pv_name>
+    <pv_name>$(P):Ampl:sysContact</pv_name>
     <background_color>
       <color name="IO InputPV Bg" red="255" green="255" blue="255" />
     </background_color>
@@ -203,7 +203,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):cmdReset</pv_name>
+      <pv_name>$(P):Ampl:cmdReset</pv_name>
       <background_color>
         <color name="IO Button" red="178" green="178" blue="178" />
       </background_color>
@@ -256,7 +256,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):cmdStandby</pv_name>
+      <pv_name>$(P):Ampl:cmdStandby</pv_name>
       <background_color>
         <color name="IO Button" red="178" green="178" blue="178" />
       </background_color>
@@ -309,7 +309,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):cmdStart</pv_name>
+      <pv_name>$(P):Ampl:cmdStart</pv_name>
       <background_color>
         <color name="IO Button" red="178" green="178" blue="178" />
       </background_color>
@@ -362,7 +362,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):cmdStop</pv_name>
+      <pv_name>$(P):Ampl:cmdStop</pv_name>
       <background_color>
         <color name="IO Button" red="178" green="178" blue="178" />
       </background_color>
@@ -388,6 +388,112 @@ $(pv_value)</tooltip>
         <color name="IO Border" red="215" green="215" blue="215" />
       </border_color>
       <y>35</y>
+      <actions hook="false" hook_all="true">
+        <action type="WRITE_PV">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <timeout>10</timeout>
+          <confirm_message></confirm_message>
+          <description></description>
+        </action>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <x>86</x>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <visible>true</visible>
+      <wuid>49f0507:14f082f2fc8:-456c</wuid>
+      <scripts />
+      <height>30</height>
+      <style>1</style>
+      <name>Action Button Template_4</name>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <pv_name>$(P):Ampl:cmdAGCOn</pv_name>
+      <background_color>
+        <color name="IO Button" red="178" green="178" blue="178" />
+      </background_color>
+      <foreground_color>
+        <color name="IO Foreground" red="0" green="0" blue="0" />
+      </foreground_color>
+      <widget_type>Action Button</widget_type>
+      <enabled>true</enabled>
+      <text>AGC On</text>
+      <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+      <font>
+        <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+      </font>
+      <width>81</width>
+      <border_style>6</border_style>
+      <push_action_index>0</push_action_index>
+      <image></image>
+      <rules />
+      <pv_value />
+      <toggle_button>false</toggle_button>
+      <border_width>2</border_width>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215" />
+      </border_color>
+      <y>70</y>
+      <actions hook="false" hook_all="true">
+        <action type="WRITE_PV">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <timeout>10</timeout>
+          <confirm_message></confirm_message>
+          <description></description>
+        </action>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <x>0</x>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <visible>true</visible>
+      <wuid>49f0507:14f082f2fc8:-456b</wuid>
+      <scripts />
+      <height>30</height>
+      <style>1</style>
+      <name>Action Button Template_5</name>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <pv_name>$(P):Ampl:cmdAGCOff</pv_name>
+      <background_color>
+        <color name="IO Button" red="178" green="178" blue="178" />
+      </background_color>
+      <foreground_color>
+        <color name="IO Foreground" red="0" green="0" blue="0" />
+      </foreground_color>
+      <widget_type>Action Button</widget_type>
+      <enabled>true</enabled>
+      <text>AGC Off</text>
+      <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+      <font>
+        <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+      </font>
+      <width>80</width>
+      <border_style>6</border_style>
+      <push_action_index>0</push_action_index>
+      <image></image>
+      <rules />
+      <pv_value />
+      <toggle_button>false</toggle_button>
+      <border_width>2</border_width>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215" />
+      </border_color>
+      <y>70</y>
       <actions hook="false" hook_all="true">
         <action type="WRITE_PV">
           <pv_name>$(pv_name)</pv_name>
@@ -511,7 +617,7 @@ $(pv_value)</tooltip>
       <format_type>3</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):csStatus</pv_name>
+      <pv_name>$(P):CentrSys:sStat</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -810,7 +916,7 @@ $(pv_value)</tooltip>
       <off_color>
         <color name="IO Default" red="255" green="0" blue="0" />
       </off_color>
-      <pv_name>$(P):csStatus</pv_name>
+      <pv_name>$(P):CentrSys:sStat</pv_name>
       <background_color>
         <color name="IO Background" red="255" green="255" blue="205" />
       </background_color>
@@ -1369,7 +1475,7 @@ $(pv_value)</tooltip>
       <format_type>3</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):sysGlobalStatus</pv_name>
+      <pv_name>$(P):Ampl:sGlobStat</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1429,7 +1535,7 @@ $(pv_value)</tooltip>
       <off_color>
         <color name="IO Default" red="255" green="0" blue="0" />
       </off_color>
-      <pv_name>$(P):sysGlobalStatus</pv_name>
+      <pv_name>$(P):Ampl:sGlobStat</pv_name>
       <background_color>
         <color name="IO Background" red="255" green="255" blue="205" />
       </background_color>
@@ -1557,7 +1663,7 @@ $(pv_value)</tooltip>
       <off_color>
         <color name="IO PV OFF" red="77" green="77" blue="77" />
       </off_color>
-      <pv_name>$(P):sysGlobalStatus</pv_name>
+      <pv_name>$(P):Ampl:sGlobStat</pv_name>
       <background_color>
         <color name="IO Background" red="255" green="255" blue="205" />
       </background_color>
@@ -1615,7 +1721,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):sysFwdPwr</pv_name>
+      <pv_name>$(P):Ampl:sFwdPwr</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1666,7 +1772,7 @@ $(pv_value)</tooltip>
       <format_type>0</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):sysReflPwr</pv_name>
+      <pv_name>$(P):Ampl:sReflPwr</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1898,7 +2004,7 @@ $(pv_value)</tooltip>
       <format_type>3</format_type>
       <precision_from_pv>true</precision_from_pv>
       <transparent>false</transparent>
-      <pv_name>$(P):sysGeneralInfo</pv_name>
+      <pv_name>$(P):Ampl:sGenInfo</pv_name>
       <background_color>
         <color name="IO InputPV Bg" red="255" green="255" blue="255" />
       </background_color>
@@ -1958,7 +2064,7 @@ $(pv_value)</tooltip>
       <off_color>
         <color name="IO Default" red="255" green="0" blue="0" />
       </off_color>
-      <pv_name>$(P):sysGeneralInfo</pv_name>
+      <pv_name>$(P):Ampl:sGenInfo</pv_name>
       <background_color>
         <color name="IO Background" red="255" green="255" blue="205" />
       </background_color>
@@ -2636,7 +2742,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -2728,7 +2834,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)ReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -2919,7 +3025,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-Drv:sFwdPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -3011,7 +3117,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-Drv:sReflPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4051,7 +4157,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr):sAnodeV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4143,7 +4249,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AnodeI:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr):sAnodeI</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4709,7 +4815,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM1:sInPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sInPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -4992,7 +5098,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM1:sV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5084,7 +5190,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod1Measure3</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5183,7 +5289,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sSvcV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5275,7 +5381,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sPDI</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5367,7 +5473,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod1Measure5</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5466,7 +5572,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sD1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5558,7 +5664,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sD2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5650,7 +5756,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod1Measure6</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5749,7 +5855,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sF1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5841,7 +5947,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sF2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -5933,7 +6039,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod1Measure7</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6032,7 +6138,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sF3I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6124,7 +6230,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sF4I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6407,7 +6513,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM2:sInPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sInPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6690,7 +6796,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM2:sV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6782,7 +6888,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod2Measure3</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6881,7 +6987,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sSvcV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -6973,7 +7079,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sPDI</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7065,7 +7171,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod2Measure5</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7164,7 +7270,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sD1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7256,7 +7362,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sD2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7348,7 +7454,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod2Measure6</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7447,7 +7553,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sF1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7539,7 +7645,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sF2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7631,7 +7737,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod2Measure7</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7730,7 +7836,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sF3I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -7822,7 +7928,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sF4I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8105,7 +8211,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM3:sInPwr:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sInPwr</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8388,7 +8494,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)-DrvM3:sV:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8480,7 +8586,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod3Measure3</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8579,7 +8685,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sSvcV</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8671,7 +8777,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sPDI</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8763,7 +8869,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod3Measure5</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8862,7 +8968,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sD1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -8954,7 +9060,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sD2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9046,7 +9152,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod3Measure6</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9145,7 +9251,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sF1I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9237,7 +9343,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sF2I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9329,7 +9435,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)FilamentMeasures</pv_name>
+          <pv_name>$(P):hpa$(nr)DriverMod3Measure7</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9428,7 +9534,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvFwdPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sF3I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9520,7 +9626,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DrvReflPwr</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sF4I</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9568,7 +9674,7 @@ $(pv_value)</tooltip>
         <visible>true</visible>
         <wuid>20cc3228:14da01c427d:-59fe</wuid>
         <scripts />
-        <height>56</height>
+        <height>87</height>
         <name>Panel 2_1</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -9588,7 +9694,7 @@ $(pv_value)</tooltip>
         <font>
           <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
-        <width>732</width>
+        <width>683</width>
         <border_style>0</border_style>
         <rules />
         <fc>false</fc>
@@ -9698,7 +9804,7 @@ $(pv_value)</tooltip>
           <wrap_words>true</wrap_words>
           <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-          <x>82</x>
+          <x>84</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
           <visible>true</visible>
@@ -9739,7 +9845,7 @@ $(pv_value)</tooltip>
           <y>0</y>
           <wrap_words>true</wrap_words>
           <tooltip></tooltip>
-          <x>158</x>
+          <x>171</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
           <border_alarm_sensitive>true</border_alarm_sensitive>
@@ -9761,7 +9867,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Anode:sInWtrT</pv_name>
+          <pv_name>$(P):hpa$(nr)-Anode:sInWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9790,7 +9896,7 @@ $(pv_value)</tooltip>
           <wrap_words>true</wrap_words>
           <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-          <x>249</x>
+          <x>262</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
           <visible>true</visible>
@@ -9831,7 +9937,7 @@ $(pv_value)</tooltip>
           <y>0</y>
           <wrap_words>true</wrap_words>
           <tooltip></tooltip>
-          <x>331</x>
+          <x>349</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
           <border_alarm_sensitive>true</border_alarm_sensitive>
@@ -9853,7 +9959,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Anode:sOutWtrT</pv_name>
+          <pv_name>$(P):hpa$(nr)-Anode:sOutWtrT</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9882,7 +9988,7 @@ $(pv_value)</tooltip>
           <wrap_words>true</wrap_words>
           <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-          <x>432</x>
+          <x>450</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
           <visible>true</visible>
@@ -9923,7 +10029,7 @@ $(pv_value)</tooltip>
           <y>0</y>
           <wrap_words>true</wrap_words>
           <tooltip></tooltip>
-          <x>514</x>
+          <x>537</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
           <border_alarm_sensitive>true</border_alarm_sensitive>
@@ -9945,7 +10051,7 @@ $(pv_value)</tooltip>
           <format_type>0</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)AirPress:sRdV</pv_name>
+          <pv_name>$(P):hpa$(nr)-Anode:sAirPress</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -9974,7 +10080,1132 @@ $(pv_value)</tooltip>
           <wrap_words>true</wrap_words>
           <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-          <x>574</x>
+          <x>597</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-56ff</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_8</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>DrvM1 Meas4</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>82</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>0</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-56fe</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_8</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>3</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)DriverMod1Measure4</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules>
+            <rule name="BorderRule" prop_id="border_style" out_exp="false">
+              <exp bool_exp="pv0==1">
+                <value>9</value>
+              </exp>
+              <pv trig="true">$(pv_name).SIMM</pv>
+            </rule>
+          </rules>
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>84</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-56fd</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_9</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>In Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>48</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>171</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-56fc</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_9</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sInWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>262</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-56fb</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_10</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Out Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>58</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>349</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-56fa</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_10</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sOutWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>450</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-56f9</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_11</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Ampl V</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>43</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>537</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-56f8</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_11</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM1:sAmplV</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>22</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>597</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-5666</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_12</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>DrvM2 Meas4</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>82</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>0</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-5665</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_12</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>3</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)DriverMod2Measure4</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules>
+            <rule name="BorderRule" prop_id="border_style" out_exp="false">
+              <exp bool_exp="pv0==1">
+                <value>9</value>
+              </exp>
+              <pv trig="true">$(pv_name).SIMM</pv>
+            </rule>
+          </rules>
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>84</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-5664</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_13</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>In Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>48</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>171</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-5663</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_13</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sInWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>262</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-5662</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_14</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Out Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>58</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>349</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-5661</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_14</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sOutWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>450</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-5660</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_15</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Ampl V</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>43</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>537</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-565f</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_15</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM2:sAmplV</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>44</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>597</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-55cd</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_16</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>DrvM3 Meas4</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>82</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>0</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-55cc</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_16</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>3</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)DriverMod3Measure4</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules>
+            <rule name="BorderRule" prop_id="border_style" out_exp="false">
+              <exp bool_exp="pv0==1">
+                <value>9</value>
+              </exp>
+              <pv trig="true">$(pv_name).SIMM</pv>
+            </rule>
+          </rules>
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>84</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-55cb</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_17</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>In Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>48</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>171</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-55ca</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_17</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sInWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>262</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-55c9</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_18</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Out Wtr T</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>58</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>349</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-55c8</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_18</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sOutWtrT</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>450</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <visible>true</visible>
+          <vertical_alignment>1</vertical_alignment>
+          <wuid>49f0507:14f082f2fc8:-55c7</wuid>
+          <auto_size>true</auto_size>
+          <scripts />
+          <height>16</height>
+          <name>Label Template_19</name>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <transparent>true</transparent>
+          <show_scrollbar>false</show_scrollbar>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205" />
+          </background_color>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Label</widget_type>
+          <enabled>true</enabled>
+          <text>Ampl V</text>
+          <font>
+            <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+          </font>
+          <width>43</width>
+          <border_style>0</border_style>
+          <rules />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip></tooltip>
+          <x>537</x>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+          <border_alarm_sensitive>true</border_alarm_sensitive>
+          <visible>true</visible>
+          <vertical_alignment>0</vertical_alignment>
+          <show_units>true</show_units>
+          <wuid>49f0507:14f082f2fc8:-55c6</wuid>
+          <auto_size>false</auto_size>
+          <rotation_angle>0.0</rotation_angle>
+          <scripts />
+          <height>20</height>
+          <name>Text Update Template_19</name>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <scale_options>
+            <width_scalable>true</width_scalable>
+            <height_scalable>true</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <format_type>0</format_type>
+          <precision_from_pv>true</precision_from_pv>
+          <transparent>false</transparent>
+          <pv_name>$(P):hpa$(nr)-DrvM3:sAmplV</pv_name>
+          <background_color>
+            <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+          </background_color>
+          <foreground_color>
+            <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+          </foreground_color>
+          <widget_type>Text Update</widget_type>
+          <enabled>true</enabled>
+          <text>######</text>
+          <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+          <precision>0</precision>
+          <font>
+            <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+          </font>
+          <width>85</width>
+          <border_style>5</border_style>
+          <rules />
+          <pv_value />
+          <border_width>2</border_width>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215" />
+          </border_color>
+          <horizontal_alignment>0</horizontal_alignment>
+          <actions hook="false" hook_all="false" />
+          <y>66</y>
+          <wrap_words>true</wrap_words>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <x>597</x>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.gridLayout" version="1.0.0">
           <wuid>20cc3228:14da01c427d:-59fa</wuid>
@@ -10017,14 +11248,14 @@ $(pv_value)</tooltip>
         <border_style>0</border_style>
         <rules />
         <fc>false</fc>
-        <lock_children>false</lock_children>
+        <lock_children>true</lock_children>
         <border_width>1</border_width>
         <border_color>
           <color red="0" green="128" blue="255" />
         </border_color>
-        <y>850</y>
+        <y>835</y>
         <actions hook="false" hook_all="false" />
-        <x>9</x>
+        <x>25</x>
         <tooltip></tooltip>
         <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
           <visible>true</visible>
@@ -10703,14 +11934,14 @@ $(pv_value)</tooltip>
         <border_style>0</border_style>
         <rules />
         <fc>false</fc>
-        <lock_children>false</lock_children>
+        <lock_children>true</lock_children>
         <border_width>1</border_width>
         <border_color>
           <color red="0" green="128" blue="255" />
         </border_color>
-        <y>840</y>
+        <y>825</y>
         <actions hook="false" hook_all="false" />
-        <x>385</x>
+        <x>410</x>
         <tooltip></tooltip>
         <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
           <border_alarm_sensitive>true</border_alarm_sensitive>
@@ -11193,8 +12424,8 @@ $(pv_value)</tooltip>
         <visible>true</visible>
         <wuid>20cc3228:14da01c427d:-eb5</wuid>
         <scripts />
-        <height>101</height>
-        <name>Commands</name>
+        <height>95</height>
+        <name>HPA$(nr) Commands</name>
         <scale_options>
           <width_scalable>true</width_scalable>
           <height_scalable>true</height_scalable>
@@ -11213,7 +12444,7 @@ $(pv_value)</tooltip>
         <font>
           <opifont.name fontName="Sans" height="20" style="0">Default</opifont.name>
         </font>
-        <width>407</width>
+        <width>402</width>
         <border_style>13</border_style>
         <rules />
         <fc>false</fc>
@@ -11222,9 +12453,9 @@ $(pv_value)</tooltip>
         <border_color>
           <color red="0" green="128" blue="255" />
         </border_color>
-        <y>725</y>
+        <y>755</y>
         <actions hook="false" hook_all="false" />
-        <x>25</x>
+        <x>9</x>
         <tooltip></tooltip>
         <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
           <border_alarm_sensitive>true</border_alarm_sensitive>
@@ -11240,7 +12471,7 @@ $(pv_value)</tooltip>
             <height_scalable>true</height_scalable>
             <keep_wh_ratio>false</keep_wh_ratio>
           </scale_options>
-          <pv_name>$(P):Hpa$(nr):cmdReset</pv_name>
+          <pv_name>$(P):hpa$(nr):cmdReset</pv_name>
           <background_color>
             <color name="IO Button" red="178" green="178" blue="178" />
           </background_color>
@@ -11293,7 +12524,7 @@ $(pv_value)</tooltip>
             <height_scalable>true</height_scalable>
             <keep_wh_ratio>false</keep_wh_ratio>
           </scale_options>
-          <pv_name>$(P):Hpa$(nr):cmdStandby</pv_name>
+          <pv_name>$(P):hpa$(nr):cmdStandby</pv_name>
           <background_color>
             <color name="IO Button" red="178" green="178" blue="178" />
           </background_color>
@@ -11346,7 +12577,7 @@ $(pv_value)</tooltip>
             <height_scalable>true</height_scalable>
             <keep_wh_ratio>false</keep_wh_ratio>
           </scale_options>
-          <pv_name>$(P):Hpa$(nr):cmdStart</pv_name>
+          <pv_name>$(P):hpa$(nr):cmdStart</pv_name>
           <background_color>
             <color name="IO Button" red="178" green="178" blue="178" />
           </background_color>
@@ -11399,7 +12630,7 @@ $(pv_value)</tooltip>
             <height_scalable>true</height_scalable>
             <keep_wh_ratio>false</keep_wh_ratio>
           </scale_options>
-          <pv_name>$(P):Hpa$(nr):cmdStop</pv_name>
+          <pv_name>$(P):hpa$(nr):cmdStop</pv_name>
           <background_color>
             <color name="IO Button" red="178" green="178" blue="178" />
           </background_color>
@@ -11590,7 +12821,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Status1</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat1</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -11650,7 +12881,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)Status1</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat1</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -11824,7 +13055,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Status2</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat2</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -11884,7 +13115,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)Status2</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat2</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -12059,7 +13290,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -12119,7 +13350,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -12269,7 +13500,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -12329,7 +13560,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -12479,7 +13710,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -12539,7 +13770,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -21006,7 +22237,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Status1</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat1</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -21066,7 +22297,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)Status1</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat1</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -21240,7 +22471,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)Status2</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat2</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -21300,7 +22531,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)Status2</pv_name>
+          <pv_name>$(P):hpa$(nr)-sStat2</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -21475,7 +22706,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -21535,7 +22766,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -21685,7 +22916,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -21745,7 +22976,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>
@@ -21895,7 +23126,7 @@ $(pv_value)</tooltip>
           <format_type>3</format_type>
           <precision_from_pv>true</precision_from_pv>
           <transparent>false</transparent>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO InputPV Bg" red="255" green="255" blue="255" />
           </background_color>
@@ -21955,7 +23186,7 @@ $(pv_value)</tooltip>
           <off_color>
             <color name="Major" red="255" green="0" blue="0" />
           </off_color>
-          <pv_name>$(P):hpa$(nr)DriverMod$(MOD)Status</pv_name>
+          <pv_name>$(P):hpa$(nr)-DrvM$(MOD):sStat</pv_name>
           <background_color>
             <color name="IO Background" red="255" green="255" blue="205" />
           </background_color>

@@ -64,8 +64,8 @@ file "integer.template" { pattern
 
 file "3integer.template" { pattern
 {DEV,      SIG,		HOST,	        PASSWD, CHAN, SIG1, SCAL1, EGU1, PREC1, SIG2, SCAL2, EGU2, PREC2, SIG3, SCAL3, EGU3, PREC3}
-{TestChan, hpa1CoolingMeasures,	192.168.10.40, public, 0, hpa1-Anode:sInWtrT, 1, "°C", 0, hpa1Anodes:OutWtrT, 1, "°C", 0, hpa1AirPress:sRdV, 1, "mbar", 0}
-{TestChan, hpa2CoolingMeasures,	192.168.10.40, public, 0, hpa2-Anode:sInWtrT, 1, "°C", 0, hpa2Anodes:OutWtrT, 1, "°C", 0, hpa2AirPress:sRdV, 1, "mbar", 0}
+{TestChan, hpa1CoolingMeasures,	192.168.10.40, public, 0, hpa1-Anode:sInWtrT, 1, "°C", 0, hpa1-Anode:sOutWtrT, 1, "°C", 0, hpa1-Anode:sAirPress, 1, "mbar", 0}
+{TestChan, hpa2CoolingMeasures,	192.168.10.40, public, 0, hpa2-Anode:sInWtrT, 1, "°C", 0, hpa2-Anode:sOutWtrT, 1, "°C", 0, hpa2-Anode:sAirPress, 1, "mbar", 0}
 {TestChan, hpa1DriverMod1Measure4,	192.168.10.40, public, 0, hpa1-DrvM1:sInWtrT, 1, "°C", 0, hpa1-DrvM1:sOutWtrT, 1, "°C", 0, hpa1-DrvM1:sAmplV, 0.1, "V", 1}
 {TestChan, hpa1DriverMod2Measure4,	192.168.10.40, public, 0, hpa1-DrvM2:sInWtrT, 1, "°C", 0, hpa1-DrvM2:sOutWtrT, 1, "°C", 0, hpa1-DrvM2:sAmplV, 0.1, "V", 1}
 {TestChan, hpa1DriverMod3Measure4,	192.168.10.40, public, 0, hpa1-DrvM3:sInWtrT, 1, "°C", 0, hpa1-DrvM3:sOutWtrT, 1, "°C", 0, hpa1-DrvM3:sAmplV, 0.1, "V", 1}
@@ -75,20 +75,20 @@ file "3integer.template" { pattern
 }
 
 file "states.template" { pattern
-{DEV,      SIG,				HOST,	     PASSWD, CHAN}
-{TestChan, sysGlobalStatus,	192.168.10.40, public, 0}
-{TestChan, sysGeneralInfo,	192.168.10.40, public, 0}
-{TestChan, hpa1Status1,	192.168.10.40, public, 0}
-{TestChan, hpa1Status2,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod1Status,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod2Status,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod3Status,	192.168.10.40, public, 0}
-{TestChan, hpa2Status1,	192.168.10.40, public, 0}
-{TestChan, hpa2Status2,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod1Status,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod2Status,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod3Status,	192.168.10.40, public, 0}
-{TestChan, csStatus,	192.168.10.40, public, 0}
+{DEV,      SIG,			PVSIG,		HOST,	     PASSWD, CHAN}
+{TestChan, sysGlobalStatus,	Ampl:sGlobStat,	192.168.10.40, public, 0}
+{TestChan, sysGeneralInfo,	Ampl:sGenInfo,	192.168.10.40, public, 0}
+{TestChan, hpa1Status1,		hpa1-sStat1,	192.168.10.40, public, 0}
+{TestChan, hpa1Status2,		hpa1-sStat2,	192.168.10.40, public, 0}
+{TestChan, hpa1DriverMod1Status,hpa1-DrvM1:sStat,	192.168.10.40, public, 0}
+{TestChan, hpa1DriverMod2Status,hpa1-DrvM2:sStat,	192.168.10.40, public, 0}
+{TestChan, hpa1DriverMod3Status,hpa1-DrvM3:sStat,	192.168.10.40, public, 0}
+{TestChan, hpa2Status1,		hpa2-sStat1,	192.168.10.40, public, 0}
+{TestChan, hpa2Status2,		hpa2-sStat2,	192.168.10.40, public, 0}
+{TestChan, hpa2DriverMod1Status,hpa2-DrvM1:sStat,	192.168.10.40, public, 0}
+{TestChan, hpa2DriverMod2Status,hpa2-DrvM2:sStat,	192.168.10.40, public, 0}
+{TestChan, hpa2DriverMod3Status,hpa2-DrvM3:sStat	192.168.10.40, public, 0}
+{TestChan, csStatus,		CentrSys:sStat,	192.168.10.40, public, 0}
 }
 
 file "write.template" { pattern

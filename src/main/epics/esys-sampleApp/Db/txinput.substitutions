@@ -3,7 +3,7 @@ file "integer.template" { pattern
 {TestChan, sysRfPower,	192.168.10.40, public, 0, Ampl:sFwdPwr, 0.01, "kW", 2, Ampl:sReflPwr, 0.01, 0, "kW", 2}
 {TestChan, csMeasures1,	192.168.10.40, public, 0, CentrS:sUnbalLdPwr, 0.01, "kW", 2, CentrS:CapChargePwr, 0.01, 0, "kW", 2}
 {TestChan, csMeasures2,	192.168.10.40, public, 0, CentrS:sCapChargeV, 0.01, "kV", 2, CentrS:sCapChargeI, 0.01, 0, "A", 2}
-{TestChan, hpa1RfPower,	192.168.10.40, public, 0, hpa1-sFwdPwr, 0.01, "kW", 2, hpa1-sReflPwr, 0.01, 0, "kW", 2}
+{TestChan, hpa1RfPower,	192.168.10.40, public, 0, hpa1:sFwdPwr, 0.01, "kW", 2, hpa1:sReflPwr, 0.01, 0, "kW", 2}
 {TestChan, hpa1DriverRfPower,	192.168.10.40, public, 0, hpa1-Drv:sFwdPwr, 0.01, "kW", 2, hpa1-Drv:sReflPwr, 0.01, 0, "kW", 2}
 {TestChan, hpa1FilamentMeasures,	192.168.10.40, public, 0, hpa1-FilV:sRdV, 0.01, "V", 2, hpa1-FilI:sRdV, 1, 0, "A", 0}
 {TestChan, hpa1ControlGridMeas1,	192.168.10.40, public, 0, hpa1-CGridOpV:sRdV, -1, "V", 0, hpa1-CGridOpI:sRdV, 0.01, 100, "A", 2}
@@ -36,8 +36,8 @@ file "integer.template" { pattern
 {TestChan, hpa2FilamentMeasures,	192.168.10.40, public, 0, hpa2-FilV:sRdV, 0.01, "V", 2, hpa2-FilI:sRdV, 1, 0, "A", 0}
 {TestChan, hpa2ControlGridMeas1,	192.168.10.40, public, 0, hpa2-CGridOpV:sRdV, -1, "V", 0, hpa2-CGridOpI:sRdV, 0.01, 100, "A", 2}
 {TestChan, hpa2ControlGridMeas2,	192.168.10.40, public, 0, hpa2-CGridBlV:sRdV, -1, "V", 0, hpa2-CGridBlI:sRdV, 0.01, 100, "A", 2}
-{TestChan, hpa2AnodeMeasures,	192.168.10.40, public, 0, hpa2-Anode:sV, 0.01, "kV", 2, hpa2-Anode:sI, 0.01, 0, "A", 2}
-{TestChan, hpa2ScreenGridMeasures,	192.168.10.40, public, 0, hpa2-SGrid:sV, 1, "V", 0, hpa2-SGrid:sI, 1, 0, "mA", 0}
+{TestChan, hpa2AnodeMeasures,	192.168.10.40, public, 0, hpa2:sAnodeV, 0.01, "kV", 2, hpa2:sAnodeI, 0.01, 0, "A", 2}
+{TestChan, hpa2ScreenGridMeasures,	192.168.10.40, public, 0, hpa2-SGridV:sRdV, 1, "V", 0, hpa2-SGridI:sRdV, 1, 0, "mA", 0}
 {TestChan, hpa2DriverMod1Measure1,	192.168.10.40, public, 0, hpa2-DrvM1:sFwdPwr, 1, "W", 0, hpa2-DrvM1:sInPwr, 0.1, 0, "µW", 1}
 {TestChan, hpa2DriverMod1Measure2,	192.168.10.40, public, 0, hpa2-DrvM1:sReflPwr, 1, "W", 0, hpa2-DrvM1:sV, 0.1, 0, "V", 1}
 {TestChan, hpa2DriverMod1Measure3,	192.168.10.40, public, 0, hpa2-DrvM1:sSvcV, 0.1, "V", 1, hpa2-DrvM1:sPDI, 1, 0, "mA", 0}

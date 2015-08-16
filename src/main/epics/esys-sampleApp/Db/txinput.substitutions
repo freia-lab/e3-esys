@@ -92,17 +92,17 @@ file "states.template" { pattern
 }
 
 file "write.template" { pattern
-{DEV,      SIG,		       HOST,	     PASSWD, EGU, ESLO, LOPR,	HOPR, PREC}
-{TestChan, SetScreenGridVhpa1, 192.168.10.40, public, "V", 1, 0, 1200, 0}
-{TestChan, SetCtrlGridOVhpa1, 192.168.10.40, public, "V", -1, -400, 0, 0}
-{TestChan, SetCtrlGridBVhpa1, 192.168.10.40, public, "V", -1, -400, 0, 0}
-{TestChan, SetFilamentVhpa1, 192.168.10.40, public, "V", 0.01, 0, 50, 2}
-{TestChan, SetScreenGridVhpa2, 192.168.10.40, public, "V", 1, 0, 1200, 0}
-{TestChan, SetCtrlGridOVhpa2, 192.168.10.40, public, "V", -1, -400, 0, 0}
-{TestChan, SetCtrlGridBVhpa2, 192.168.10.40, public, "V", -1, -400, 0, 0}
-{TestChan, SetFilamentVhpa2, 192.168.10.40, public, "V", 0.01, 0, 50, 2}
-{TestChan, SetHVpower, 192.168.10.40, public, "kW", 0.01, 0, 400, 2}
-{TestChan, SetHV, 192.168.10.40, public, "kV", 0.01, 0, 100, 2}
+{DEV,      SIG,		       HOST,	     PASSWD, PV_SIG,		EGU, ESLO, LOPR,	HOPR, PREC}
+{TestChan, SetScreenGridVhpa1, 192.168.10.40, public,hpa1-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{TestChan, SetCtrlGridOVhpa1, 192.168.10.40, public, hpa1-CGridOpV:cSetV,"V", -1, -400, 0, 0}
+{TestChan, SetCtrlGridBVhpa1, 192.168.10.40, public, hpa1-CGridBlV:cSetV,"V", -1, -400, 0, 0}
+{TestChan, SetFilamentVhpa1, 192.168.10.40,  public, hpa1-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{TestChan, SetScreenGridVhpa2, 192.168.10.40, public,hpa2-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{TestChan, SetCtrlGridOVhpa2, 192.168.10.40, public, hpa2-CGridOpV:cSetV, "V", -1, -400, 0, 0}
+{TestChan, SetCtrlGridBVhpa2, 192.168.10.40, public, hpa2-CGridBlV:cSetV, "V", -1, -400, 0, 0}
+{TestChan, SetFilamentVhpa2, 192.168.10.40,  public, hpa2-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{TestChan, SetHVpower, 192.168.10.40, 	     public, Ampl-RFPwr:cSetV, "kW", 0.01, 0, 400, 2}
+{TestChan, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "kV", 0.01, 0, 100, 2}
 }
 
 #file "hlogtstamp.template" { pattern

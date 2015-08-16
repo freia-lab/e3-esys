@@ -1,5 +1,5 @@
 # Settings
-record(longout, "$(DEV):c$(SIG)-w")
+record(longout, "$(DEV):$(PV_SIG)-i")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -8,7 +8,7 @@ record(longout, "$(DEV):c$(SIG)-w")
   field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
 }
 
-record(longin, "$(DEV):c$(SIG)-r")
+record(longin, "$(DEV):$(PV_SIG)-ir")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "1 second")
@@ -18,7 +18,7 @@ record(longin, "$(DEV):c$(SIG)-r")
 }
 
 
-record(ao, "$(DEV):c$(SIG)-fw")
+record(ao, "$(DEV):$(PV_SIG)")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
@@ -33,7 +33,7 @@ record(ao, "$(DEV):c$(SIG)-fw")
   field(OUT, "@$(HOST) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
 }
 
-record(ai, "$(DEV):c$(SIG)-fr")
+record(ai, "$(DEV):$(PV_SIG)-fr")
 {
   field(DESC, "SNMP channel")
   field(SCAN, "1 second")

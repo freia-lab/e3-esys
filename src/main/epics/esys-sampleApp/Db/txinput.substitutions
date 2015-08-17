@@ -1,123 +1,123 @@
 file "integer.template" { pattern
 {DEV,      SIG,		HOST,	        PASSWD, CHAN, SIG1, SCAL1, EGU1, PREC1, SIG2, SCAL2, OFFS2, EGU2, PREC2}
-{TestChan, sysRfPower,	192.168.10.40, public, 0, Ampl:sFwdPwr, 0.01, "kW", 2, Ampl:sReflPwr, 0.01, 0, "kW", 2}
-{TestChan, csMeasures1,	192.168.10.40, public, 0, CentrS:sUnbalLdPwr, 0.01, "kW", 2, CentrS:CapChargePwr, 0.01, 0, "kW", 2}
-{TestChan, csMeasures2,	192.168.10.40, public, 0, CentrS:sCapChargeV, 0.01, "kV", 2, CentrS:sCapChargeI, 0.01, 0, "A", 2}
-{TestChan, hpa1RfPower,	192.168.10.40, public, 0, hpa1:sFwdPwr, 0.01, "kW", 2, hpa1:sReflPwr, 0.01, 0, "kW", 2}
-{TestChan, hpa1DriverRfPower,	192.168.10.40, public, 0, hpa1-Drv:sFwdPwr, 0.01, "kW", 2, hpa1-Drv:sReflPwr, 0.01, 0, "kW", 2}
-{TestChan, hpa1FilamentMeasures,	192.168.10.40, public, 0, hpa1-FilV:sRdV, 0.01, "V", 2, hpa1-FilI:sRdV, 1, 0, "A", 0}
-{TestChan, hpa1ControlGridMeas1,	192.168.10.40, public, 0, hpa1-CGridOpV:sRdV, -1, "V", 0, hpa1-CGridOpI:sRdV, 0.01, 100, "A", 2}
-{TestChan, hpa1ControlGridMeas2,	192.168.10.40, public, 0, hpa1-CGridBlV:sRdV, -1, "V", 0, hpa1-CGridBlI:sRdV, 0.01, 100, "A", 2}
-{TestChan, hpa1AnodeMeasures,	192.168.10.40, public, 0, hpa1:sAnodeV, 0.01, "kV", 2, hpa1:sAnodeI, 0.01, 0, "A", 2}
-{TestChan, hpa1ScreenGridMeasures,	192.168.10.40, public, 0, hpa1-SGridV:sRdV, 1, "V", 0, hpa1-SGridI:sRdV, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod1Measure1,	192.168.10.40, public, 0, hpa1-DrvM1:sFwdPwr, 1, "W", 0, hpa1-DrvM1:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa1DriverMod1Measure2,	192.168.10.40, public, 0, hpa1-DrvM1:sReflPwr, 1, "W", 0, hpa1-DrvM1:sV, 0.1, 0, "V", 1}
-{TestChan, hpa1DriverMod1Measure3,	192.168.10.40, public, 0, hpa1-DrvM1:sSvcV, 0.1, "V", 1, hpa1-DrvM1:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod1Measure5,	192.168.10.40, public, 0, hpa1-DrvM1:sD1I, 1, "mA", 0, hpa1-DrvM1:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod1Measure6,	192.168.10.40, public, 0, hpa1-DrvM1:sF1I, 1, "mA", 0, hpa1-DrvM1:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod1Measure7,	192.168.10.40, public, 0, hpa1-DrvM1:sF3I, 1, "mA", 0, hpa1-DrvM1:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod2Measure1,	192.168.10.40, public, 0, hpa1-DrvM2:sFwdPwr, 1, "W", 0, hpa1-DrvM2:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa1DriverMod2Measure2,	192.168.10.40, public, 0, hpa1-DrvM2:sReflPwr, 1, "W", 0, hpa1-DrvM2:sV, 0.1, 0, "V", 2}
-{TestChan, hpa1DriverMod2Measure3,	192.168.10.40, public, 0, hpa1-DrvM2:sSvcV, 0.1, "V", 1, hpa1-DrvM2:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod2Measure5,	192.168.10.40, public, 0, hpa1-DrvM2:sD1I, 1, "mA", 0, hpa1-DrvM2:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod2Measure6,	192.168.10.40, public, 0, hpa1-DrvM2:sF1I, 1, "mA", 0, hpa1-DrvM2:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod2Measure7,	192.168.10.40, public, 0, hpa1-DrvM2:sF3I, 1, "mA", 0, hpa1-DrvM2:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod3Measure1,	192.168.10.40, public, 0, hpa1-DrvM3:sFwdPwr, 1, "W", 0, hpa1-DrvM3:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa1DriverMod3Measure2,	192.168.10.40, public, 0, hpa1-DrvM3:sReflPwr, 1, "W", 0, hpa1-DrvM3:sV, 0.1, 0, "V", 2}
-{TestChan, hpa1DriverMod3Measure3,	192.168.10.40, public, 0, hpa1-DrvM3:sSvcV, 0.1, "V", 1, hpa1-DrvM3:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod3Measure5,	192.168.10.40, public, 0, hpa1-DrvM3:sD1I, 1, "mA", 0, hpa1-DrvM3:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod3Measure6,	192.168.10.40, public, 0, hpa1-DrvM3:sF1I, 1, "mA", 0, hpa1-DrvM3:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa1DriverMod3Measure7,	192.168.10.40, public, 0, hpa1-DrvM3:sF3I, 1, "mA", 0, hpa1-DrvM3:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa1ElectrodeSettings1,	192.168.10.40, public, 0, hpa1-FilV:sSetV, 0.01, "V", 2, hpa1-SGridV:sSetV, 1, 0, "V", 0}
-{TestChan, hpa1ElectrodeSettings2,	192.168.10.40, public, 0, hpa1-CGridBlV:sSetV, -1, "V", 0, hpa1-CGridOpV:sSetV, -1, 0, "V", 0}
-{TestChan, hvSettings,			192.168.10.40, public, 0, Ampl-RFPwr:sSetV, 10, "W", 0, Ampl-RFV:sSetV, 10, 0, "V", 0}
-{TestChan, hpa2RfPower,	192.168.10.40, public, 0, hpa2:sFwdPwr, 0.01, "kW", 2, hpa2:sReflPwr, 0.01, 0, "kW", 2}
-{TestChan, hpa2DriverRfPower,	192.168.10.40, public, 0, hpa2-Drv:sFwdPwr, 0.01, "kW", 2, hpa2-Drv:sReflPwr, 0.01, 0, "kW", 2}
-{TestChan, hpa2FilamentMeasures,	192.168.10.40, public, 0, hpa2-FilV:sRdV, 0.01, "V", 2, hpa2-FilI:sRdV, 1, 0, "A", 0}
-{TestChan, hpa2ControlGridMeas1,	192.168.10.40, public, 0, hpa2-CGridOpV:sRdV, -1, "V", 0, hpa2-CGridOpI:sRdV, 0.01, 100, "A", 2}
-{TestChan, hpa2ControlGridMeas2,	192.168.10.40, public, 0, hpa2-CGridBlV:sRdV, -1, "V", 0, hpa2-CGridBlI:sRdV, 0.01, 100, "A", 2}
-{TestChan, hpa2AnodeMeasures,	192.168.10.40, public, 0, hpa2:sAnodeV, 0.01, "kV", 2, hpa2:sAnodeI, 0.01, 0, "A", 2}
-{TestChan, hpa2ScreenGridMeasures,	192.168.10.40, public, 0, hpa2-SGridV:sRdV, 1, "V", 0, hpa2-SGridI:sRdV, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod1Measure1,	192.168.10.40, public, 0, hpa2-DrvM1:sFwdPwr, 1, "W", 0, hpa2-DrvM1:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa2DriverMod1Measure2,	192.168.10.40, public, 0, hpa2-DrvM1:sReflPwr, 1, "W", 0, hpa2-DrvM1:sV, 0.1, 0, "V", 1}
-{TestChan, hpa2DriverMod1Measure3,	192.168.10.40, public, 0, hpa2-DrvM1:sSvcV, 0.1, "V", 1, hpa2-DrvM1:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod1Measure5,	192.168.10.40, public, 0, hpa2-DrvM1:sD1I, 1, "mA", 0, hpa2-DrvM1:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod1Measure6,	192.168.10.40, public, 0, hpa2-DrvM1:sF1I, 1, "mA", 0, hpa2-DrvM1:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod1Measure7,	192.168.10.40, public, 0, hpa2-DrvM1:sF3I, 1, "mA", 0, hpa2-DrvM1:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod2Measure1,	192.168.10.40, public, 0, hpa2-DrvM2:sFwdPwr, 1, "W", 0, hpa2-DrvM2:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa2DriverMod2Measure2,	192.168.10.40, public, 0, hpa2-DrvM2:sReflPwr, 1, "W", 0, hpa2-DrvM2:sV, 0.1, 0, "V", 2}
-{TestChan, hpa2DriverMod2Measure3,	192.168.10.40, public, 0, hpa2-DrvM2:sSvcV, 0.1, "V", 1, hpa2-DrvM2:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod2Measure5,	192.168.10.40, public, 0, hpa2-DrvM2:sD1I, 1, "mA", 0, hpa2-DrvM2:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod2Measure6,	192.168.10.40, public, 0, hpa2-DrvM2:sF1I, 1, "mA", 0, hpa2-DrvM2:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod2Measure7,	192.168.10.40, public, 0, hpa2-DrvM2:sF3I, 1, "mA", 0, hpa2-DrvM2:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod3Measure1,	192.168.10.40, public, 0, hpa2-DrvM3:sFwdPwr, 1, "W", 0, hpa2-DrvM3:sInPwr, 0.1, 0, "µW", 1}
-{TestChan, hpa2DriverMod3Measure2,	192.168.10.40, public, 0, hpa2-DrvM3:sReflPwr, 1, "W", 0, hpa2-DrvM3:sV, 0.1, 0, "V", 2}
-{TestChan, hpa2DriverMod3Measure3,	192.168.10.40, public, 0, hpa2-DrvM3:sSvcV, 0.1, "V", 1, hpa2-DrvM3:sPDI, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod3Measure5,	192.168.10.40, public, 0, hpa2-DrvM3:sD1I, 1, "mA", 0, hpa2-DrvM3:sD2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod3Measure6,	192.168.10.40, public, 0, hpa2-DrvM3:sF1I, 1, "mA", 0, hpa2-DrvM3:sF2I, 1, 0, "mA", 0}
-{TestChan, hpa2DriverMod3Measure7,	192.168.10.40, public, 0, hpa2-DrvM3:sF3I, 1, "mA", 0, hpa2-DrvM3:sF4I, 1, 0, "mA", 0}
-{TestChan, hpa2ElectrodeSettings1,	192.168.10.40, public, 0, hpa2-FilV:sSetV, 0.01, "V", 2, hpa2-SGridV:sSetV, 1, 0, "V", 0}
-{TestChan, hpa2ElectrodeSettings2,	192.168.10.40, public, 0, hpa2-CGridBlV:sSetV, -1, "V", 0, hpa2-CGridOpV:sSetV, -1, 0, "V", 0}
-#{TestChan, hvNotUsed,			192.168.10.40, public, 0, hpa2RFPwr:sSetV, 10, "W", 0, hpa2RFV:sSetV, 10, 0, "V", 0}
-{TestChan, sysHistoryLogRecordCount,	192.168.10.40, public, 0, Log:sBufLen, 1, "", 0, Log:sRecNo, 1, 0, "", 0}
+{HLRF-Esys, sysRfPower,	192.168.10.40, public, 0, Ampl:sFwdPwr, 0.01, "kW", 2, Ampl:sReflPwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, csMeasures1,	192.168.10.40, public, 0, CentrS:sUnbalLdPwr, 0.01, "kW", 2, CentrS:CapChargePwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, csMeasures2,	192.168.10.40, public, 0, CentrS:sCapChargeV, 0.01, "kV", 2, CentrS:sCapChargeI, 0.01, 0, "A", 2}
+{HLRF-Esys, hpa1RfPower,	192.168.10.40, public, 0, hpa1:sFwdPwr, 0.01, "kW", 2, hpa1:sReflPwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, hpa1DriverRfPower,	192.168.10.40, public, 0, hpa1-Drv:sFwdPwr, 0.01, "kW", 2, hpa1-Drv:sReflPwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, hpa1FilamentMeasures,	192.168.10.40, public, 0, hpa1-FilV:sRdV, 0.01, "V", 2, hpa1-FilI:sRdV, 1, 0, "A", 0}
+{HLRF-Esys, hpa1ControlGridMeas1,	192.168.10.40, public, 0, hpa1-CGridOpV:sRdV, -1, "V", 0, hpa1-CGridOpI:sRdV, 0.01, 100, "A", 2}
+{HLRF-Esys, hpa1ControlGridMeas2,	192.168.10.40, public, 0, hpa1-CGridBlV:sRdV, -1, "V", 0, hpa1-CGridBlI:sRdV, 0.01, 100, "A", 2}
+{HLRF-Esys, hpa1AnodeMeasures,	192.168.10.40, public, 0, hpa1:sAnodeV, 0.01, "kV", 2, hpa1:sAnodeI, 0.01, 0, "A", 2}
+{HLRF-Esys, hpa1ScreenGridMeasures,	192.168.10.40, public, 0, hpa1-SGridV:sRdV, 1, "V", 0, hpa1-SGridI:sRdV, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod1Measure1,	192.168.10.40, public, 0, hpa1-DrvM1:sFwdPwr, 1, "W", 0, hpa1-DrvM1:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa1DriverMod1Measure2,	192.168.10.40, public, 0, hpa1-DrvM1:sReflPwr, 1, "W", 0, hpa1-DrvM1:sV, 0.1, 0, "V", 1}
+{HLRF-Esys, hpa1DriverMod1Measure3,	192.168.10.40, public, 0, hpa1-DrvM1:sSvcV, 0.1, "V", 1, hpa1-DrvM1:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod1Measure5,	192.168.10.40, public, 0, hpa1-DrvM1:sD1I, 1, "mA", 0, hpa1-DrvM1:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod1Measure6,	192.168.10.40, public, 0, hpa1-DrvM1:sF1I, 1, "mA", 0, hpa1-DrvM1:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod1Measure7,	192.168.10.40, public, 0, hpa1-DrvM1:sF3I, 1, "mA", 0, hpa1-DrvM1:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod2Measure1,	192.168.10.40, public, 0, hpa1-DrvM2:sFwdPwr, 1, "W", 0, hpa1-DrvM2:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa1DriverMod2Measure2,	192.168.10.40, public, 0, hpa1-DrvM2:sReflPwr, 1, "W", 0, hpa1-DrvM2:sV, 0.1, 0, "V", 2}
+{HLRF-Esys, hpa1DriverMod2Measure3,	192.168.10.40, public, 0, hpa1-DrvM2:sSvcV, 0.1, "V", 1, hpa1-DrvM2:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod2Measure5,	192.168.10.40, public, 0, hpa1-DrvM2:sD1I, 1, "mA", 0, hpa1-DrvM2:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod2Measure6,	192.168.10.40, public, 0, hpa1-DrvM2:sF1I, 1, "mA", 0, hpa1-DrvM2:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod2Measure7,	192.168.10.40, public, 0, hpa1-DrvM2:sF3I, 1, "mA", 0, hpa1-DrvM2:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod3Measure1,	192.168.10.40, public, 0, hpa1-DrvM3:sFwdPwr, 1, "W", 0, hpa1-DrvM3:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa1DriverMod3Measure2,	192.168.10.40, public, 0, hpa1-DrvM3:sReflPwr, 1, "W", 0, hpa1-DrvM3:sV, 0.1, 0, "V", 2}
+{HLRF-Esys, hpa1DriverMod3Measure3,	192.168.10.40, public, 0, hpa1-DrvM3:sSvcV, 0.1, "V", 1, hpa1-DrvM3:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod3Measure5,	192.168.10.40, public, 0, hpa1-DrvM3:sD1I, 1, "mA", 0, hpa1-DrvM3:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod3Measure6,	192.168.10.40, public, 0, hpa1-DrvM3:sF1I, 1, "mA", 0, hpa1-DrvM3:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1DriverMod3Measure7,	192.168.10.40, public, 0, hpa1-DrvM3:sF3I, 1, "mA", 0, hpa1-DrvM3:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa1ElectrodeSettings1,	192.168.10.40, public, 0, hpa1-FilV:sSetV, 0.01, "V", 2, hpa1-SGridV:sSetV, 1, 0, "V", 0}
+{HLRF-Esys, hpa1ElectrodeSettings2,	192.168.10.40, public, 0, hpa1-CGridBlV:sSetV, -1, "V", 0, hpa1-CGridOpV:sSetV, -1, 0, "V", 0}
+{HLRF-Esys, hvSettings,			192.168.10.40, public, 0, Ampl-RFPwr:sSetV, 10, "W", 0, Ampl-RFV:sSetV, 10, 0, "V", 0}
+{HLRF-Esys, hpa2RfPower,	192.168.10.40, public, 0, hpa2:sFwdPwr, 0.01, "kW", 2, hpa2:sReflPwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, hpa2DriverRfPower,	192.168.10.40, public, 0, hpa2-Drv:sFwdPwr, 0.01, "kW", 2, hpa2-Drv:sReflPwr, 0.01, 0, "kW", 2}
+{HLRF-Esys, hpa2FilamentMeasures,	192.168.10.40, public, 0, hpa2-FilV:sRdV, 0.01, "V", 2, hpa2-FilI:sRdV, 1, 0, "A", 0}
+{HLRF-Esys, hpa2ControlGridMeas1,	192.168.10.40, public, 0, hpa2-CGridOpV:sRdV, -1, "V", 0, hpa2-CGridOpI:sRdV, 0.01, 100, "A", 2}
+{HLRF-Esys, hpa2ControlGridMeas2,	192.168.10.40, public, 0, hpa2-CGridBlV:sRdV, -1, "V", 0, hpa2-CGridBlI:sRdV, 0.01, 100, "A", 2}
+{HLRF-Esys, hpa2AnodeMeasures,	192.168.10.40, public, 0, hpa2:sAnodeV, 0.01, "kV", 2, hpa2:sAnodeI, 0.01, 0, "A", 2}
+{HLRF-Esys, hpa2ScreenGridMeasures,	192.168.10.40, public, 0, hpa2-SGridV:sRdV, 1, "V", 0, hpa2-SGridI:sRdV, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod1Measure1,	192.168.10.40, public, 0, hpa2-DrvM1:sFwdPwr, 1, "W", 0, hpa2-DrvM1:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa2DriverMod1Measure2,	192.168.10.40, public, 0, hpa2-DrvM1:sReflPwr, 1, "W", 0, hpa2-DrvM1:sV, 0.1, 0, "V", 1}
+{HLRF-Esys, hpa2DriverMod1Measure3,	192.168.10.40, public, 0, hpa2-DrvM1:sSvcV, 0.1, "V", 1, hpa2-DrvM1:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod1Measure5,	192.168.10.40, public, 0, hpa2-DrvM1:sD1I, 1, "mA", 0, hpa2-DrvM1:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod1Measure6,	192.168.10.40, public, 0, hpa2-DrvM1:sF1I, 1, "mA", 0, hpa2-DrvM1:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod1Measure7,	192.168.10.40, public, 0, hpa2-DrvM1:sF3I, 1, "mA", 0, hpa2-DrvM1:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod2Measure1,	192.168.10.40, public, 0, hpa2-DrvM2:sFwdPwr, 1, "W", 0, hpa2-DrvM2:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa2DriverMod2Measure2,	192.168.10.40, public, 0, hpa2-DrvM2:sReflPwr, 1, "W", 0, hpa2-DrvM2:sV, 0.1, 0, "V", 2}
+{HLRF-Esys, hpa2DriverMod2Measure3,	192.168.10.40, public, 0, hpa2-DrvM2:sSvcV, 0.1, "V", 1, hpa2-DrvM2:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod2Measure5,	192.168.10.40, public, 0, hpa2-DrvM2:sD1I, 1, "mA", 0, hpa2-DrvM2:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod2Measure6,	192.168.10.40, public, 0, hpa2-DrvM2:sF1I, 1, "mA", 0, hpa2-DrvM2:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod2Measure7,	192.168.10.40, public, 0, hpa2-DrvM2:sF3I, 1, "mA", 0, hpa2-DrvM2:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod3Measure1,	192.168.10.40, public, 0, hpa2-DrvM3:sFwdPwr, 1, "W", 0, hpa2-DrvM3:sInPwr, 0.1, 0, "µW", 1}
+{HLRF-Esys, hpa2DriverMod3Measure2,	192.168.10.40, public, 0, hpa2-DrvM3:sReflPwr, 1, "W", 0, hpa2-DrvM3:sV, 0.1, 0, "V", 2}
+{HLRF-Esys, hpa2DriverMod3Measure3,	192.168.10.40, public, 0, hpa2-DrvM3:sSvcV, 0.1, "V", 1, hpa2-DrvM3:sPDI, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod3Measure5,	192.168.10.40, public, 0, hpa2-DrvM3:sD1I, 1, "mA", 0, hpa2-DrvM3:sD2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod3Measure6,	192.168.10.40, public, 0, hpa2-DrvM3:sF1I, 1, "mA", 0, hpa2-DrvM3:sF2I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2DriverMod3Measure7,	192.168.10.40, public, 0, hpa2-DrvM3:sF3I, 1, "mA", 0, hpa2-DrvM3:sF4I, 1, 0, "mA", 0}
+{HLRF-Esys, hpa2ElectrodeSettings1,	192.168.10.40, public, 0, hpa2-FilV:sSetV, 0.01, "V", 2, hpa2-SGridV:sSetV, 1, 0, "V", 0}
+{HLRF-Esys, hpa2ElectrodeSettings2,	192.168.10.40, public, 0, hpa2-CGridBlV:sSetV, -1, "V", 0, hpa2-CGridOpV:sSetV, -1, 0, "V", 0}
+#{HLRF-Esys, hvNotUsed,			192.168.10.40, public, 0, hpa2RFPwr:sSetV, 10, "W", 0, hpa2RFV:sSetV, 10, 0, "V", 0}
+{HLRF-Esys, sysHistoryLogRecordCount,	192.168.10.40, public, 0, Log:sBufLen, 1, "", 0, Log:sRecNo, 1, 0, "", 0}
 }
 
 file "3integer.template" { pattern
 {DEV,      SIG,		HOST,	        PASSWD, CHAN, SIG1, SCAL1, EGU1, PREC1, SIG2, SCAL2, EGU2, PREC2, SIG3, SCAL3, EGU3, PREC3}
-{TestChan, hpa1CoolingMeasures,	192.168.10.40, public, 0, hpa1-Anode:sInWtrT, 1, "°C", 0, hpa1-Anode:sOutWtrT, 1, "°C", 0, hpa1-Anode:sAirPress, 1, "mbar", 0}
-{TestChan, hpa2CoolingMeasures,	192.168.10.40, public, 0, hpa2-Anode:sInWtrT, 1, "°C", 0, hpa2-Anode:sOutWtrT, 1, "°C", 0, hpa2-Anode:sAirPress, 1, "mbar", 0}
-{TestChan, hpa1DriverMod1Measure4,	192.168.10.40, public, 0, hpa1-DrvM1:sInWtrT, 1, "°C", 0, hpa1-DrvM1:sOutWtrT, 1, "°C", 0, hpa1-DrvM1:sAmplV, 0.1, "V", 1}
-{TestChan, hpa1DriverMod2Measure4,	192.168.10.40, public, 0, hpa1-DrvM2:sInWtrT, 1, "°C", 0, hpa1-DrvM2:sOutWtrT, 1, "°C", 0, hpa1-DrvM2:sAmplV, 0.1, "V", 1}
-{TestChan, hpa1DriverMod3Measure4,	192.168.10.40, public, 0, hpa1-DrvM3:sInWtrT, 1, "°C", 0, hpa1-DrvM3:sOutWtrT, 1, "°C", 0, hpa1-DrvM3:sAmplV, 0.1, "V", 1}
-{TestChan, hpa2DriverMod1Measure4,	192.168.10.40, public, 0, hpa2-DrvM1:sInWtrT, 1, "°C", 0, hpa2-DrvM1:sOutWtrT, 1, "°C", 0, hpa2-DrvM1:sAmplV, 0.1, "V", 1}
-{TestChan, hpa2DriverMod2Measure4,	192.168.10.40, public, 0, hpa2-DrvM2:sInWtrT, 1, "°C", 0, hpa2-DrvM2:sOutWtrT, 1, "°C", 0, hpa2-DrvM2:sAmplV, 0.1, "V", 1}
-{TestChan, hpa2DriverMod3Measure4,	192.168.10.40, public, 0, hpa2-DrvM3:sInWtrT, 1, "°C", 0, hpa2-DrvM3:sOutWtrT, 1, "°C", 0, hpa2-DrvM3:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa1CoolingMeasures,	192.168.10.40, public, 0, hpa1-Anode:sInWtrT, 1, "°C", 0, hpa1-Anode:sOutWtrT, 1, "°C", 0, hpa1-Anode:sAirPress, 1, "mbar", 0}
+{HLRF-Esys, hpa2CoolingMeasures,	192.168.10.40, public, 0, hpa2-Anode:sInWtrT, 1, "°C", 0, hpa2-Anode:sOutWtrT, 1, "°C", 0, hpa2-Anode:sAirPress, 1, "mbar", 0}
+{HLRF-Esys, hpa1DriverMod1Measure4,	192.168.10.40, public, 0, hpa1-DrvM1:sInWtrT, 1, "°C", 0, hpa1-DrvM1:sOutWtrT, 1, "°C", 0, hpa1-DrvM1:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa1DriverMod2Measure4,	192.168.10.40, public, 0, hpa1-DrvM2:sInWtrT, 1, "°C", 0, hpa1-DrvM2:sOutWtrT, 1, "°C", 0, hpa1-DrvM2:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa1DriverMod3Measure4,	192.168.10.40, public, 0, hpa1-DrvM3:sInWtrT, 1, "°C", 0, hpa1-DrvM3:sOutWtrT, 1, "°C", 0, hpa1-DrvM3:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa2DriverMod1Measure4,	192.168.10.40, public, 0, hpa2-DrvM1:sInWtrT, 1, "°C", 0, hpa2-DrvM1:sOutWtrT, 1, "°C", 0, hpa2-DrvM1:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa2DriverMod2Measure4,	192.168.10.40, public, 0, hpa2-DrvM2:sInWtrT, 1, "°C", 0, hpa2-DrvM2:sOutWtrT, 1, "°C", 0, hpa2-DrvM2:sAmplV, 0.1, "V", 1}
+{HLRF-Esys, hpa2DriverMod3Measure4,	192.168.10.40, public, 0, hpa2-DrvM3:sInWtrT, 1, "°C", 0, hpa2-DrvM3:sOutWtrT, 1, "°C", 0, hpa2-DrvM3:sAmplV, 0.1, "V", 1}
 }
 
 file "states.template" { pattern
 {DEV,      SIG,			PVSIG,		HOST,	     PASSWD, CHAN}
-{TestChan, sysGlobalStatus,	Ampl:sGlobStat,	192.168.10.40, public, 0}
-{TestChan, sysGeneralInfo,	Ampl:sGenInfo,	192.168.10.40, public, 0}
-{TestChan, hpa1Status1,		hpa1-sStat1,	192.168.10.40, public, 0}
-{TestChan, hpa1Status2,		hpa1-sStat2,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod1Status,hpa1-DrvM1:sStat,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod2Status,hpa1-DrvM2:sStat,	192.168.10.40, public, 0}
-{TestChan, hpa1DriverMod3Status,hpa1-DrvM3:sStat,	192.168.10.40, public, 0}
-{TestChan, hpa2Status1,		hpa2-sStat1,	192.168.10.40, public, 0}
-{TestChan, hpa2Status2,		hpa2-sStat2,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod1Status,hpa2-DrvM1:sStat,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod2Status,hpa2-DrvM2:sStat,	192.168.10.40, public, 0}
-{TestChan, hpa2DriverMod3Status,hpa2-DrvM3:sStat	192.168.10.40, public, 0}
-{TestChan, csStatus,		CentrSys:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, sysGlobalStatus,	Ampl:sGlobStat,	192.168.10.40, public, 0}
+{HLRF-Esys, sysGeneralInfo,	Ampl:sGenInfo,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa1Status1,		hpa1-sStat1,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa1Status2,		hpa1-sStat2,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa1DriverMod1Status,hpa1-DrvM1:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa1DriverMod2Status,hpa1-DrvM2:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa1DriverMod3Status,hpa1-DrvM3:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa2Status1,		hpa2-sStat1,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa2Status2,		hpa2-sStat2,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa2DriverMod1Status,hpa2-DrvM1:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa2DriverMod2Status,hpa2-DrvM2:sStat,	192.168.10.40, public, 0}
+{HLRF-Esys, hpa2DriverMod3Status,hpa2-DrvM3:sStat	192.168.10.40, public, 0}
+{HLRF-Esys, csStatus,		CentrSys:sStat,	192.168.10.40, public, 0}
 }
 
 file "write.template" { pattern
 {DEV,      SIG,		       HOST,	     PASSWD, PV_SIG,		EGU, ESLO, LOPR,	HOPR, PREC}
-{TestChan, SetScreenGridVhpa1, 192.168.10.40, public,hpa1-SGridV:cSetV, "V", 1, 0, 1200, 0}
-{TestChan, SetCtrlGridOVhpa1, 192.168.10.40, public, hpa1-CGridOpV:cSetV,"V", -1, -400, 0, 0}
-{TestChan, SetCtrlGridBVhpa1, 192.168.10.40, public, hpa1-CGridBlV:cSetV,"V", -1, -400, 0, 0}
-{TestChan, SetFilamentVhpa1, 192.168.10.40,  public, hpa1-FilV:cSetV, "V", 0.01, 0, 50, 2}
-{TestChan, SetScreenGridVhpa2, 192.168.10.40, public,hpa2-SGridV:cSetV, "V", 1, 0, 1200, 0}
-{TestChan, SetCtrlGridOVhpa2, 192.168.10.40, public, hpa2-CGridOpV:cSetV, "V", -1, -400, 0, 0}
-{TestChan, SetCtrlGridBVhpa2, 192.168.10.40, public, hpa2-CGridBlV:cSetV, "V", -1, -400, 0, 0}
-{TestChan, SetFilamentVhpa2, 192.168.10.40,  public, hpa2-FilV:cSetV, "V", 0.01, 0, 50, 2}
-{TestChan, SetHVpower, 192.168.10.40, 	     public, Ampl-RFPwr:cSetV, "kW", 0.01, 0, 400, 2}
-{TestChan, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "kV", 0.01, 0, 100, 2}
+{HLRF-Esys, SetScreenGridVhpa1, 192.168.10.40, public,hpa1-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{HLRF-Esys, SetCtrlGridOVhpa1, 192.168.10.40, public, hpa1-CGridOpV:cSetV,"V", -1, -400, 0, 0}
+{HLRF-Esys, SetCtrlGridBVhpa1, 192.168.10.40, public, hpa1-CGridBlV:cSetV,"V", -1, -400, 0, 0}
+{HLRF-Esys, SetFilamentVhpa1, 192.168.10.40,  public, hpa1-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{HLRF-Esys, SetScreenGridVhpa2, 192.168.10.40, public,hpa2-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{HLRF-Esys, SetCtrlGridOVhpa2, 192.168.10.40, public, hpa2-CGridOpV:cSetV, "V", -1, -400, 0, 0}
+{HLRF-Esys, SetCtrlGridBVhpa2, 192.168.10.40, public, hpa2-CGridBlV:cSetV, "V", -1, -400, 0, 0}
+{HLRF-Esys, SetFilamentVhpa2, 192.168.10.40,  public, hpa2-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{HLRF-Esys, SetHVpower, 192.168.10.40, 	     public, Ampl-RFPwr:cSetV, "kW", 0.01, 0, 400, 2}
+{HLRF-Esys, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "kV", 0.01, 0, 100, 2}
 }
 
 file "hlogtstamp.template" { pattern
 {DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
-{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
 }
 
 file "hlogcode.template" { pattern
 {DEV,      SIG,			PV_SIG1, PV_SIG2,	HOST,	     PASSWD, CHAN}
-{TestChan, sysHLogRecord1code,	sR1code, sR1Msg,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord2code,	sR2code, sR2Msg,	192.168.10.40, public, 0}
-{TestChan, sysHLogRecord3code,	sR3code, sR3Msg,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord1code,	sR1code, sR1Msg,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord2code,	sR2code, sR2Msg,	192.168.10.40, public, 0}
+{HLRF-Esys, sysHLogRecord3code,	sR3code, sR3Msg,	192.168.10.40, public, 0}
 }

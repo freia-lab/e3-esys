@@ -6,7 +6,7 @@ cd "$(TOP)/db"
 #dbLoadRecords("xxx.db","user=konradHost")
 #dbLoadTemplate(xxx.substitutions)
 
-dbLoadRecords("snmp.db","DEV=TestChan,HOST=192.168.10.40,CHAN=0,GROUP=0")
+dbLoadRecords("snmp.db","DEV=HLRF-Esys,HOST=192.168.10.40,CHAN=0,GROUP=0")
 dbLoadTemplate("txinput.substitutions")
 
 # IOC monitor

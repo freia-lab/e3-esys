@@ -3,7 +3,7 @@
   <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
   <macros>
     <include_parent_macros>true</include_parent_macros>
-    <P>HLRF-Esys</P>
+    <P>HPRF-Esys</P>
   </macros>
   <wuid>-14a921ec:134b2495e46:-7f53</wuid>
   <boy_version>3.2.0.codac_core_4_1_0</boy_version>
@@ -2700,7 +2700,7 @@ $(pv_value)</tooltip>
           <wuid>-5767458d:14d95b1a7d8:-6c00</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -2721,7 +2721,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>59</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -2799,7 +2799,7 @@ $(pv_value)</tooltip>
           <wuid>-35824496:14d76cae7ce:-7620</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_2</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -2820,7 +2820,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>47</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -2891,7 +2891,7 @@ $(pv_value)</tooltip>
           <wuid>-35824496:14d76cae7ce:-75e0</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_2</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -2912,7 +2912,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>56</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -2983,7 +2983,7 @@ $(pv_value)</tooltip>
           <wuid>-5767458d:14d95b1a7d8:-6b5f</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3004,7 +3004,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>98</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3082,7 +3082,7 @@ $(pv_value)</tooltip>
           <wuid>-35824496:14d76cae7ce:-7563</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3103,7 +3103,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>47</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3174,7 +3174,7 @@ $(pv_value)</tooltip>
           <wuid>-35824496:14d76cae7ce:-7561</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3195,7 +3195,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>56</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3266,7 +3266,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-7db8</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3287,7 +3287,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>111</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3365,7 +3365,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-7db6</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3386,7 +3386,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3457,7 +3457,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-7db4</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3478,7 +3478,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3549,7 +3549,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6bc4</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3570,7 +3570,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>113</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3648,7 +3648,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6bc2</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3669,7 +3669,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>68</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3740,7 +3740,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6bc0</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3761,7 +3761,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>68</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3832,7 +3832,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ba9</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3853,7 +3853,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>113</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -3931,7 +3931,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ba7</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -3952,7 +3952,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>63</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4023,7 +4023,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ba5</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4044,7 +4044,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>63</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4115,7 +4115,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b8e</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4136,7 +4136,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>98</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4214,7 +4214,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b8c</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4235,7 +4235,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4306,7 +4306,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b8a</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4327,7 +4327,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4398,7 +4398,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b73</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4497,7 +4497,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b71</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4518,7 +4518,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4589,7 +4589,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b6f</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4610,7 +4610,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4681,7 +4681,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b51</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4702,7 +4702,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4780,7 +4780,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b4f</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4801,7 +4801,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>74</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4872,7 +4872,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b4d</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4893,7 +4893,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>56</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -4964,7 +4964,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b36</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -4985,7 +4985,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5063,7 +5063,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b34</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5084,7 +5084,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>83</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5155,7 +5155,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b32</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5176,7 +5176,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5247,7 +5247,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b1b</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5268,7 +5268,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5346,7 +5346,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b19</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5438,7 +5438,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b17</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5530,7 +5530,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6b00</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5551,7 +5551,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5629,7 +5629,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6afe</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5650,7 +5650,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5721,7 +5721,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6afc</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5742,7 +5742,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5813,7 +5813,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ae5</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5834,7 +5834,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -5912,7 +5912,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ae3</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -5933,7 +5933,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6004,7 +6004,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ae1</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6025,7 +6025,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6096,7 +6096,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6aca</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6117,7 +6117,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6195,7 +6195,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ac8</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6216,7 +6216,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6287,7 +6287,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6ac6</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6308,7 +6308,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6379,7 +6379,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6aaf</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6400,7 +6400,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6478,7 +6478,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6aad</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6499,7 +6499,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>74</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6570,7 +6570,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6aab</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6591,7 +6591,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>56</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6662,7 +6662,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a94</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6683,7 +6683,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6761,7 +6761,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a92</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6782,7 +6782,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>83</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6853,7 +6853,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a90</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6874,7 +6874,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -6945,7 +6945,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a79</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -6966,7 +6966,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7044,7 +7044,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a77</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7136,7 +7136,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a75</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7228,7 +7228,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a5e</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7249,7 +7249,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7327,7 +7327,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a5c</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7348,7 +7348,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7419,7 +7419,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a5a</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7440,7 +7440,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7511,7 +7511,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a3c</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7532,7 +7532,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7610,7 +7610,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a3a</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7631,7 +7631,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7702,7 +7702,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a38</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7723,7 +7723,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7794,7 +7794,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a21</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7815,7 +7815,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7893,7 +7893,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a1f</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -7914,7 +7914,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -7985,7 +7985,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a1d</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8006,7 +8006,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8077,7 +8077,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a06</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8098,7 +8098,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8176,7 +8176,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a04</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8197,7 +8197,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>74</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8268,7 +8268,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6a02</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8289,7 +8289,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>56</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8360,7 +8360,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69eb</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8381,7 +8381,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8459,7 +8459,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69e9</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8480,7 +8480,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>83</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8551,7 +8551,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69e7</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8572,7 +8572,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>43</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8643,7 +8643,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69d0</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8664,7 +8664,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -8742,7 +8742,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69ce</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8834,7 +8834,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69cc</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8926,7 +8926,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69b5</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -8947,7 +8947,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9025,7 +9025,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69b3</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9046,7 +9046,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9117,7 +9117,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-69b1</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9138,7 +9138,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>75</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9209,7 +9209,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-62a0</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_70</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9230,7 +9230,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9308,7 +9308,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-629e</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_71</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9329,7 +9329,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9400,7 +9400,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-629c</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_72</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9421,7 +9421,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9492,7 +9492,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-625b</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9513,7 +9513,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>130</width>
+          <width>110</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9591,7 +9591,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6259</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_5</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9612,7 +9612,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>91</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -9683,7 +9683,7 @@ $(pv_value)</tooltip>
           <wuid>20cc3228:14da01c427d:-6257</wuid>
           <auto_size>true</auto_size>
           <scripts />
-          <height>20</height>
+          <height>16</height>
           <name>Label Template_6</name>
           <scale_options>
             <width_scalable>true</width_scalable>
@@ -9704,7 +9704,7 @@ $(pv_value)</tooltip>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
           </font>
-          <width>88</width>
+          <width>82</width>
           <border_style>0</border_style>
           <rules />
           <border_width>2</border_width>
@@ -11391,7 +11391,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Device</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -11432,7 +11432,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>cSetV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -11473,7 +11473,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>sSetV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -11514,7 +11514,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>sRdV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -23366,7 +23366,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>Device</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -23407,7 +23407,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>cSetV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -23448,7 +23448,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>sSetV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
@@ -23489,7 +23489,7 @@ $(pv_value)</tooltip>
             <color name="IO Text Fg" red="0" green="32" blue="92" />
           </foreground_color>
           <widget_type>Label</widget_type>
-          <enabled>false</enabled>
+          <enabled>true</enabled>
           <text>sRdV</text>
           <font>
             <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>

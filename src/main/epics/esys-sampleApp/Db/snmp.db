@@ -175,24 +175,16 @@ record(longout, "$(DEV):Log:cmdReset")
   field(OUT, "@$(HOST) public %(E)cmdResetHistoryLog.$(CHAN) INTEGER: 100 i")
 }
 
-# Download the history log page: data - start page (starting from 0, 3 entries in page)
+# Download the history log page: data - record #n (starting from 1,
+# reads records n, n-1 and n-2)
 record(longout, "$(DEV):Log:cDownloadPage")
 {
-  field(DESC, "SNMP channel- select page to read")
+  field(DESC, "SNMP channel- select record #")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
-  field(HOPR, "1667")
+  field(HOPR, "5000")
   field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
 }
-
-#record(longin, "$(DEV):Log:sBufLen")
-#{
-#  field(DESC, "SNMP channel- # of history records")
-#  field(SCAN, ".5 second")
-#  field(DTYP, "Snmp")
-#  field(INP, "@$(HOST) public %(E)sysHistoryLogRecordCount.$(CHAN) INTEGER: 100 i")
-#}
-
 
 #record(waveform, "$(DEV):sysHistoryBuf-wfm")
 #{

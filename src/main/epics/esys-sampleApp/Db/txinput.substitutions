@@ -105,19 +105,19 @@ file "write.template" { pattern
 {TestChan, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "kV", 0.01, 0, 100, 2}
 }
 
-#file "hlogtstamp.template" { pattern
-#{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
-#{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
-#}
+file "hlogtstamp.template" { pattern
+{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
+{TestChan, sysHLogRecord1timestart,	R1Tstart,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord1timestop,	R1Tstop,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord2timestart,	R2Tstart,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord2timestop,	R2Tstop,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord3timestart,	R3Tstart,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord3timestop,	R3Tstop,	192.168.10.40, public, 0}
+}
 
-#file "hlogcode.template" { pattern
-#{DEV,      SIG,			PV_SIG,		HOST,	     PASSWD, CHAN}
-#{TestChan, sysHLogRecord1code,	R1code,		192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord2code,	R2code,		192.168.10.40, public, 0}
-#{TestChan, sysHLogRecord3code,	R3code,		192.168.10.40, public, 0}
-#}
+file "hlogcode.template" { pattern
+{DEV,      SIG,			PV_SIG1, PV_SIG2,	HOST,	     PASSWD, CHAN}
+{TestChan, sysHLogRecord1code,	sR1code, sR1Msg,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord2code,	sR2code, sR2Msg,	192.168.10.40, public, 0}
+{TestChan, sysHLogRecord3code,	sR3code, sR3Msg,	192.168.10.40, public, 0}
+}

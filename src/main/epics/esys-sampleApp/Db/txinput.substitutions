@@ -78,13 +78,13 @@ file "states.template" { pattern
 {DEV,      SIG,			PVSIG,		HOST,	     PASSWD, CHAN}
 {HPRF-Esys, sysGlobalStatus,	Ampl:sGlobStat,	192.168.10.40, public, 0}
 {HPRF-Esys, sysGeneralInfo,	Ampl:sGenInfo,	192.168.10.40, public, 0}
-{HPRF-Esys, hpa1Status1,		hpa1-sStat1,	192.168.10.40, public, 0}
-{HPRF-Esys, hpa1Status2,		hpa1-sStat2,	192.168.10.40, public, 0}
+{HPRF-Esys, hpa1Status1,		hpa1:sStat1,	192.168.10.40, public, 0}
+{HPRF-Esys, hpa1Status2,		hpa1:sStat2,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa1DriverMod1Status,hpa1-DrvM1:sStat,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa1DriverMod2Status,hpa1-DrvM2:sStat,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa1DriverMod3Status,hpa1-DrvM3:sStat,	192.168.10.40, public, 0}
-{HPRF-Esys, hpa2Status1,		hpa2-sStat1,	192.168.10.40, public, 0}
-{HPRF-Esys, hpa2Status2,		hpa2-sStat2,	192.168.10.40, public, 0}
+{HPRF-Esys, hpa2Status1,		hpa2:sStat1,	192.168.10.40, public, 0}
+{HPRF-Esys, hpa2Status2,		hpa2:sStat2,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa2DriverMod1Status,hpa2-DrvM1:sStat,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa2DriverMod2Status,hpa2-DrvM2:sStat,	192.168.10.40, public, 0}
 {HPRF-Esys, hpa2DriverMod3Status,hpa2-DrvM3:sStat	192.168.10.40, public, 0}

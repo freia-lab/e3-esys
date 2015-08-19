@@ -23,7 +23,7 @@
     <groupId>org.iter.codac.units</groupId>
     <artifactId>epics-esys-sample</artifactId>
     <packaging>codac</packaging>
-    <version>0.0a1</version>
+    <version>0.1</version>
     <name>CODAC Core System epics-esys-sample module</name>
     <description>CODAC Core System epics-esys-sample module</description>
     <url>http://www.iter.org/</url>
@@ -65,7 +65,7 @@
                         <package name="opi">
                             <include type="boy" file="*" />
                             <include type="databrowser" file="*" />
-                            <include type="boy" file="*-SDDMain.opi" topopi="true" />
+                            <include type="boy" file="FactoryTest.opi" topopi="true" />
                         </package>
                         <package name="esys-sample-ioc">
                             <include type="ioc" name="esys-sample" runlevels="345" />

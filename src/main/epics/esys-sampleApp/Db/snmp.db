@@ -332,3 +332,42 @@ record(calc, "$(DEV):hpa2-Fil:sRampPerc")
   field(LOPR, 0)
   field(HOPR, 100)
 }
+
+record(calc, "$(DEV):Ampl:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>4)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+
+record(calc, "$(DEV):hpa1:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>8)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+
+record(calc, "$(DEV):hpa2:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>12)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}

@@ -23,7 +23,7 @@
     <groupId>org.iter.codac.units</groupId>
     <artifactId>epics-esys-sample</artifactId>
     <packaging>codac</packaging>
-    <version>0.1</version>
+    <version>0.2</version>
     <name>CODAC Core System epics-esys-sample module</name>
     <description>CODAC Core System epics-esys-sample module</description>
     <url>http://www.iter.org/</url>
@@ -67,8 +67,13 @@
                             <include type="databrowser" file="*" />
                             <include type="boy" file="FactoryTest.opi" topopi="true" />
                         </package>
-                        <package name="esys-sample-ioc">
-                            <include type="ioc" name="esys-sample" runlevels="345" />
+                        <package name="ioc">
+                           <requires>%{codac_rpm_prefix}-epics-snmp</requires>
+                           <include type="ioc" name="esys-sample" runlevels="345" />
+                            <include type="file" source="/main/epics/mibs/ESSV900-1-4.mib" target="apps/${project.artifactId}/mibs/" />
+                        </package>
+                        <package name="src">
+                            <include type="source" source="./src/main/epics" target="apps/${project.artifactId}/src" />
                         </package>
                     </packaging>
                 </configuration>

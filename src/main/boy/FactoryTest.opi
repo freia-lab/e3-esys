@@ -156,7 +156,7 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <wuid>-5767458d:14d95b1a7d8:-7cea</wuid>
     <scripts />
-    <height>176</height>
+    <height>210</height>
     <name>Commands</name>
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -440,7 +440,7 @@ $(pv_value)</tooltip>
       <border_color>
         <color name="IO Border" red="215" green="215" blue="215" />
       </border_color>
-      <y>70</y>
+      <y>80</y>
       <actions hook="false" hook_all="true">
         <action type="WRITE_PV">
           <pv_name>$(pv_name)</pv_name>
@@ -493,7 +493,7 @@ $(pv_value)</tooltip>
       <border_color>
         <color name="IO Border" red="215" green="215" blue="215" />
       </border_color>
-      <y>70</y>
+      <y>80</y>
       <actions hook="false" hook_all="true">
         <action type="WRITE_PV">
           <pv_name>$(pv_name)</pv_name>
@@ -506,6 +506,59 @@ $(pv_value)</tooltip>
       <tooltip>$(pv_name)
 $(pv_value)</tooltip>
       <x>86</x>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <visible>true</visible>
+      <wuid>6d6e2db0:14f82ea251c:-6b3a</wuid>
+      <scripts />
+      <height>30</height>
+      <style>1</style>
+      <name>Action Button Template_6</name>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <pv_name>$(P):Ampl:IpSrv:cmdReset</pv_name>
+      <background_color>
+        <color name="IO Button" red="178" green="178" blue="178" />
+      </background_color>
+      <foreground_color>
+        <color name="IO Foreground" red="0" green="0" blue="0" />
+      </foreground_color>
+      <widget_type>Action Button</widget_type>
+      <enabled>true</enabled>
+      <text>IPSrv Reset</text>
+      <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+      <font>
+        <opifont.name fontName="arial" height="10" style="1">IO Input 1</opifont.name>
+      </font>
+      <width>166</width>
+      <border_style>6</border_style>
+      <push_action_index>0</push_action_index>
+      <image></image>
+      <rules />
+      <pv_value />
+      <toggle_button>false</toggle_button>
+      <border_width>2</border_width>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215" />
+      </border_color>
+      <y>115</y>
+      <actions hook="false" hook_all="true">
+        <action type="WRITE_PV">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <timeout>10</timeout>
+          <confirm_message></confirm_message>
+          <description></description>
+        </action>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <x>0</x>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.gridLayout" version="1.0.0">
       <wuid>-5767458d:14d95b1a7d8:-7c17</wuid>
@@ -523,7 +576,7 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <wuid>-5767458d:14d95b1a7d8:-7a09</wuid>
     <scripts />
-    <height>496</height>
+    <height>466</height>
     <name>Central Section</name>
     <scale_options>
       <width_scalable>true</width_scalable>
@@ -547,12 +600,12 @@ $(pv_value)</tooltip>
     <border_style>12</border_style>
     <rules />
     <fc>false</fc>
-    <lock_children>false</lock_children>
+    <lock_children>true</lock_children>
     <border_width>1</border_width>
     <border_color>
       <color red="0" green="128" blue="255" />
     </border_color>
-    <y>255</y>
+    <y>289</y>
     <actions hook="false" hook_all="false" />
     <x>7</x>
     <tooltip></tooltip>
@@ -28375,12 +28428,12 @@ $(pv_value)</tooltip>
     <border_style>12</border_style>
     <rules />
     <fc>false</fc>
-    <lock_children>false</lock_children>
+    <lock_children>true</lock_children>
     <border_width>1</border_width>
     <border_color>
       <color red="0" green="128" blue="255" />
     </border_color>
-    <y>758</y>
+    <y>773</y>
     <actions hook="false" hook_all="false" />
     <x>19</x>
     <tooltip></tooltip>

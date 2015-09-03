@@ -51,6 +51,14 @@ record(longout, "$(DEV):Ampl:cmdStandby")
   field(OUT, "@$(HOST) public %(E)cmdSystemStandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
+record(longout, "$(DEV):Ampl-IpSrv:cmdReset")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdExecIpServerReset.$(CHAN) INTEGER: 100 i")
+}
+
 record(longout, "$(DEV):hpa1:cmdStart")
 {
   field(DESC, "SNMP channel")
@@ -108,7 +116,7 @@ record(longout, "$(DEV):hpa2:cmdStandby")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
-  field(OUT, "@$(HOST) public %(E)cmdHpa1StandByPowerOn.$(CHAN) INTEGER: 100 i")
+  field(OUT, "@$(HOST) public %(E)cmdHpa2StandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
 

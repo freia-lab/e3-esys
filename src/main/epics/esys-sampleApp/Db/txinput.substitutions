@@ -94,15 +94,15 @@ file "states.template" { pattern
 file "write.template" { pattern
 {DEV,      SIG,		       HOST,	     PASSWD, PV_SIG,		EGU, ESLO, LOPR,	HOPR, PREC}
 {HPRF-Esys, SetScreenGridVhpa1, 192.168.10.40, public,hpa1-SGridV:cSetV, "V", 1, 0, 1200, 0}
-{HPRF-Esys, SetCtrlGridOVhpa1, 192.168.10.40, public, hpa1-CGridOpV:cSetV,"V", -1, -400, 0, 0}
-{HPRF-Esys, SetCtrlGridBVhpa1, 192.168.10.40, public, hpa1-CGridBlV:cSetV,"V", -1, -400, 0, 0}
+{HPRF-Esys, SetCtrlGridOVhpa1, 192.168.10.40, public, hpa1-CGridOpV:cSetV,"V", 1, -400, -150, 0}
+{HPRF-Esys, SetCtrlGridBVhpa1, 192.168.10.40, public, hpa1-CGridBlV:cSetV,"V", 1, -400, -150, 0}
 {HPRF-Esys, SetFilamentVhpa1, 192.168.10.40,  public, hpa1-FilV:cSetV, "V", 0.01, 0, 50, 2}
 {HPRF-Esys, SetScreenGridVhpa2, 192.168.10.40, public,hpa2-SGridV:cSetV, "V", 1, 0, 1200, 0}
-{HPRF-Esys, SetCtrlGridOVhpa2, 192.168.10.40, public, hpa2-CGridOpV:cSetV, "V", -1, -400, 0, 0}
-{HPRF-Esys, SetCtrlGridBVhpa2, 192.168.10.40, public, hpa2-CGridBlV:cSetV, "V", -1, -400, 0, 0}
+{HPRF-Esys, SetCtrlGridOVhpa2, 192.168.10.40, public, hpa2-CGridOpV:cSetV, "V", 1, -400, -150, 0}
+{HPRF-Esys, SetCtrlGridBVhpa2, 192.168.10.40, public, hpa2-CGridBlV:cSetV, "V", 1, -400, -150, 0}
 {HPRF-Esys, SetFilamentVhpa2, 192.168.10.40,  public, hpa2-FilV:cSetV, "V", 0.01, 0, 50, 2}
 {HPRF-Esys, SetHVpower, 192.168.10.40, 	     public, Ampl-RFPwr:cSetV, "kW", 0.01, 0, 400, 2}
-{HPRF-Esys, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "kV", 0.01, 0, 100, 2}
+{HPRF-Esys, SetHV, 192.168.10.40, 	     public, Ampl-RFV:cSetV, "V", 1, 0, 18000, 0}
 }
 
 file "hlogtstamp.template" { pattern

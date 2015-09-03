@@ -6,6 +6,6 @@
 #epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "YES")
 
 epicsEnvSet("MIBDIRS", "+$(TOP)/mibs")
-epicsEnvSet("E", "ESSV900-1-4::")
+epicsEnvSet("E", "ESSV900-1-6::")
 epicsEnvSet("W", "SNMPv2-MIB::")
 epicsEnvSet("N", "NOTIFICATION-LOG-MIB::")

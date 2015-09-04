@@ -521,7 +521,7 @@ $(pv_value)</tooltip>
         <height_scalable>true</height_scalable>
         <keep_wh_ratio>false</keep_wh_ratio>
       </scale_options>
-      <pv_name>$(P):Ampl:IpSrv:cmdReset</pv_name>
+      <pv_name>$(P):Ampl-IpSrv:cmdReset</pv_name>
       <background_color>
         <color name="IO Button" red="178" green="178" blue="178" />
       </background_color>

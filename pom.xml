@@ -23,7 +23,7 @@
     <groupId>org.iter.codac.units</groupId>
     <artifactId>epics-esys-sample</artifactId>
     <packaging>codac</packaging>
-    <version>0.2</version>
+    <version>1.0</version>
     <name>CODAC Core System epics-esys-sample module</name>
     <description>CODAC Core System epics-esys-sample module</description>
     <url>http://www.iter.org/</url>

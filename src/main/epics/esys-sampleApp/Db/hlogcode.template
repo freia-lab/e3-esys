@@ -10,10 +10,10 @@ record(longin, "$(DEV):Log:$(PV_SIG1)")
 record(aSub, "$(DEV):Log:$(PV_SIG1)-aSub")
 {
   field(DESC, "Event code decoding")
-  field(INPA, "$(DEV):Log:$(PV_SIG1)")
+  field(INPA, "$(DEV):Log:$(PV_SIG1) MS")
   field(FTA, "ULONG")
   field(FTVA, "STRING")
-  field(OUTA, "$(DEV):Log:$(PV_SIG2)")
+  field(OUTA, "$(DEV):Log:$(PV_SIG2) MS")
   field(FLNK, "$(DEV):Log:$(PV_SIG2) PP")
   field(SNAM, "code2msgProcess")
 }

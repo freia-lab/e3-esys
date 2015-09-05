@@ -10,10 +10,10 @@ record(longin, "$(DEV):Log:$(PV_SIG)")
 record(aSub, "$(DEV):Log:$(PV_SIG)-aSub")
 {
   field(DESC, "Time stamp decoding")
-  field(INPA, "$(DEV):Log:$(PV_SIG)")
+  field(INPA, "$(DEV):Log:$(PV_SIG) MS")
   field(FTA, "ULONG")
   field(FTVA, "STRING")
-  field(OUTA, "$(DEV):Log:s$(PV_SIG)")
+  field(OUTA, "$(DEV):Log:s$(PV_SIG) MS")
   field(FLNK, "$(DEV):Log:s$(PV_SIG) PP")
   field(SNAM, "myAsubProcess")
 }

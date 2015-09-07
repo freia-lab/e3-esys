@@ -10,7 +10,7 @@ record(longin, "$(DEV):Log:$(PV_SIG)")
 record(aSub, "$(DEV):Log:$(PV_SIG)-aSub")
 {
   field(DESC, "Time stamp decoding")
-  field(INPA, "$(DEV):Log:$(PV_SIG) MS")
+  field(INPA, "$(DEV):Log:$(PV_SIG) MSI")
   field(FTA, "ULONG")
   field(FTVA, "STRING")
   field(OUTA, "$(DEV):Log:s$(PV_SIG) MS")

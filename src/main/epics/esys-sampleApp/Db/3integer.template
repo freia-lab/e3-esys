@@ -1,7 +1,7 @@
 record(longin, "$(DEV):$(SIG)")
 {
   field(DESC, "SNMP channel")
-  field(SCAN, ".5 second")
+  field(SCAN, "1 second")
   field(DTYP, "Snmp")
   field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
   field(FLNK, "$(DEV):$(SIG1)")
@@ -9,7 +9,7 @@ record(longin, "$(DEV):$(SIG)")
 
 record(calc, "$(DEV):$(SIG1)")
 {
-  field(INPA, "$(DEV):$(SIG) MS")
+  field(INPA, "$(DEV):$(SIG) MSI")
   field(INPB, "$(SCAL1)")
   field(INPC, "0xFF")
   field(PREC, "$(PREC1)")

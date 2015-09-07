@@ -55,6 +55,6 @@ iocInit
 #< "${TOP}/iocBoot/iocesys-sample/sddSeqToLoad.cmd"
 #< "${TOP}/iocBoot/iocesys-sample/seqToLoad.cmd"
 #< "${TOP}/iocBoot/iocesys-sample/sddPostDriverConf.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/userPostDriverConf.cmd"
+< "${TOP}/iocBoot/iocesys-sample/userPostDriverConf.cmd"
 
 

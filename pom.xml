@@ -70,7 +70,7 @@
                         <package name="ioc">
                            <requires>%{codac_rpm_prefix}-epics-snmp</requires>
                            <include type="ioc" name="esys-sample" runlevels="345" />
-                            <include type="file" source="/main/epics/mibs/ESSV900-1-4.mib" target="apps/${project.artifactId}/mibs/" />
+                            <include type="file" source="./main/epics/mibs/" target="apps/${project.artifactId}/" />
                         </package>
                         <package name="src">
                             <include type="source" source="./src/main/epics" target="apps/${project.artifactId}/src" />

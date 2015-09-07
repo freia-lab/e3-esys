@@ -157,7 +157,7 @@ record(longout, "$(DEV):Ampl:cmdAGCOff")
 record(stringin, "$(DEV):Ampl:sysContact")
 {
   field(DESC, "SNMP channel")
-  field(SCAN, "10 second")
+#  field(SCAN, "10 second")
   field(DTYP, "Snmp")
   field(INP, "@$(HOST) public %(W)sysContact.$(CHAN) STRING: 100 s")
 }
@@ -166,7 +166,7 @@ record(stringin, "$(DEV):Ampl:sysContact")
 record(stringin, "$(DEV):Ampl:sysDescr")
 {
   field(DESC, "SNMP channel")
-  field(SCAN, "10 second")
+#  field(SCAN, "10 second")
   field(DTYP, "Snmp")
 #  field(FTVL, "CHAR")
 #  field(NELM, "200")

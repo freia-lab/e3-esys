@@ -178,7 +178,14 @@ $(pv_value)</tooltip>
     </font>
     <width>251</width>
     <border_style>13</border_style>
-    <rules />
+    <rules>
+      <rule name="Enabled" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv trig="true">$(P):Ampl:sLocal</pv>
+      </rule>
+    </rules>
     <fc>false</fc>
     <lock_children>false</lock_children>
     <border_width>1</border_width>
@@ -11405,7 +11412,15 @@ $(pv_value)</tooltip>
         </font>
         <width>415</width>
         <border_style>0</border_style>
-        <rules />
+        <rules>
+          <rule name="enabled" prop_id="enabled" out_exp="false">
+            <exp bool_exp="(pv0==1)||(pv1==1)||(pv1==2)">
+              <value>false</value>
+            </exp>
+            <pv trig="true">$(P):Ampl:sLocal</pv>
+            <pv trig="true">$(P):hpa$(nr)-Fil:sRampStat</pv>
+          </rule>
+        </rules>
         <fc>false</fc>
         <lock_children>true</lock_children>
         <border_width>1</border_width>
@@ -12978,7 +12993,11 @@ $(pv_value)</tooltip>
         </macros>
         <visible>true</visible>
         <wuid>20cc3228:14da01c427d:-eb5</wuid>
-        <scripts />
+        <scripts>
+          <path pathString="scripts/enabled-remote.js" checkConnect="true" sfe="false" seoe="false">
+            <pv trig="true">$(P):Ampl:sLocal</pv>
+          </path>
+        </scripts>
         <height>95</height>
         <name>HPA$(nr) Commands</name>
         <scale_options>
@@ -23831,7 +23850,12 @@ $(pv_value)</tooltip>
         </macros>
         <visible>true</visible>
         <wuid>49f0507:14f082f2fc8:8a1</wuid>
-        <scripts />
+        <scripts>
+          <path pathString="scripts/enabled-rem-not-ramp.js" checkConnect="true" sfe="false" seoe="true">
+            <pv trig="true">$(P):Ampl:sLocal</pv>
+            <pv trig="true">$(P):hpa$(nr)-Fil:sRampStat</pv>
+          </path>
+        </scripts>
         <height>125</height>
         <name>Panel 2_2</name>
         <scale_options>

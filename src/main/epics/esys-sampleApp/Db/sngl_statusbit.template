@@ -1,10 +1,10 @@
-record(mbbi, "$(DEV):$(PVSIG)")
+record(mbbi, "$(P):$(DEV):$(PVSIG)")
 {
   field(DESC, "$(DESCR)")
   field(SCAN, "1 second")
   field(PHAS, "2")
   field(DTYP, "Raw Soft Channel")
-  field(INP, "$(DEV):$(INP) MS")
+  field(INP, "$(P):$(INP) MS")
   field (SHFT, "$(SHFT)")
   field (NOBT, 1)
   field (ZRST, "$(ZRST)")

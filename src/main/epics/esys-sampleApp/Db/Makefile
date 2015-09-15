@@ -14,9 +14,12 @@ DB += snmp.db
 DB += integer.template
 DB += 3integer.template
 DB += states.template
+DB += states_MS.template
+DB += sngl_statusbit.template
 DB += write.template
 DB += hlogtstamp.template
 DB += hlogcode.template
+DB += comstat.template
 DB += txinput.substitutions
 
 #----------------------------------------------------

@@ -1,0 +1,12 @@
+record(calc, "$(P):$(DEV):sComStat")
+{
+  field(INPA, "$(P):Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>$(BIT))&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}

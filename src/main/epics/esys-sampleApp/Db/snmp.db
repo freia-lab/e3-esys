@@ -1,24 +1,3 @@
-#
-#  Basic PVs for a Wiener/ISEG/MPOD power supply channel
-#
-#  Macros required:
-#     DEV   : base device name
-#     HOST  : SNMP host
-#     CHAN  : ISEG slot/channel ID, for example u300 = slot 4 channel 0
-#     GROUP : Group number channel belongs to
-#                0   : whole crate
-#                64  : all HV modules
-#                128 : all LV modules
-#             (older Wiener/ISEGs may instead have group numbers for each slot)
-
-#record(longout, "$(DEV):OnCommand")
-#{
-#  field(DESC, "SNMP channel")
-#  field(DTYP, "Snmp")
-#  field(SCAN, "Passive")
-#  field(OUT, "@$(HOST) guru %(W)outputSwitch.$(CHAN) ( 100 i")
-#}
-
 # Commands
 
 record(longout, "$(DEV):Ampl:cmdStart")
@@ -144,15 +123,7 @@ record(longout, "$(DEV):Ampl:cmdAGCOff")
   field(OUT, "@$(HOST) public %(E)cmdSetAgcDisabled.$(CHAN) INTEGER: 100 i")
 }
 
-
-
-#record(longout, "$(DEV):txPowerSet-w")
-#{
-#  field(DESC, "SNMP channel")
-#  field(SCAN, "Passive")
-#  field(DTYP, "Snmp")
-#  field(OUT, "@$(HOST) public %(E)cmdTxPowerSet.$(CHAN) INTEGER: 100 i")
-#}
+# Records to be processed only once when ioc boots
 
 record(stringin, "$(DEV):Ampl:sysContact")
 {
@@ -161,7 +132,6 @@ record(stringin, "$(DEV):Ampl:sysContact")
   field(DTYP, "Snmp")
   field(INP, "@$(HOST) public %(W)sysContact.$(CHAN) STRING: 100 s")
 }
-
 
 record(stringin, "$(DEV):Ampl:sysDescr")
 {
@@ -212,6 +182,7 @@ record(longout, "$(DEV):Log:cDownloadPage")
 #   field (INPA, "1")
 #}
 
+# 
 # PV for retrieving the status in easy readable format
 record(mbbi, "$(DEV):hpa1:sGlobStat")
 {
@@ -257,12 +228,19 @@ record(mbbi, "$(DEV):hpa2:sGlobStat")
   field (THSV, "MINOR")
 }
 
+record(calc, "$(DEV):hpa1-Fil:sRampStat-raw")
+{
+  field (SCAN, "1 second")
+  field(INPA, "$(DEV):hpa1:sStat1 MSI")
+  field(INPB, "$(DEV):Ampl-hpa1:sComStat MS")
+  field(CALC, "A")
+  field(FLNK, "$(DEV):hpa1-Fil:sRampStat")
+}
 record(mbbi, "$(DEV):hpa1-Fil:sRampStat")
 {
   field (DESC, "HPA1 Filament Status")
-  field (SCAN, "1 second")
   field (DTYP, "Raw Soft Channel")
-  field (INP, "$(DEV):hpa1:sStat1 MSI")
+  field (INP, "$(DEV):hpa1-Fil:sRampStat-raw MS")
   field (SHFT, 4)
   field (NOBT, 3)
   field (ZRVL, 0)
@@ -277,32 +255,20 @@ record(mbbi, "$(DEV):hpa1-Fil:sRampStat")
   field (FRST, "Down Completed")
 }
 
-record(mbbi, "$(DEV):hpa1-Fil:sRampStat")
+
+record(calc, "$(DEV):hpa2-Fil:sRampStat-raw")
 {
-  field (DESC, "HPA1 Filament Ramp Status")
   field (SCAN, "1 second")
-  field (DTYP, "Raw Soft Channel")
-  field (INP, "$(DEV):hpa1:sStat1 MSI")
-  field (SHFT, 4)
-  field (NOBT, 3)
-  field (ZRVL, 0)
-  field (ONVL, 1)
-  field (TWVL, 2)
-  field (THVL, 3)
-  field (FRVL, 4)
-  field (ZRST, "Idle")
-  field (ONST, "Up")
-  field (TWST, "Down")
-  field (THST, "Up Completed")
-  field (FRST, "Down Completed")
+  field(INPA, "$(DEV):hpa2:sStat1 MSI")
+  field(INPB, "$(DEV):Ampl-hpa2:sComStat MS")
+  field(CALC, "A")
+  field(FLNK, "$(DEV):hpa2-Fil:sRampStat")
 }
-
 record(mbbi, "$(DEV):hpa2-Fil:sRampStat")
 {
   field (DESC, "HPA2 Filament Ramp Status")
-  field (SCAN, "1 second")
   field (DTYP, "Raw Soft Channel")
-  field (INP, "$(DEV):hpa2:sStat1 MSI")
+  field (INP, "$(DEV):hpa2-Fil:sRampStat-raw MS")
   field (SHFT, 4)
   field (NOBT, 3)
   field (ZRVL, 0)
@@ -322,6 +288,7 @@ record(calc, "$(DEV):hpa1-Fil:sRampPerc")
   field(INPA, "$(DEV):hpa1:sStat1 MSI")
   field (SCAN, "1 second")
   field(INPB, "0xFF")
+  field(INPC, "$(DEV):Ampl-hpa1:sComStat MS")
   field(PREC, "0")
   field(EGU, "%")
   field(CALC, "(A>>8)&B")
@@ -334,6 +301,7 @@ record(calc, "$(DEV):hpa2-Fil:sRampPerc")
   field(INPA, "$(DEV):hpa2:sStat1 MSI")
   field (SCAN, "1 second")
   field(INPB, "0xFF")
+  field(INPC, "$(DEV):Ampl-hpa2:sComStat MS")
   field(PREC, "0")
   field(EGU, "%")
   field(CALC, "(A>>8)&B")
@@ -354,7 +322,7 @@ record(calc, "$(DEV):Ampl:sComStat")
   field(HSV, "MAJOR")
 }
 
-record(calc, "$(DEV):hpa1:sComStat")
+record(calc, "$(DEV):Ampl-hpa1:sComStat")
 {
   field(INPA, "$(DEV):Ampl:sGlobStat MSI")
   field (SCAN, "1 second")
@@ -367,7 +335,7 @@ record(calc, "$(DEV):hpa1:sComStat")
   field(HSV, "MAJOR")
 }
 
-record(calc, "$(DEV):hpa2:sComStat")
+record(calc, "$(DEV):Ampl-hpa2:sComStat")
 {
   field(INPA, "$(DEV):Ampl:sGlobStat MSI")
   field (SCAN, "1 second")

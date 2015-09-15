@@ -1,0 +1,15 @@
+record(longin, "$(DEV):$(PVSIG)-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).0 INTEGER: 100 i")
+  field(FLNK, "$(DEV):$(PVSIG)")
+}
+
+record(calc, "$(DEV):$(PVSIG)")
+{
+  field(INPA, "$(DEV):$(PVSIG)-raw MSI")
+  field(INPB, "$(DEV):$(INPMS):sComStat MS")
+  field(CALC, "A")
+}

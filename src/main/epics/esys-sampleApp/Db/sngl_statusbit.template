@@ -1,0 +1,16 @@
+record(mbbi, "$(DEV):$(PVSIG)")
+{
+  field(DESC, "$(DESCR)")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "$(DEV):$(INP) MS")
+  field (SHFT, "$(SHFT)")
+  field (NOBT, 1)
+  field (ZRST, "$(ZRST)")
+  field (ONST, "$(ONST)")
+  field (ZRVL, "$(ZRVL)")
+  field (ONVL, "$(ONVL)")
+  field (ZRSV, "$(ZRSV)")
+  field (ONSV, "$(ONSV)")
+}

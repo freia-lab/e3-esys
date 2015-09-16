@@ -23,11 +23,15 @@ file "sngl_statusbit.template" { pattern
 {P,         DEV,        PVSIG,        INP,		SHFT,	  ZRVL, ONVL, ZRST,  ONST,   ZRSV,  ONSV,	DESCR}
 {HPRF-Esys, CentrSys, 	sAlrm-CChrgHV,CentrSys:sStat,	0,	  1,	0,    "OK", "Alarm", NO_ALARM, MAJOR, "Capacity charger HV"}
 {HPRF-Esys, hpa1-DrvM3, sIntlk,       hpa1-DrvM3:sStat,	0,	  0,	1,    "Alarm", "OK", MAJOR, NO_ALARM, "DrvM3 Interlock"}
-{HPRF-Esys, Ampl,     	sLocal,       sGlobStat,	0,	  1,	0,    "Remote", "Local", NO_ALARM, MINOR, "Local Mode"}
-{HPRF-Esys, hpa1,     	sPwrOn,       sGlobStat,	25,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
-{HPRF-Esys, hpa2,     	sPwrOn,       sGlobStat,	27,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
-{HPRF-Esys, hpa1,     	sRF-Enbld,    sGlobStat,	28,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
-{HPRF-Esys, hpa2,     	sRF-Enbld,    sGlobStat,	29,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, Ampl,     	sLocal,       Ampl:sGlobStat,	0,	  1,	0,    "Remote", "Local", NO_ALARM, MINOR, "Local Mode"}
+{HPRF-Esys, hpa1,     	sCmdStart,    Ampl:sGlobStat,	20,	  0,	1,    "Stopped", "Started", NO_ALARM, NO_ALARM, "Start cmd status"}
+{HPRF-Esys, hpa1,     	sStart,       Ampl:sGlobStat,	21,	  0,	1,    "Not running", "Running", NO_ALARM, NO_ALARM, "Run status"}
+{HPRF-Esys, hpa2,     	sCmdStart,    Ampl:sGlobStat,	22,	  0,	1,    "Stopped", "Started", NO_ALARM, NO_ALARM, "Start cmd status"}
+{HPRF-Esys, hpa2,     	sStart,       Ampl:sGlobStat,	23,	  0,	1,    "Not running", "Running", NO_ALARM, NO_ALARM, "Run status"}
+{HPRF-Esys, hpa1,     	sPwrOn,       Ampl:sGlobStat,	25,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa2,     	sPwrOn,       Ampl:sGlobStat,	27,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa1,     	sRF-Enbld,    Ampl:sGlobStat,	28,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa2,     	sRF-Enbld,    Ampl:sGlobStat,	29,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
 }
 
 file "comstat.template" { pattern

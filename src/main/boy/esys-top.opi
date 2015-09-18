@@ -77,6 +77,7 @@
   <widget typeId="org.csstudio.opibuilder.widgets.tab" version="1.0.0">
     <macros>
       <include_parent_macros>true</include_parent_macros>
+      <nr>2</nr>
     </macros>
     <tab_2_enabled>true</tab_2_enabled>
     <tab_3_background_color>
@@ -199,12 +200,53 @@
       <actions hook="false" hook_all="false" />
       <x>1</x>
       <tooltip></tooltip>
+      <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+        </macros>
+        <visible>true</visible>
+        <wuid>4267d76c:14fd02e5381:-2b2f</wuid>
+        <auto_size>false</auto_size>
+        <scripts />
+        <zoom_to_fit>true</zoom_to_fit>
+        <height>615</height>
+        <name>Linking Container Template</name>
+        <scale_options>
+          <width_scalable>true</width_scalable>
+          <height_scalable>true</height_scalable>
+          <keep_wh_ratio>false</keep_wh_ratio>
+        </scale_options>
+        <opi_file>helper-opi-files/overview.opi</opi_file>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="188" green="188" blue="188" />
+        </background_color>
+        <group_name></group_name>
+        <enabled>true</enabled>
+        <widget_type>Linking Container</widget_type>
+        <font>
+          <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+        </font>
+        <width>1180</width>
+        <border_style>0</border_style>
+        <rules />
+        <border_width>2</border_width>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215" />
+        </border_color>
+        <y>10</y>
+        <actions hook="false" hook_all="false" />
+        <x>5</x>
+        <tooltip></tooltip>
+      </widget>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
         <include_parent_macros>true</include_parent_macros>
       </macros>
-      <visible>false</visible>
+      <visible>true</visible>
       <wuid>4267d76c:14fd02e5381:-548b</wuid>
       <scripts />
       <height>651</height>
@@ -240,6 +282,48 @@
       <actions hook="false" hook_all="false" />
       <x>1</x>
       <tooltip></tooltip>
+      <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <nr>1</nr>
+        </macros>
+        <visible>true</visible>
+        <wuid>4267d76c:14fd02e5381:-2212</wuid>
+        <auto_size>false</auto_size>
+        <scripts />
+        <zoom_to_fit>true</zoom_to_fit>
+        <height>615</height>
+        <name>Linking Container Template</name>
+        <scale_options>
+          <width_scalable>true</width_scalable>
+          <height_scalable>true</height_scalable>
+          <keep_wh_ratio>false</keep_wh_ratio>
+        </scale_options>
+        <opi_file>helper-opi-files/hpa-Main.opi</opi_file>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="188" green="188" blue="188" />
+        </background_color>
+        <group_name></group_name>
+        <enabled>true</enabled>
+        <widget_type>Linking Container</widget_type>
+        <font>
+          <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+        </font>
+        <width>1180</width>
+        <border_style>0</border_style>
+        <rules />
+        <border_width>2</border_width>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215" />
+        </border_color>
+        <y>10</y>
+        <actions hook="false" hook_all="false" />
+        <x>5</x>
+        <tooltip></tooltip>
+      </widget>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
@@ -281,12 +365,53 @@
       <actions hook="false" hook_all="false" />
       <x>1</x>
       <tooltip></tooltip>
+      <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+        </macros>
+        <visible>true</visible>
+        <wuid>4267d76c:14fd02e5381:-2196</wuid>
+        <auto_size>false</auto_size>
+        <scripts />
+        <zoom_to_fit>true</zoom_to_fit>
+        <height>615</height>
+        <name>Linking Container Template</name>
+        <scale_options>
+          <width_scalable>true</width_scalable>
+          <height_scalable>true</height_scalable>
+          <keep_wh_ratio>false</keep_wh_ratio>
+        </scale_options>
+        <opi_file>helper-opi-files/hpa-Main.opi</opi_file>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="188" green="188" blue="188" />
+        </background_color>
+        <group_name></group_name>
+        <enabled>true</enabled>
+        <widget_type>Linking Container</widget_type>
+        <font>
+          <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+        </font>
+        <width>1180</width>
+        <border_style>0</border_style>
+        <rules />
+        <border_width>2</border_width>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215" />
+        </border_color>
+        <y>10</y>
+        <actions hook="false" hook_all="false" />
+        <x>5</x>
+        <tooltip></tooltip>
+      </widget>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
         <include_parent_macros>true</include_parent_macros>
       </macros>
-      <visible>true</visible>
+      <visible>false</visible>
       <wuid>4267d76c:14fd02e5381:-5489</wuid>
       <scripts />
       <height>651</height>
@@ -331,7 +456,7 @@
         <auto_size>false</auto_size>
         <scripts />
         <zoom_to_fit>false</zoom_to_fit>
-        <height>226</height>
+        <height>635</height>
         <name>Linking Container Template</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -351,7 +476,7 @@
         <font>
           <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
         </font>
-        <width>1216</width>
+        <width>1215</width>
         <border_style>0</border_style>
         <rules />
         <border_width>2</border_width>
@@ -471,7 +596,11 @@ $(pv_value)</tooltip>
       </macros>
       <visible>true</visible>
       <wuid>4267d76c:14fd02e5381:-45a3</wuid>
-      <scripts />
+      <scripts>
+        <path pathString="scripts/enabled-remote.js" checkConnect="true" sfe="false" seoe="false">
+          <pv trig="true">$(P):Ampl:sLocal</pv>
+        </path>
+      </scripts>
       <height>103</height>
       <name>Commands</name>
       <scale_options>

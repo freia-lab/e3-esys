@@ -65,7 +65,7 @@
                         <package name="opi">
                             <include type="boy" file="*" />
                             <include type="databrowser" file="*" />
-                            <include type="boy" file="FactoryTest.opi" topopi="true" />
+                            <include type="boy" file="esys-top.opi" topopi="true" />
                         </package>
                         <package name="ioc">
                            <requires>%{codac_rpm_prefix}-epics-snmp</requires>

@@ -206,10 +206,10 @@
         </macros>
         <visible>true</visible>
         <wuid>4267d76c:14fd02e5381:-2b2f</wuid>
-        <auto_size>false</auto_size>
+        <auto_size>true</auto_size>
         <scripts />
-        <zoom_to_fit>true</zoom_to_fit>
-        <height>615</height>
+        <zoom_to_fit>false</zoom_to_fit>
+        <height>624</height>
         <name>Linking Container Template</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -229,7 +229,7 @@
         <font>
           <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
         </font>
-        <width>1180</width>
+        <width>513</width>
         <border_style>0</border_style>
         <rules />
         <border_width>2</border_width>
@@ -246,7 +246,7 @@
       <macros>
         <include_parent_macros>true</include_parent_macros>
       </macros>
-      <visible>true</visible>
+      <visible>false</visible>
       <wuid>4267d76c:14fd02e5381:-548b</wuid>
       <scripts />
       <height>651</height>
@@ -289,10 +289,10 @@
         </macros>
         <visible>true</visible>
         <wuid>4267d76c:14fd02e5381:-2212</wuid>
-        <auto_size>false</auto_size>
+        <auto_size>true</auto_size>
         <scripts />
-        <zoom_to_fit>true</zoom_to_fit>
-        <height>615</height>
+        <zoom_to_fit>false</zoom_to_fit>
+        <height>1</height>
         <name>Linking Container Template</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -312,7 +312,7 @@
         <font>
           <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
         </font>
-        <width>1180</width>
+        <width>1</width>
         <border_style>0</border_style>
         <rules />
         <border_width>2</border_width>
@@ -329,7 +329,7 @@
       <macros>
         <include_parent_macros>true</include_parent_macros>
       </macros>
-      <visible>false</visible>
+      <visible>true</visible>
       <wuid>4267d76c:14fd02e5381:-548a</wuid>
       <scripts />
       <height>651</height>
@@ -371,10 +371,10 @@
         </macros>
         <visible>true</visible>
         <wuid>4267d76c:14fd02e5381:-2196</wuid>
-        <auto_size>false</auto_size>
+        <auto_size>true</auto_size>
         <scripts />
-        <zoom_to_fit>true</zoom_to_fit>
-        <height>615</height>
+        <zoom_to_fit>false</zoom_to_fit>
+        <height>1</height>
         <name>Linking Container Template</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -394,7 +394,7 @@
         <font>
           <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
         </font>
-        <width>1180</width>
+        <width>1</width>
         <border_style>0</border_style>
         <rules />
         <border_width>2</border_width>

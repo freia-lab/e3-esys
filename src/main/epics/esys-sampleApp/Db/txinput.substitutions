@@ -66,13 +66,13 @@ file "integer.template" { pattern
 {HPRF-Esys, hpa1DriverMod1Measure6,	192.168.10.40, public, 0, hpa1-DrvM1:sF1I, 1, "mA", 0, hpa1-DrvM1:sF2I, 1, 0, "mA", 0,	hpa1-DrvM1}
 {HPRF-Esys, hpa1DriverMod1Measure7,	192.168.10.40, public, 0, hpa1-DrvM1:sF3I, 1, "mA", 0, hpa1-DrvM1:sF4I, 1, 0, "mA", 0,	hpa1-DrvM1}
 {HPRF-Esys, hpa1DriverMod2Measure1,	192.168.10.40, public, 0, hpa1-DrvM2:sFwdPwr, 1, "W", 0, hpa1-DrvM2:sInPwr, 0.1, 0, "µW", 1,	hpa1-DrvM2}
-{HPRF-Esys, hpa1DriverMod2Measure2,	192.168.10.40, public, 0, hpa1-DrvM2:sReflPwr, 1, "W", 0, hpa1-DrvM2:sV, 0.1, 0, "V", 2,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure2,	192.168.10.40, public, 0, hpa1-DrvM2:sReflPwr, 1, "W", 0, hpa1-DrvM2:sV, 0.1, 0, "V", 1,	hpa1-DrvM2}
 {HPRF-Esys, hpa1DriverMod2Measure3,	192.168.10.40, public, 0, hpa1-DrvM2:sSvcV, 0.1, "V", 1, hpa1-DrvM2:sPDI, 1, 0, "mA", 0,	hpa1-DrvM2}
 {HPRF-Esys, hpa1DriverMod2Measure5,	192.168.10.40, public, 0, hpa1-DrvM2:sD1I, 1, "mA", 0, hpa1-DrvM2:sD2I, 1, 0, "mA", 0,	hpa1-DrvM2}
 {HPRF-Esys, hpa1DriverMod2Measure6,	192.168.10.40, public, 0, hpa1-DrvM2:sF1I, 1, "mA", 0, hpa1-DrvM2:sF2I, 1, 0, "mA", 0,	hpa1-DrvM2}
 {HPRF-Esys, hpa1DriverMod2Measure7,	192.168.10.40, public, 0, hpa1-DrvM2:sF3I, 1, "mA", 0, hpa1-DrvM2:sF4I, 1, 0, "mA", 0,	hpa1-DrvM2}
 {HPRF-Esys, hpa1DriverMod3Measure1,	192.168.10.40, public, 0, hpa1-DrvM3:sFwdPwr, 1, "W", 0, hpa1-DrvM3:sInPwr, 0.1, 0, "µW", 1,	hpa1-DrvM3}
-{HPRF-Esys, hpa1DriverMod3Measure2,	192.168.10.40, public, 0, hpa1-DrvM3:sReflPwr, 1, "W", 0, hpa1-DrvM3:sV, 0.1, 0, "V", 2,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure2,	192.168.10.40, public, 0, hpa1-DrvM3:sReflPwr, 1, "W", 0, hpa1-DrvM3:sV, 0.1, 0, "V", 1,	hpa1-DrvM3}
 {HPRF-Esys, hpa1DriverMod3Measure3,	192.168.10.40, public, 0, hpa1-DrvM3:sSvcV, 0.1, "V", 1, hpa1-DrvM3:sPDI, 1, 0, "mA", 0,	hpa1-DrvM3}
 {HPRF-Esys, hpa1DriverMod3Measure5,	192.168.10.40, public, 0, hpa1-DrvM3:sD1I, 1, "mA", 0, hpa1-DrvM3:sD2I, 1, 0, "mA", 0,	hpa1-DrvM3}
 {HPRF-Esys, hpa1DriverMod3Measure6,	192.168.10.40, public, 0, hpa1-DrvM3:sF1I, 1, "mA", 0, hpa1-DrvM3:sF2I, 1, 0, "mA", 0,	hpa1-DrvM3}

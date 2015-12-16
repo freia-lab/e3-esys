@@ -1,13 +1,16 @@
 require snmp
 
 epicsEnvSet("AUTOSAVE_SYSM_PV_PREFIX","esys:")
-epicsEnvSet("MIBDIRS", "+$(REQUIRE_ioc-esys-freia_PATH)/misc")
+epicsEnvSet("MIBDIRS", "+$(REQUIRE_ioc_esys_freia_PATH)/misc")
 epicsEnvSet("E", "ESSV900-1-6::")
 epicsEnvSet("W", "SNMPv2-MIB::")
 epicsEnvSet("N", "NOTIFICATION-LOG-MIB::")
 
-requireSnippet(userPreDriverConf-esys-freia.cmd, "IP_ADDR=$(CCU_IPADDR)")
-requireSnippet(dbToLoad-esys-freia.cmd, "HOST_IPADDR=$(CCU_IPADDR)")
+epicsEnvSet("CCU_IPADDR", $(HOST_IPADDR))
+
+
+requireSnippet(userPreDriverConf-esys-freia.cmd)
+requireSnippet(dbToLoad-esys-freia.cmd, "H_IPADDR=$(HOST_IPADDR)")
 
 #############################################
 ## IOC initialization                      ##

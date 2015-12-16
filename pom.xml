@@ -21,11 +21,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.iter.codac.units</groupId>
-    <artifactId>epics-esys-sample</artifactId>
+    <artifactId>epics-esys-freia</artifactId>
     <packaging>codac</packaging>
     <version>1.0</version>
-    <name>CODAC Core System epics-esys-sample module</name>
-    <description>CODAC Core System epics-esys-sample module</description>
+    <name>CODAC Core System epics-esys-freia module</name>
+    <description>CODAC Core System epics-esys-freia module</description>
     <url>http://www.iter.org/</url>
  
     <!-- project properties -->
@@ -69,7 +69,7 @@
                         </package>
                         <package name="ioc">
                            <requires>%{codac_rpm_prefix}-epics-snmp</requires>
-                           <include type="ioc" name="esys-sample" runlevels="345" />
+                           <include type="ioc" name="esys-freia" runlevels="345" />
                             <include type="file" source="./main/epics/mibs/" target="apps/${project.artifactId}/" />
                         </package>
                         <package name="src">

@@ -27,78 +27,78 @@ include $(TOP)/configure/CONFIG
 
 #=============================
 # Build the IOC support library
-#LIBRARY_IOC += esys-sampleSupport
+#LIBRARY_IOC += esys-freiaSupport
 
-#esys-sampleSupport_SRCS += subRecordFunctions.c
+#esys-freiaSupport_SRCS += subRecordFunctions.c
 
-#esys-sampleSupport_LIBS += $(EPICS_BASE_IOC_LIBS)
+#esys-freiaSupport_LIBS += $(EPICS_BASE_IOC_LIBS)
 
-PROD_IOC += esys-sample
+PROD_IOC += esys-freia
 
-# esys-sample.dbd will be created and installed
-DBD += esys-sample.dbd
+# esys-freia.dbd will be created and installed
+DBD += esys-freia.dbd
 
-# esys-sample.dbd will be made up from base.dbd and module dbds listed below:
-esys-sample_DBD += base.dbd
-esys-sample_DBD += subRecordFunctions.dbd
+# esys-freia.dbd will be made up from base.dbd and module dbds listed below:
+esys-freia_DBD += base.dbd
+esys-freia_DBD += subRecordFunctions.dbd
 
-# esys-sample_registerRecordDeviceDriver.cpp derives from esys-sample.dbd
-esys-sample_SRCS += esys-sample_registerRecordDeviceDriver.cpp
-esys-sample_SRCS += subRecordFunctions.c
+# esys-freia_registerRecordDeviceDriver.cpp derives from esys-freia.dbd
+esys-freia_SRCS += esys-freia_registerRecordDeviceDriver.cpp
+esys-freia_SRCS += subRecordFunctions.c
 
 
 # Build the main IOC entry point on workstation OSs.
-esys-sample_SRCS_DEFAULT += esys-sampleMain.cpp
-esys-sample_SRCS_vxWorks += -nil-
+esys-freia_SRCS_DEFAULT += esys-freiaMain.cpp
+esys-freia_SRCS_vxWorks += -nil-
 
 #=============================
 # Add support for the following uncommented modules:
 
 # # AUTOSAVE
-esys-sample_DBD += asSupport.dbd
-esys-sample_LIBS += autosave
+esys-freia_DBD += asSupport.dbd
+esys-freia_LIBS += autosave
 
 # # IOC Monitor
-esys-sample_DBD += iocmon.dbd
-esys-sample_LIBS += iocmon
+esys-freia_DBD += iocmon.dbd
+esys-freia_LIBS += iocmon
 
 # # System Monitor
-esys-sample_DBD += sysmon.dbd
-esys-sample_LIBS += sysmon
+esys-freia_DBD += sysmon.dbd
+esys-freia_LIBS += sysmon
 
 # # STD
-esys-sample_DBD += std.dbd
-esys-sample_LIBS += std
+esys-freia_DBD += std.dbd
+esys-freia_LIBS += std
 
 # # SNMP
-esys-sample_DBD += devSnmp.dbd
-esys-sample_LIBS += devSnmp
+esys-freia_DBD += devSnmp.dbd
+esys-freia_LIBS += devSnmp
 
 # # ASYN
-#esys-sample_DBD += asyn.dbd
-#esys-sample_LIBS += asyn
+#esys-freia_DBD += asyn.dbd
+#esys-freia_LIBS += asyn
 
 # # NI SYNC
-#esys-sample_DBD += nisync.dbd
-#esys-sample_LIBS += nisync-epics
+#esys-freia_DBD += nisync.dbd
+#esys-freia_LIBS += nisync-epics
 
 # # NI SYNC General Time
-#esys-sample_DBD += nisync-generalTime.dbd
-#esys-sample_LIBS += nisync-generalTime
+#esys-freia_DBD += nisync-generalTime.dbd
+#esys-freia_LIBS += nisync-generalTime
 
 # # NI PXI-6259
-#esys-sample_DBD += ni6259.dbd
-#esys-sample_LIBS += ni6259
+#esys-freia_DBD += ni6259.dbd
+#esys-freia_LIBS += ni6259
 
 # # S7PLC
-#esys-sample_DBD += s7plc.dbd
-#esys-sample_LIBS += s7plc
+#esys-freia_DBD += s7plc.dbd
+#esys-freia_LIBS += s7plc
 
 -include ../*.snlprog
 #=============================
 
 # Finally link to the EPICS Base libraries
-esys-sample_LIBS += $(EPICS_BASE_IOC_LIBS)
+esys-freia_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #=============================
 

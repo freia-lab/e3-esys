@@ -1,0 +1,349 @@
+# Commands
+
+record(longout, "$(DEV):Ampl:cmdStart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSystemStart.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):Ampl:cmdStop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSystemStop.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):Ampl:cmdReset")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdResetSystem.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):Ampl:cmdStandby")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSystemStandByPowerOn.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):Ampl-IpSrv:cmdReset")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdExecIpServerReset.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):hpa1:cmdStart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa1Start.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):hpa1:cmdStop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa1Stop.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):hpa1:cmdReset")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdResetHpa1.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):hpa1:cmdStandby")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa1StandByPowerOn.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):hpa2:cmdStart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa2Start.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):hpa2:cmdStop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa2Stop.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):hpa2:cmdReset")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdResetHpa2.$(CHAN) INTEGER: 100 i")
+}
+
+record(longout, "$(DEV):hpa2:cmdStandby")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdHpa2StandByPowerOn.$(CHAN) INTEGER: 100 i")
+}
+
+
+record(longout, "$(DEV):cmdSaveHistoryLog")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
+}
+
+# Automatic gain control
+record(longout, "$(DEV):Ampl:cmdAGCOn")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSetAgcEnabled.$(CHAN) INTEGER: 100 i")
+}
+record(longout, "$(DEV):Ampl:cmdAGCOff")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdSetAgcDisabled.$(CHAN) INTEGER: 100 i")
+}
+
+# Records to be processed only once when ioc boots
+
+record(stringin, "$(DEV):Ampl:sysContact")
+{
+  field(DESC, "SNMP channel")
+#  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@$(HOST) public %(W)sysContact.$(CHAN) STRING: 100 s")
+}
+
+record(stringin, "$(DEV):Ampl:sysDescr")
+{
+  field(DESC, "SNMP channel")
+#  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+#  field(FTVL, "CHAR")
+#  field(NELM, "200")
+  field(INP, "@$(HOST) public %(W)sysDescr.$(CHAN) STRING: 100 s")
+}
+
+# History buffer related records
+
+record(longout, "$(DEV):Log:cmdReset")
+{
+  field(DESC, "SNMP channel- clear history log")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(OUT, "@$(HOST) public %(E)cmdResetHistoryLog.$(CHAN) INTEGER: 100 i")
+}
+
+# Download the history log page: data - record #n (starting from 1,
+# reads records n, n-1 and n-2)
+record(longout, "$(DEV):Log:cDownloadPage")
+{
+  field(DESC, "SNMP channel- select record #")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(HOPR, "5000")
+  field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
+}
+
+#record(waveform, "$(DEV):sysHistoryBuf-wfm")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "5 second")
+#  field(DTYP, "Snmp")
+#  field(INP, "@$(HOST) public %(E)sysHistoryLogBuffer.$(CHAN) HEX-STRING: 2000 s h")
+#  field(NELM, "500")
+#  field(FTVL, "STRING")
+#}
+
+#record(sub, "$(DEV):subr1")
+#{
+#   field (INAM, "mysubInit")
+#   field (SNAM, "mysubProcess")
+#   field (SCAN, "1 second")
+#   field (INPA, "1")
+#}
+
+# 
+# PV for retrieving the status in easy readable format
+record(mbbi, "$(DEV):hpa1:sGlobStat")
+{
+  field (DESC, "HPA1 Global Status")
+  field (SCAN, "1 second")
+  field (DTYP, "Raw Soft Channel")
+  field (INP, "$(DEV):Ampl:sGlobStat MSI")
+  field (SHFT, 16)
+  field (NOBT, 2)
+  field (ZRVL, 0)
+  field (ONVL, 1)
+  field (TWVL, 2)
+  field (THVL, 3)
+  field (ZRST, "No Communication")
+  field (ONST, "Normal")
+  field (TWST, "Alarm")
+  field (THST, "Warning")
+  field (ZRSV, "MAJOR")
+  field (ONSV, "NO_ALARM")
+  field (TWSV, "MAJOR")
+  field (THSV, "MINOR")
+}
+
+record(mbbi, "$(DEV):hpa2:sGlobStat")
+{
+  field (DESC, "HPA1 Global Status")
+  field (SCAN, "1 second")
+  field (DTYP, "Raw Soft Channel")
+  field (INP, "$(DEV):Ampl:sGlobStat MSI")
+  field (SHFT, 18)
+  field (NOBT, 2)
+  field (ZRVL, 0)
+  field (ONVL, 1)
+  field (TWVL, 2)
+  field (THVL, 3)
+  field (ZRST, "No Communication")
+  field (ONST, "Normal")
+  field (TWST, "Alarm")
+  field (THST, "Warning")
+  field (ZRSV, "MAJOR")
+  field (ONSV, "NO_ALARM")
+  field (TWSV, "MAJOR")
+  field (THSV, "MINOR")
+}
+
+record(calc, "$(DEV):hpa1-Fil:sRampStat-raw")
+{
+  field (SCAN, "1 second")
+  field(INPA, "$(DEV):hpa1:sStat1 MSI")
+  field(INPB, "$(DEV):Ampl-hpa1:sComStat MS")
+  field(CALC, "A")
+  field(FLNK, "$(DEV):hpa1-Fil:sRampStat")
+}
+record(mbbi, "$(DEV):hpa1-Fil:sRampStat")
+{
+  field (DESC, "HPA1 Filament Status")
+  field (DTYP, "Raw Soft Channel")
+  field (INP, "$(DEV):hpa1-Fil:sRampStat-raw MS")
+  field (SHFT, 4)
+  field (NOBT, 3)
+  field (ZRVL, 0)
+  field (ONVL, 1)
+  field (TWVL, 2)
+  field (THVL, 3)
+  field (FRVL, 4)
+  field (ZRST, "Idle")
+  field (ONST, "Up")
+  field (TWST, "Down")
+  field (THST, "Up Completed")
+  field (FRST, "Down Completed")
+}
+
+
+record(calc, "$(DEV):hpa2-Fil:sRampStat-raw")
+{
+  field (SCAN, "1 second")
+  field(INPA, "$(DEV):hpa2:sStat1 MSI")
+  field(INPB, "$(DEV):Ampl-hpa2:sComStat MS")
+  field(CALC, "A")
+  field(FLNK, "$(DEV):hpa2-Fil:sRampStat")
+}
+record(mbbi, "$(DEV):hpa2-Fil:sRampStat")
+{
+  field (DESC, "HPA2 Filament Ramp Status")
+  field (DTYP, "Raw Soft Channel")
+  field (INP, "$(DEV):hpa2-Fil:sRampStat-raw MS")
+  field (SHFT, 4)
+  field (NOBT, 3)
+  field (ZRVL, 0)
+  field (ONVL, 1)
+  field (TWVL, 2)
+  field (THVL, 3)
+  field (FRVL, 4)
+  field (ZRST, "Idle")
+  field (ONST, "Up")
+  field (TWST, "Down")
+  field (THST, "Up Completed")
+  field (FRST, "Down Completed")
+}
+
+record(calc, "$(DEV):hpa1-Fil:sRampPerc")
+{
+  field(INPA, "$(DEV):hpa1:sStat1 MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0xFF")
+  field(INPC, "$(DEV):Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "%")
+  field(CALC, "(A>>8)&B")
+  field(LOPR, 0)
+  field(HOPR, 100)
+}
+
+record(calc, "$(DEV):hpa2-Fil:sRampPerc")
+{
+  field(INPA, "$(DEV):hpa2:sStat1 MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0xFF")
+  field(INPC, "$(DEV):Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "%")
+  field(CALC, "(A>>8)&B")
+  field(LOPR, 0)
+  field(HOPR, 100)
+}
+
+record(calc, "$(DEV):Ampl:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>4)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+
+record(calc, "$(DEV):Ampl-hpa1:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>8)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+
+record(calc, "$(DEV):Ampl-hpa2:sComStat")
+{
+  field(INPA, "$(DEV):Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x7")
+  field(PREC, "0")
+  field(CALC, "(A>>12)&B")
+  field(LOPR, 0)
+  field(HOPR, 7)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}

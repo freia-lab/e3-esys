@@ -32,7 +32,7 @@ set_savefile_path("$(EPICS_AUTOSAVE_VAR)/$(UNIT_NAME)")
 # Save files associated with the request files 'auto-output.req' and
 # 'auto-input.req'.  These files are the standard way to use autosave 
  
-set_pass1_restoreFile("iocesys-sample.sav")
+set_pass1_restoreFile("iocesys-freia.sav")
 
 # specify directories in which to to search for included request files
 set_requestfile_path("./")

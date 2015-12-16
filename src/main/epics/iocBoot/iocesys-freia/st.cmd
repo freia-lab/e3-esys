@@ -1,4 +1,4 @@
-#!../../bin/linux-x86_64/esys-sample
+#!../../bin/linux-x86_64/esys-freia
 #+======================================================================
 # $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-iter-templates/tags/CODAC-CORE-4.1.0/templates/genericBoot/ioc/st.cmd $
 # $Id: st.cmd 35402 2013-04-07 15:41:49Z zagara $
@@ -31,14 +31,14 @@ cd "${TOP}"
 ## Register all support components         ##
 #############################################
 
-dbLoadDatabase "dbd/esys-sample.dbd"
-esys_sample_registerRecordDeviceDriver pdbbase
+dbLoadDatabase "dbd/esys-freia.dbd"
+esys_freia_registerRecordDeviceDriver pdbbase
 
-#< "${TOP}/iocBoot/iocesys-sample/sddPreDriverConf.cmd"
-< "${TOP}/iocBoot/iocesys-sample/userPreDriverConf.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/threadSchedulingConf.cmd"
-< "${TOP}/iocBoot/iocesys-sample/dbToLoad.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/iocesys-sample-preSaveRestore.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/sddPreDriverConf.cmd"
+< "${TOP}/iocBoot/iocesys-freia/userPreDriverConf.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/threadSchedulingConf.cmd"
+< "${TOP}/iocBoot/iocesys-freia/dbToLoad.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/iocesys-freia-preSaveRestore.cmd"
 
 #############################################
 ## IOC Logging                             ##
@@ -51,10 +51,10 @@ iocLogInit
 cd "${TOP}/db"
 iocInit
 
-#< "${TOP}/iocBoot/iocesys-sample/iocesys-sample-postSaveRestore.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/sddSeqToLoad.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/seqToLoad.cmd"
-#< "${TOP}/iocBoot/iocesys-sample/sddPostDriverConf.cmd"
-< "${TOP}/iocBoot/iocesys-sample/userPostDriverConf.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/iocesys-freia-postSaveRestore.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/sddSeqToLoad.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/seqToLoad.cmd"
+#< "${TOP}/iocBoot/iocesys-freia/sddPostDriverConf.cmd"
+< "${TOP}/iocBoot/iocesys-freia/userPostDriverConf.cmd"
 
 

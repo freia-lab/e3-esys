@@ -3,11 +3,9 @@
 #############################################
 
 cd "$(TOP)/db"
-#dbLoadRecords("xxx.db","user=konradHost")
-#dbLoadTemplate(xxx.substitutions)
 
-dbLoadRecords("snmp.db","DEV=HPRF-Esys,HOST=192.168.10.40,CHAN=0,GROUP=0")
-dbLoadTemplate("txinput.substitutions")
+dbLoadRecords("snmp-freia.db","DEV=HPRF-Esys,HOST=$(CCU_IPADDR),CHAN=0,GROUP=0")
+dbLoadTemplate("esys-freia.substitutions")
 
 # IOC monitor
 cd "$(EPICS_MODULES)/iocmon/db"

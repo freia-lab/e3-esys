@@ -3,5 +3,5 @@ record(longin, "$(DEV):$(PVSIG)")
   field(DESC, "SNMP channel")
   field(SCAN, ".5 second")
   field(DTYP, "Snmp")
-  field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
+  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
 }

@@ -4,7 +4,7 @@ record(longin, "$(DEV):Log:$(PV_SIG)")
   field(SCAN, "1 second")
   field(DTYP, "Snmp")
   field(FLNK, "$(DEV):Log:$(PV_SIG)-aSub")
-  field(INP, "@$(HOST) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
+  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
 }
 
 record(aSub, "$(DEV):Log:$(PV_SIG)-aSub")

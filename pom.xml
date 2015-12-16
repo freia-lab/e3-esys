@@ -23,7 +23,7 @@
     <groupId>org.iter.codac.units</groupId>
     <artifactId>epics-esys-freia</artifactId>
     <packaging>codac</packaging>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>CODAC Core System epics-esys-freia module</name>
     <description>CODAC Core System epics-esys-freia module</description>
     <url>http://www.iter.org/</url>

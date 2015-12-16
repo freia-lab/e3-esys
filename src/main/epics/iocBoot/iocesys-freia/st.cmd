@@ -34,7 +34,6 @@ cd "${TOP}"
 dbLoadDatabase "dbd/esys-freia.dbd"
 esys_freia_registerRecordDeviceDriver pdbbase
 
-#< "${TOP}/iocBoot/iocesys-freia/sddPreDriverConf.cmd"
 < "${TOP}/iocBoot/iocesys-freia/userPreDriverConf.cmd"
 #< "${TOP}/iocBoot/iocesys-freia/threadSchedulingConf.cmd"
 < "${TOP}/iocBoot/iocesys-freia/dbToLoad.cmd"
@@ -52,9 +51,7 @@ cd "${TOP}/db"
 iocInit
 
 #< "${TOP}/iocBoot/iocesys-freia/iocesys-freia-postSaveRestore.cmd"
-#< "${TOP}/iocBoot/iocesys-freia/sddSeqToLoad.cmd"
 #< "${TOP}/iocBoot/iocesys-freia/seqToLoad.cmd"
-#< "${TOP}/iocBoot/iocesys-freia/sddPostDriverConf.cmd"
 < "${TOP}/iocBoot/iocesys-freia/userPostDriverConf.cmd"
 
 

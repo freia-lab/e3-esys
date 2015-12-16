@@ -10,7 +10,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install)
 # databases, templates, substitutions like this
-DB += snmp.db
+DB += snmp-freia.db
 DB += integer.template
 DB += 3integer.template
 DB += states.template
@@ -20,7 +20,8 @@ DB += write.template
 DB += hlogtstamp.template
 DB += hlogcode.template
 DB += comstat.template
-DB += txinput.substitutions
+DB += esys-freia.substitutions
+#DB += txinput.substitutions
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

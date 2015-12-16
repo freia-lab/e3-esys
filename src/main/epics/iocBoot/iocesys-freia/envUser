@@ -10,4 +10,4 @@ epicsEnvSet("E", "ESSV900-1-6::")
 epicsEnvSet("W", "SNMPv2-MIB::")
 epicsEnvSet("N", "NOTIFICATION-LOG-MIB::")
 
-epicsEnvSet("CCU_IPADDR", "192.168.10.200")
+epicsEnvSet("CCU_IPADDR", "192.168.10.40")

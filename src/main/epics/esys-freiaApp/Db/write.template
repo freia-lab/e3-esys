@@ -1,21 +1,22 @@
 # Settings
-record(longout, "$(DEV):$(PV_SIG)-i")
-{
-  field(DESC, "SNMP channel")
-  field(SCAN, "Passive")
-  field(DTYP, "Snmp")
-  field(EGU, "$(EGU)")
-  field(OUT, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
-}
 
-record(longin, "$(DEV):$(PV_SIG)-ir")
-{
-  field(DESC, "SNMP channel")
-  field(SCAN, "1 second")
-  field(DTYP, "Snmp")
-  field(EGU, "$(EGU)")
-  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
-}
+#record(longout, "$(DEV):$(PV_SIG)-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "$(EGU)")
+#  field(OUT, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+#}
+
+#record(longin, "$(DEV):$(PV_SIG)-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "$(EGU)")
+#  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 i")
+#}
 
 
 record(ao, "$(DEV):$(PV_SIG)")
@@ -33,17 +34,17 @@ record(ao, "$(DEV):$(PV_SIG)")
   field(OUT, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
 }
 
-record(ai, "$(DEV):$(PV_SIG)-fr")
-{
-  field(DESC, "SNMP channel")
-  field(SCAN, "1 second")
-  field(DTYP, "Snmp")
-  field(LOPR, "$(LOPR)")
-  field(HOPR, "$(HOPR)")
-  field(EGU, "$(EGU)")
-  field(PREC, "$(PREC)")
-  field(LINR, "LINEAR")
-  field(EOFF, "0")
-  field(ASLO, "$(ESLO)")
-  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
-}
+#record(ai, "$(DEV):$(PV_SIG)-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "$(LOPR)")
+#  field(HOPR, "$(HOPR)")
+#  field(EGU, "$(EGU)")
+#  field(PREC, "$(PREC)")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "$(ESLO)")
+#  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)cmd$(SIG).0 INTEGER: 100 iR")
+#}

@@ -17,5 +17,5 @@ requireSnippet(dbToLoad-esys-freia.cmd, "H_IPADDR=$(HOST_IPADDR)")
 #############################################
 iocInit
 
-requireSnippet(userPostDriverConf-esys-freia.cmd)
+#requireSnippet(userPostDriverConf-esys-freia.cmd)
 

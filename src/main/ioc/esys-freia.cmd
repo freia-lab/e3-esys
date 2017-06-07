@@ -1,5 +1,3 @@
-require snmp
-
 epicsEnvSet("AUTOSAVE_SYSM_PV_PREFIX","esys:")
 epicsEnvSet("MIBDIRS", "+$(REQUIRE_ioc_esys_freia_PATH)/misc")
 epicsEnvSet("E", "ESSV900-1-6::")

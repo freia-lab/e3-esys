@@ -16,7 +16,7 @@ SOURCES += $(wildcard src/main/epics/esys-freiaApp/src/*.cpp)
 STARTUPS = $(wildcard src/main/ioc/*.cmd)
 
 
-OPIS= src/main/boy
+OPIS= boy
 
 # The line below id the fix needed in environment <= 1.7.0
 #vpath %.mib ../../src/main/epics/mibs

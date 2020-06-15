@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>HPRF-Esys</P>
+  </macros>
+  <width>1280</width>
+  <height>1024</height>
+  <background_color>
+    <color name="IO Shape Fill" red="188" green="188" blue="188">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Itelco-Electrosys 400 kW RF Power station $(P)</text>
+    <y>5</y>
+    <width>1270</width>
+    <height>44</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="IO Text Fg" red="0" green="32" blue="92">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="IO Background" red="255" green="255" blue="205">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabbed ContainerTemplate</name>
+    <macros>
+      <nr>2</nr>
+    </macros>
+    <tabs>
+      <tab>
+        <name>Overview</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <file>helper-opi-files/overview.opi</file>
+            <x>5</x>
+            <y>10</y>
+            <width>1180</width>
+            <height>645</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>HPA1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <file>helper-opi-files/hpa-Main.opi</file>
+            <macros>
+              <nr>1</nr>
+            </macros>
+            <x>5</x>
+            <y>10</y>
+            <width>1188</width>
+            <height>631</height>
+            <resize>2</resize>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>HPA2</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <file>helper-opi-files/hpa-Main.opi</file>
+            <x>5</x>
+            <y>10</y>
+            <width>1188</width>
+            <height>631</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Extras</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <file>helper-opi-files/extras.opi</file>
+            <x>5</x>
+            <y>10</y>
+            <width>1215</width>
+            <height>635</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>30</x>
+    <y>290</y>
+    <width>1231</width>
+    <height>681</height>
+    <background_color>
+      <color name="IO Shape Fill" red="188" green="188" blue="188">
+      </color>
+    </background_color>
+    <tab_height>10</tab_height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2</name>
+    <x>30</x>
+    <y>75</y>
+    <width>1231</width>
+    <height>201</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="led" version="2.0.0">
+      <name>LED Template</name>
+      <pv_name>$(P):Ampl:sLocal</pv_name>
+      <bit>0</bit>
+      <x>12</x>
+      <y>12</y>
+      <width>189</width>
+      <height>42</height>
+      <off_label>Remote</off_label>
+      <off_color>
+        <color name="IO PV ON" red="0" green="0" blue="225">
+        </color>
+      </off_color>
+      <on_label>Local</on_label>
+      <on_color>
+        <color name="IO PV OFF" red="77" green="77" blue="77">
+        </color>
+      </on_color>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO OutputPV Fg" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color red="150" green="150" blue="150">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="BorderRule" prop_id="border_style" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>9</value>
+          </exp>
+          <pv_name>$(pv_name).SIMM</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Commands</name>
+      <x>10</x>
+      <y>85</y>
+      <width>193</width>
+      <height>103</height>
+      <style>1</style>
+      <foreground_color>
+        <color name="IO OutputPV Bg" red="121" green="123" blue="126">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <scripts>
+        <script file="scripts/enabled-remote.js">
+          <pv_name>$(P):Ampl:sLocal</pv_name>
+        </script>
+      </scripts>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button Template</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Reset Faults</description>
+          </action>
+        </actions>
+        <pv_name>$(P):Ampl:cmdReset</pv_name>
+        <text>Reset</text>
+        <width>90</width>
+        <font>
+          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button Template_1</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Stby/PwrOn - turn off/on the high voltage</description>
+          </action>
+        </actions>
+        <pv_name>$(P):Ampl:cmdStandby</pv_name>
+        <text>Stby/PwrOn</text>
+        <x>95</x>
+        <width>96</width>
+        <font>
+          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button Template</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Start the station (all but high voltage on)</description>
+          </action>
+        </actions>
+        <pv_name>$(P):Ampl:cmdStart</pv_name>
+        <text>Start</text>
+        <y>35</y>
+        <width>90</width>
+        <font>
+          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button Template_1</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Stop - turn off all</description>
+          </action>
+        </actions>
+        <pv_name>$(P):Ampl:cmdStop</pv_name>
+        <text>Stop</text>
+        <x>95</x>
+        <y>35</y>
+        <width>96</width>
+        <font>
+          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Foreground" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Panel 2</name>
+      <x>225</x>
+      <y>22</y>
+      <width>522</width>
+      <height>166</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="progressbar" version="2.0.0">
+        <name>Progress Bar Template</name>
+        <pv_name>$(P):Ampl:sFwdPwr</pv_name>
+        <x>175</x>
+        <width>346</width>
+        <height>80</height>
+        <fill_color>
+          <color name="IO PV ON" red="0" green="0" blue="225">
+          </color>
+        </fill_color>
+        <actions>
+        </actions>
+        <limits_from_pv>false</limits_from_pv>
+        <maximum>440.0</maximum>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label Template</name>
+        <text>Forward:</text>
+        <y>5</y>
+        <width>71</width>
+        <height>24</height>
+        <font>
+          <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Text Fg" red="0" green="32" blue="92">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="IO Background" red="255" green="255" blue="205">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <auto_size>true</auto_size>
+        <actions>
+        </actions>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label Template_1</name>
+        <text>Reflected:</text>
+        <y>85</y>
+        <width>78</width>
+        <height>24</height>
+        <font>
+          <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO Text Fg" red="0" green="32" blue="92">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="IO Background" red="255" green="255" blue="205">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <auto_size>true</auto_size>
+        <actions>
+        </actions>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="progressbar" version="2.0.0">
+        <name>Progress Bar Template</name>
+        <pv_name>$(P):Ampl:sReflPwr</pv_name>
+        <x>175</x>
+        <y>85</y>
+        <width>346</width>
+        <height>80</height>
+        <fill_color>
+          <color name="IO PV ON" red="0" green="0" blue="225">
+          </color>
+        </fill_color>
+        <actions>
+        </actions>
+        <limits_from_pv>false</limits_from_pv>
+        <maximum>440.0</maximum>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update Template</name>
+        <pv_name>$(P):Ampl:sFwdPwr</pv_name>
+        <x>17</x>
+        <y>47</y>
+        <width>146</width>
+        <height>26</height>
+        <font>
+          <font name="IO Title" family="arial" style="BOLD" size="13.861386138613861">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO InputPV Fg" red="0" green="32" blue="92">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="IO InputPV Bg" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_width>2</border_width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update Template_2</name>
+        <pv_name>$(P):Ampl:sReflPwr</pv_name>
+        <x>17</x>
+        <y>131</y>
+        <width>146</width>
+        <height>26</height>
+        <font>
+          <font name="IO Title" family="arial" style="BOLD" size="13.861386138613861">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="IO InputPV Fg" red="0" green="32" blue="92">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="IO InputPV Bg" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_width>2</border_width>
+      </widget>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Linking Container Template</name>
+      <file>helper-opi-files/hpaGlbStat.opi</file>
+      <macros>
+        <nr>1</nr>
+      </macros>
+      <x>790</x>
+      <y>10</y>
+      <width>207</width>
+      <height>178</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Linking Container Template_1</name>
+      <file>helper-opi-files/hpaGlbStat.opi</file>
+      <macros>
+        <nr>2</nr>
+      </macros>
+      <x>1010</x>
+      <y>10</y>
+      <width>207</width>
+      <height>178</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol</name>
+    <symbols>
+      <symbol>../freia-symbols/cryogenics/PV_Vacuum_Pump_GREEN.svg</symbol>
+    </symbols>
+    <x>300</x>
+    <y>255</y>
+    <width>50</width>
+    <height>55</height>
+  </widget>
+</display>

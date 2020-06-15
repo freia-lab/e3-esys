@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1180</width>
+  <height>645</height>
+  <background_color>
+    <color name="BACKGROUND" red="220" green="225" blue="221">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="2.0.0">
+    <name>Central Section</name>
+    <x>5</x>
+    <y>5</y>
+    <width>243</width>
+    <height>385</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="../scripts/enabled-remote.js">
+        <pv_name>$(P):Ampl:sLocal</pv_name>
+      </script>
+    </scripts>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor Template</name>
+      <pv_name>$(P):CentrSys:sStat</pv_name>
+      <x>15</x>
+      <y>160</y>
+      <width>155</width>
+      <height>181</height>
+      <numBits>9</numBits>
+      <horizontal>false</horizontal>
+      <off_color>
+        <color name="RED" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <labels>
+        <text>Cap Charge HV</text>
+        <text>Crowbar</text>
+        <text>HV Door</text>
+        <text>HV Air Temp</text>
+        <text>Heat Xchng 1</text>
+        <text>Heat Xchng 2</text>
+        <text>Unbal. Load Wtr Flow</text>
+        <text>Unbal Load Power</text>
+        <text>Heat Xchng Flow</text>
+      </labels>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):CentrS:sUnbalLdPwr</pv_name>
+      <x>121</x>
+      <y>5</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Unbal. Load Pwr</text>
+      <y>2</y>
+      <height>12</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):CentrS:sCapChargeV</pv_name>
+      <x>121</x>
+      <y>30</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Cap. Charging V</text>
+      <y>27</y>
+      <height>12</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):CentrS:sCapChargeI</pv_name>
+      <x>121</x>
+      <y>55</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Cap. Charging I</text>
+      <y>52</y>
+      <height>12</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template</name>
+      <pv_name>$(P):Ampl-RFPwr:cSetV</pv_name>
+      <x>67</x>
+      <y>91</y>
+      <width>80</width>
+      <height>21</height>
+      <font>
+        <font name="IO Output 1" family="arial" style="BOLD" size="9.900990099009901">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_7</name>
+      <text>H Voltage</text>
+      <x>2</x>
+      <y>129</y>
+      <width>90</width>
+      <height>12</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_8</name>
+      <text>Charger MaxPower</text>
+      <x>2</x>
+      <y>75</y>
+      <width>75</width>
+      <height>49</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template_1</name>
+      <pv_name>$(P):Ampl-RFV:cSetV</pv_name>
+      <x>67</x>
+      <y>127</y>
+      <width>80</width>
+      <height>21</height>
+      <font>
+        <font name="IO Output 1" family="arial" style="BOLD" size="9.900990099009901">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_1</name>
+      <pv_name>$(P):Ampl-RFV:sSetV</pv_name>
+      <x>155</x>
+      <y>130</y>
+      <width>76</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_7</name>
+      <pv_name>$(P):Ampl-RFPwr:sSetV</pv_name>
+      <x>155</x>
+      <y>94</y>
+      <width>76</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Comm. Status</name>
+    <x>5</x>
+    <y>400</y>
+    <width>243</width>
+    <height>235</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor Template_1</name>
+      <pv_name>$(P):Ampl:sComStat</pv_name>
+      <x>12</x>
+      <y>6</y>
+      <width>224</width>
+      <height>60</height>
+      <numBits>3</numBits>
+      <horizontal>false</horizontal>
+      <off_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="RED" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <labels>
+        <text>HPA1-PIB CAN Bus Comm</text>
+        <text>HPA2-PIB CAN Bus Comm</text>
+        <text>HVCS-PIB CAN Bus Comm</text>
+      </labels>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor Template_2</name>
+      <pv_name>$(P):Ampl-hpa1:sComStat</pv_name>
+      <x>12</x>
+      <y>71</y>
+      <width>224</width>
+      <height>60</height>
+      <numBits>3</numBits>
+      <horizontal>false</horizontal>
+      <off_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="RED" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <labels>
+        <text>HPA1-Driver Mod 1 Comm</text>
+        <text>HPA1-Driver Mod 2 Comm</text>
+        <text>HPA1-Driver Mod 3 Comm</text>
+      </labels>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor Template_3</name>
+      <pv_name>$(P):Ampl-hpa2:sComStat</pv_name>
+      <x>12</x>
+      <y>136</y>
+      <width>224</width>
+      <height>60</height>
+      <numBits>3</numBits>
+      <horizontal>false</horizontal>
+      <off_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="RED" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <labels>
+        <text>HPA2-Driver Mod 1 Comm</text>
+        <text>HPA2-Driver Mod 2 Comm</text>
+        <text>HPA2-Driver Mod 3 Comm</text>
+      </labels>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+</display>

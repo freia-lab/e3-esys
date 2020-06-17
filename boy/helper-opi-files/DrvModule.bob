@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <width>1280</width>
-  <height>1024</height>
+  <width>410</width>
+  <height>280</height>
   <background_color>
     <color name="BACKGROUND" red="220" green="225" blue="221">
     </color>
@@ -31,8 +31,8 @@
       <name>Label Template_5</name>
       <text>Forward Pwr</text>
       <x>2</x>
-      <width>95</width>
-      <height>12</height>
+      <width>75</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -81,8 +81,8 @@
       <name>Label Template_6</name>
       <text>Input Pwr</text>
       <x>201</x>
-      <width>105</width>
-      <height>12</height>
+      <width>58</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -132,8 +132,8 @@
       <text>Reflected Pwr</text>
       <x>2</x>
       <y>25</y>
-      <width>95</width>
-      <height>12</height>
+      <width>81</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -183,8 +183,8 @@
       <text>Voltage</text>
       <x>201</x>
       <y>25</y>
-      <width>105</width>
-      <height>12</height>
+      <width>45</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -234,8 +234,8 @@
       <text>Service Voltage</text>
       <x>2</x>
       <y>50</y>
-      <width>95</width>
-      <height>12</height>
+      <width>90</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -285,8 +285,8 @@
       <text>PreDrv Current</text>
       <x>201</x>
       <y>50</y>
-      <width>105</width>
-      <height>12</height>
+      <width>88</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -336,8 +336,8 @@
       <text>Drv1 Current</text>
       <x>2</x>
       <y>75</y>
-      <width>95</width>
-      <height>12</height>
+      <width>75</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -387,8 +387,8 @@
       <text>Drv2 Current</text>
       <x>201</x>
       <y>75</y>
-      <width>105</width>
-      <height>12</height>
+      <width>75</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -438,8 +438,8 @@
       <text>Final1 Current</text>
       <x>2</x>
       <y>100</y>
-      <width>95</width>
-      <height>12</height>
+      <width>84</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -489,8 +489,8 @@
       <text>Final2 Current</text>
       <x>201</x>
       <y>100</y>
-      <width>105</width>
-      <height>12</height>
+      <width>84</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -540,8 +540,8 @@
       <text>Final3 Current</text>
       <x>2</x>
       <y>125</y>
-      <width>95</width>
-      <height>12</height>
+      <width>84</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -591,8 +591,8 @@
       <text>Final4 Current</text>
       <x>201</x>
       <y>125</y>
-      <width>105</width>
-      <height>12</height>
+      <width>84</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>

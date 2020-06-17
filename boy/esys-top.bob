@@ -6,11 +6,12 @@
   <width>1280</width>
   <height>1024</height>
   <background_color>
-    <color name="IO Shape Fill" red="188" green="188" blue="188">
+    <color name="BACKGROUND" red="220" green="225" blue="221">
     </color>
   </background_color>
   <actions>
   </actions>
+  <grid_visible>false</grid_visible>
   <widget type="label" version="2.0.0">
     <name>Label Template</name>
     <text>Itelco-Electrosys 400 kW RF Power station $(P)</text>
@@ -18,15 +19,15 @@
     <width>1270</width>
     <height>44</height>
     <font>
-      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      <font family="Source Sans Pro" style="BOLD_ITALIC" size="39.0">
       </font>
     </font>
     <foreground_color>
-      <color name="IO Text Fg" red="0" green="32" blue="92">
+      <color name="BLACK" red="0" green="0" blue="0">
       </color>
     </foreground_color>
     <background_color>
-      <color name="IO Background" red="255" green="255" blue="205">
+      <color name="BACKGROUND" red="220" green="225" blue="221">
       </color>
     </background_color>
     <horizontal_alignment>1</horizontal_alignment>
@@ -76,7 +77,6 @@
             <y>10</y>
             <width>1188</width>
             <height>631</height>
-            <resize>2</resize>
             <actions>
             </actions>
             <border_color>
@@ -128,11 +128,12 @@
     <x>30</x>
     <y>290</y>
     <width>1231</width>
-    <height>681</height>
+    <height>700</height>
     <background_color>
-      <color name="IO Shape Fill" red="188" green="188" blue="188">
+      <color name="BACKGROUND" red="220" green="225" blue="221">
       </color>
     </background_color>
+    <active_tab>1</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -165,16 +166,16 @@
       <height>42</height>
       <off_label>Remote</off_label>
       <off_color>
-        <color name="IO PV ON" red="0" green="0" blue="225">
+        <color red="0" green="64" blue="255">
         </color>
       </off_color>
       <on_label>Local</on_label>
       <on_color>
-        <color name="IO PV OFF" red="77" green="77" blue="77">
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
         </color>
       </on_color>
       <font>
-        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        <font family="Source Sans Pro" style="BOLD" size="17.0">
         </font>
       </font>
       <foreground_color>
@@ -182,20 +183,12 @@
         </color>
       </foreground_color>
       <line_color>
-        <color red="150" green="150" blue="150">
+        <color name="GRAY" red="169" green="169" blue="169">
         </color>
       </line_color>
       <square>true</square>
       <actions>
       </actions>
-      <rules>
-        <rule name="BorderRule" prop_id="border_style" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>9</value>
-          </exp>
-          <pv_name>$(pv_name).SIMM</pv_name>
-        </rule>
-      </rules>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Commands</name>
@@ -205,7 +198,7 @@
       <height>103</height>
       <style>1</style>
       <foreground_color>
-        <color name="IO OutputPV Bg" red="121" green="123" blue="126">
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
         </color>
       </foreground_color>
       <background_color>
@@ -231,13 +224,14 @@
         </actions>
         <pv_name>$(P):Ampl:cmdReset</pv_name>
         <text>Reset</text>
+        <y>6</y>
         <width>90</width>
         <font>
-          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          <font family="Source Sans Pro" style="BOLD" size="13.0">
           </font>
         </font>
         <foreground_color>
-          <color name="IO Foreground" red="0" green="0" blue="0">
+          <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
       </widget>
@@ -253,9 +247,10 @@
         <pv_name>$(P):Ampl:cmdStandby</pv_name>
         <text>Stby/PwrOn</text>
         <x>95</x>
+        <y>6</y>
         <width>96</width>
         <font>
-          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          <font family="Source Sans Pro" style="BOLD" size="13.0">
           </font>
         </font>
         <foreground_color>
@@ -274,14 +269,14 @@
         </actions>
         <pv_name>$(P):Ampl:cmdStart</pv_name>
         <text>Start</text>
-        <y>35</y>
+        <y>41</y>
         <width>90</width>
         <font>
-          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          <font family="Source Sans Pro" style="BOLD" size="13.0">
           </font>
         </font>
         <foreground_color>
-          <color name="IO Foreground" red="0" green="0" blue="0">
+          <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
       </widget>
@@ -297,10 +292,10 @@
         <pv_name>$(P):Ampl:cmdStop</pv_name>
         <text>Stop</text>
         <x>95</x>
-        <y>35</y>
+        <y>41</y>
         <width>96</width>
         <font>
-          <font name="IO Input 1" family="arial" style="BOLD" size="9.900990099009901">
+          <font family="Source Sans Pro" style="BOLD" size="13.0">
           </font>
         </font>
         <foreground_color>
@@ -311,10 +306,10 @@
     </widget>
     <widget type="group" version="2.0.0">
       <name>Panel 2</name>
-      <x>225</x>
-      <y>22</y>
-      <width>522</width>
-      <height>166</height>
+      <x>229</x>
+      <y>12</y>
+      <width>540</width>
+      <height>176</height>
       <style>3</style>
       <foreground_color>
         <color red="0" green="128" blue="255">
@@ -327,14 +322,17 @@
       <transparent>true</transparent>
       <actions>
       </actions>
-      <widget type="progressbar" version="2.0.0">
+      <widget type="tank" version="2.0.0">
         <name>Progress Bar Template</name>
         <pv_name>$(P):Ampl:sFwdPwr</pv_name>
-        <x>175</x>
-        <width>346</width>
-        <height>80</height>
+        <x>102</x>
+        <height>170</height>
+        <background_color>
+          <color name="BACKGROUND" red="220" green="225" blue="221">
+          </color>
+        </background_color>
         <fill_color>
-          <color name="IO PV ON" red="0" green="0" blue="225">
+          <color red="0" green="64" blue="255">
           </color>
         </fill_color>
         <actions>
@@ -343,48 +341,22 @@
         <maximum>440.0</maximum>
       </widget>
       <widget type="label" version="2.0.0">
-        <name>Label Template</name>
-        <text>Forward:</text>
-        <y>5</y>
-        <width>71</width>
-        <height>24</height>
-        <font>
-          <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color name="IO Text Fg" red="0" green="32" blue="92">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="IO Background" red="255" green="255" blue="205">
-          </color>
-        </background_color>
-        <vertical_alignment>1</vertical_alignment>
-        <auto_size>true</auto_size>
-        <actions>
-        </actions>
-        <border_color>
-          <color name="IO Border" red="215" green="215" blue="215">
-          </color>
-        </border_color>
-      </widget>
-      <widget type="label" version="2.0.0">
         <name>Label Template_1</name>
         <text>Reflected:</text>
-        <y>85</y>
-        <width>78</width>
-        <height>24</height>
+        <x>275</x>
+        <y>5</y>
+        <width>96</width>
+        <height>28</height>
         <font>
-          <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+          <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
         </font>
         <foreground_color>
-          <color name="IO Text Fg" red="0" green="32" blue="92">
+          <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205">
+          <color name="BACKGROUND" red="220" green="225" blue="221">
           </color>
         </background_color>
         <vertical_alignment>1</vertical_alignment>
@@ -396,15 +368,17 @@
           </color>
         </border_color>
       </widget>
-      <widget type="progressbar" version="2.0.0">
+      <widget type="tank" version="2.0.0">
         <name>Progress Bar Template</name>
         <pv_name>$(P):Ampl:sReflPwr</pv_name>
-        <x>175</x>
-        <y>85</y>
-        <width>346</width>
-        <height>80</height>
+        <x>380</x>
+        <height>170</height>
+        <background_color>
+          <color name="BACKGROUND" red="220" green="225" blue="221">
+          </color>
+        </background_color>
         <fill_color>
-          <color name="IO PV ON" red="0" green="0" blue="225">
+          <color red="0" green="64" blue="255">
           </color>
         </fill_color>
         <actions>
@@ -415,20 +389,18 @@
       <widget type="textupdate" version="2.0.0">
         <name>Text Update Template</name>
         <pv_name>$(P):Ampl:sFwdPwr</pv_name>
-        <x>17</x>
-        <y>47</y>
-        <width>146</width>
+        <y>33</y>
         <height>26</height>
         <font>
-          <font name="IO Title" family="arial" style="BOLD" size="13.861386138613861">
+          <font family="Source Sans Pro" style="BOLD" size="16.0">
           </font>
         </font>
         <foreground_color>
-          <color name="IO InputPV Fg" red="0" green="32" blue="92">
+          <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
         <background_color>
-          <color name="IO InputPV Bg" red="255" green="255" blue="255">
+          <color name="WHITE" red="255" green="255" blue="255">
           </color>
         </background_color>
         <actions>
@@ -438,25 +410,51 @@
       <widget type="textupdate" version="2.0.0">
         <name>Text Update Template_2</name>
         <pv_name>$(P):Ampl:sReflPwr</pv_name>
-        <x>17</x>
-        <y>131</y>
-        <width>146</width>
+        <x>275</x>
+        <y>33</y>
         <height>26</height>
         <font>
-          <font name="IO Title" family="arial" style="BOLD" size="13.861386138613861">
+          <font family="Source Sans Pro" style="BOLD" size="16.0">
           </font>
         </font>
         <foreground_color>
-          <color name="IO InputPV Fg" red="0" green="32" blue="92">
+          <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
         <background_color>
-          <color name="IO InputPV Bg" red="255" green="255" blue="255">
+          <color name="WHITE" red="255" green="255" blue="255">
           </color>
         </background_color>
         <actions>
         </actions>
         <border_width>2</border_width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label Template</name>
+        <text>Forward:</text>
+        <y>5</y>
+        <width>87</width>
+        <height>28</height>
+        <font>
+          <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="BLACK" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="BACKGROUND" red="220" green="225" blue="221">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <auto_size>true</auto_size>
+        <actions>
+        </actions>
+        <border_color>
+          <color name="IO Border" red="215" green="215" blue="215">
+          </color>
+        </border_color>
       </widget>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -493,15 +491,5 @@
         </color>
       </border_color>
     </widget>
-  </widget>
-  <widget type="symbol" version="2.0.0">
-    <name>Symbol</name>
-    <symbols>
-      <symbol>../freia-symbols/cryogenics/PV_Vacuum_Pump_GREEN.svg</symbol>
-    </symbols>
-    <x>300</x>
-    <y>255</y>
-    <width>50</width>
-    <height>55</height>
   </widget>
 </display>

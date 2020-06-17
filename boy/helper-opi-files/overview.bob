@@ -98,7 +98,8 @@
       <name>Label Template</name>
       <text>Unbal. Load Pwr</text>
       <y>2</y>
-      <height>12</height>
+      <width>97</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -147,7 +148,8 @@
       <name>Label Template</name>
       <text>Cap. Charging V</text>
       <y>27</y>
-      <height>12</height>
+      <width>92</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -196,7 +198,8 @@
       <name>Label Template</name>
       <text>Cap. Charging I</text>
       <y>52</y>
-      <height>12</height>
+      <width>89</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -222,11 +225,11 @@
       <name>Text Input Template</name>
       <pv_name>$(P):Ampl-RFPwr:cSetV</pv_name>
       <x>67</x>
-      <y>91</y>
+      <y>95</y>
       <width>80</width>
       <height>21</height>
       <font>
-        <font name="IO Output 1" family="arial" style="BOLD" size="9.900990099009901">
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
         </font>
       </font>
       <foreground_color>
@@ -246,8 +249,8 @@
       <text>H Voltage</text>
       <x>2</x>
       <y>129</y>
-      <width>90</width>
-      <height>12</height>
+      <width>57</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -274,8 +277,8 @@
       <text>Charger MaxPower</text>
       <x>2</x>
       <y>75</y>
-      <width>75</width>
-      <height>49</height>
+      <width>111</width>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -305,7 +308,7 @@
       <width>80</width>
       <height>21</height>
       <font>
-        <font name="IO Output 1" family="arial" style="BOLD" size="9.900990099009901">
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
         </font>
       </font>
       <foreground_color>
@@ -347,7 +350,7 @@
       <name>Text Update Template_7</name>
       <pv_name>$(P):Ampl-RFPwr:sSetV</pv_name>
       <x>155</x>
-      <y>94</y>
+      <y>98</y>
       <width>76</width>
       <height>16</height>
       <font>

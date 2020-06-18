@@ -60,7 +60,7 @@
       <height>26</height>
       <off_label>Standby</off_label>
       <off_color>
-        <color name="RED" red="252" green="13" blue="27">
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
         </color>
       </off_color>
       <on_label>Pwr On</on_label>
@@ -145,7 +145,7 @@
       <text>Forward:</text>
       <y>96</y>
       <width>53</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -172,7 +172,7 @@
       <text>Reflected:</text>
       <y>119</y>
       <width>59</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>

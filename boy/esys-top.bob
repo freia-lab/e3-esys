@@ -2,6 +2,7 @@
 <display version="2.0.0">
   <macros>
     <P>HPRF-Esys</P>
+    <PLOC>$(P):Ampl:sLocal</PLOC>
   </macros>
   <width>1280</width>
   <height>1024</height>
@@ -50,7 +51,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container Template</name>
-            <file>helper-opi-files/overview.opi</file>
+            <file>helper-opi-files/overview.bob</file>
             <x>5</x>
             <y>10</y>
             <width>1180</width>
@@ -69,7 +70,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container Template</name>
-            <file>helper-opi-files/hpa-Main.opi</file>
+            <file>helper-opi-files/hpa-Main.bob</file>
             <macros>
               <nr>1</nr>
             </macros>
@@ -91,7 +92,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container Template</name>
-            <file>helper-opi-files/hpa-Main.opi</file>
+            <file>helper-opi-files/hpa-Main.bob</file>
             <x>5</x>
             <y>10</y>
             <width>1188</width>
@@ -110,7 +111,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container Template</name>
-            <file>helper-opi-files/extras.opi</file>
+            <file>helper-opi-files/extras.bob</file>
             <x>5</x>
             <y>10</y>
             <width>1215</width>
@@ -133,7 +134,6 @@
       <color name="BACKGROUND" red="220" green="225" blue="221">
       </color>
     </background_color>
-    <active_tab>1</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -179,7 +179,7 @@
         </font>
       </font>
       <foreground_color>
-        <color name="IO OutputPV Fg" red="0" green="0" blue="0">
+        <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
       <line_color>
@@ -208,11 +208,6 @@
       <transparent>true</transparent>
       <actions>
       </actions>
-      <scripts>
-        <script file="scripts/enabled-remote.js">
-          <pv_name>$(P):Ampl:sLocal</pv_name>
-        </script>
-      </scripts>
       <widget type="action_button" version="3.0.0">
         <name>Action Button Template</name>
         <actions execute_as_one="true">
@@ -234,6 +229,14 @@
           <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
+        <rules>
+          <rule name="LocalRule" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0 == 1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(PLOC)</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="action_button" version="3.0.0">
         <name>Action Button Template_1</name>
@@ -257,6 +260,14 @@
           <color name="IO Foreground" red="0" green="0" blue="0">
           </color>
         </foreground_color>
+        <rules>
+          <rule name="LocalRule" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0 == 1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(PLOC)</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="action_button" version="3.0.0">
         <name>Action Button Template</name>
@@ -279,6 +290,14 @@
           <color name="BLACK" red="0" green="0" blue="0">
           </color>
         </foreground_color>
+        <rules>
+          <rule name="LocalRule" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0 == 1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(PLOC)</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="action_button" version="3.0.0">
         <name>Action Button Template_1</name>
@@ -302,6 +321,14 @@
           <color name="IO Foreground" red="0" green="0" blue="0">
           </color>
         </foreground_color>
+        <rules>
+          <rule name="LocalRule" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0 == 1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(PLOC)</pv_name>
+          </rule>
+        </rules>
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
@@ -367,24 +394,6 @@
           <color name="IO Border" red="215" green="215" blue="215">
           </color>
         </border_color>
-      </widget>
-      <widget type="tank" version="2.0.0">
-        <name>Progress Bar Template</name>
-        <pv_name>$(P):Ampl:sReflPwr</pv_name>
-        <x>380</x>
-        <height>170</height>
-        <background_color>
-          <color name="BACKGROUND" red="220" green="225" blue="221">
-          </color>
-        </background_color>
-        <fill_color>
-          <color red="0" green="64" blue="255">
-          </color>
-        </fill_color>
-        <actions>
-        </actions>
-        <limits_from_pv>false</limits_from_pv>
-        <maximum>440.0</maximum>
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update Template</name>
@@ -456,10 +465,28 @@
           </color>
         </border_color>
       </widget>
+      <widget type="tank" version="2.0.0">
+        <name>Progress Bar Template</name>
+        <pv_name>$(P):Ampl:sReflPwr</pv_name>
+        <x>379</x>
+        <height>170</height>
+        <background_color>
+          <color name="BACKGROUND" red="220" green="225" blue="221">
+          </color>
+        </background_color>
+        <fill_color>
+          <color red="0" green="64" blue="255">
+          </color>
+        </fill_color>
+        <actions>
+        </actions>
+        <limits_from_pv>false</limits_from_pv>
+        <maximum>440.0</maximum>
+      </widget>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Linking Container Template</name>
-      <file>helper-opi-files/hpaGlbStat.opi</file>
+      <file>helper-opi-files/hpaGlbStat.bob</file>
       <macros>
         <nr>1</nr>
       </macros>
@@ -476,7 +503,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Linking Container Template_1</name>
-      <file>helper-opi-files/hpaGlbStat.opi</file>
+      <file>helper-opi-files/hpaGlbStat.bob</file>
       <macros>
         <nr>2</nr>
       </macros>
@@ -491,5 +518,26 @@
         </color>
       </border_color>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>helper-opi-files/extras.bob</file>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <x>80</x>
+    <y>40</y>
+    <rules>
+      <rule name="LocalRule" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pv0 == 1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(PLOC)</pv_name>
+      </rule>
+    </rules>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

@@ -53,6 +53,14 @@
         <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
     </widget>
     <widget type="spinner" version="2.0.0">
       <name>Spinner Template</name>
@@ -62,7 +70,7 @@
       <width>85</width>
       <height>25</height>
       <format>0</format>
-      <precision>3</precision>
+      <precision>0</precision>
       <foreground_color>
         <color name="WHITE" red="255" green="255" blue="255">
         </color>
@@ -90,7 +98,7 @@
       <x>2</x>
       <y>3</y>
       <width>111</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -118,7 +126,7 @@
       <x>6</x>
       <y>32</y>
       <width>94</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -239,7 +247,7 @@
       <text>Start</text>
       <x>425</x>
       <width>29</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -266,7 +274,7 @@
       <text>Stop</text>
       <x>575</x>
       <width>28</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -481,7 +489,7 @@
       <name>Label Template</name>
       <text>Record #</text>
       <width>52</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>

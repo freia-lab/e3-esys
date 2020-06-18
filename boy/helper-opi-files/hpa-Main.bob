@@ -30,7 +30,7 @@
       <text>Forward</text>
       <x>151</x>
       <width>50</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -80,7 +80,7 @@
       <text>Reflected</text>
       <x>364</x>
       <width>56</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -131,7 +131,7 @@
       <x>151</x>
       <y>25</y>
       <width>50</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -182,7 +182,7 @@
       <x>364</x>
       <y>25</y>
       <width>56</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -284,7 +284,7 @@
       <x>364</x>
       <y>50</y>
       <width>45</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -386,7 +386,7 @@
       <x>364</x>
       <y>75</y>
       <width>45</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -488,7 +488,7 @@
       <x>364</x>
       <y>100</y>
       <width>45</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -590,7 +590,7 @@
       <x>364</x>
       <y>125</y>
       <width>45</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -692,7 +692,7 @@
       <x>364</x>
       <y>150</y>
       <width>45</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -776,7 +776,7 @@
       <text>Device</text>
       <x>7</x>
       <width>38</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="ITALIC" size="14.0">
         </font>
@@ -803,7 +803,7 @@
       <text>cSetV</text>
       <x>117</x>
       <width>32</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="ITALIC" size="14.0">
         </font>
@@ -830,7 +830,7 @@
       <text>sSetV</text>
       <x>219</x>
       <width>31</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="ITALIC" size="14.0">
         </font>
@@ -857,7 +857,7 @@
       <text>sRdV</text>
       <x>321</x>
       <width>28</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="ITALIC" size="14.0">
         </font>
@@ -1199,6 +1199,14 @@
         <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button Template_1</name>
@@ -1222,6 +1230,14 @@
         <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button Template</name>
@@ -1245,6 +1261,14 @@
         <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button Template_1</name>
@@ -1268,6 +1292,14 @@
         <color name="BLACK" red="0" green="0" blue="0">
         </color>
       </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1364,7 +1396,7 @@
       <text>Anode In Wtr T</text>
       <x>50</x>
       <width>86</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1414,7 +1446,7 @@
       <text>Anode Out Wtr T</text>
       <x>240</x>
       <width>96</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1464,7 +1496,7 @@
       <text>Air Press.</text>
       <x>468</x>
       <width>54</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1515,7 +1547,7 @@
       <x>50</x>
       <y>22</y>
       <width>46</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1566,7 +1598,7 @@
       <x>240</x>
       <y>23</y>
       <width>56</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1617,7 +1649,7 @@
       <x>468</x>
       <y>23</y>
       <width>41</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1668,7 +1700,7 @@
       <x>50</x>
       <y>44</y>
       <width>46</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1719,7 +1751,7 @@
       <x>240</x>
       <y>45</y>
       <width>56</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1770,7 +1802,7 @@
       <x>468</x>
       <y>45</y>
       <width>41</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1821,7 +1853,7 @@
       <x>50</x>
       <y>66</y>
       <width>46</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1872,7 +1904,7 @@
       <x>240</x>
       <y>67</y>
       <width>56</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -1923,7 +1955,7 @@
       <x>468</x>
       <y>67</y>
       <width>41</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -2260,7 +2292,7 @@
       <color name="BACKGROUND" red="220" green="225" blue="221">
       </color>
     </background_color>
-    <active_tab>1</active_tab>
+    <active_tab>2</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -2426,7 +2458,7 @@
     <x>3</x>
     <y>2</y>
     <width>56</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2454,7 +2486,7 @@
     <x>3</x>
     <y>27</y>
     <width>94</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2482,7 +2514,7 @@
     <x>3</x>
     <y>52</y>
     <width>52</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2510,7 +2542,7 @@
     <x>3</x>
     <y>77</y>
     <width>107</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2538,7 +2570,7 @@
     <x>3</x>
     <y>102</y>
     <width>126</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2566,7 +2598,7 @@
     <x>3</x>
     <y>127</y>
     <width>38</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2594,7 +2626,7 @@
     <x>3</x>
     <y>152</y>
     <width>68</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2622,7 +2654,7 @@
     <x>13</x>
     <y>195</y>
     <width>81</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2650,7 +2682,7 @@
     <x>13</x>
     <y>222</y>
     <width>105</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2677,7 +2709,7 @@
     <text>Control Grid Bl. V</text>
     <x>13</x>
     <y>249</y>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2705,7 +2737,7 @@
     <x>13</x>
     <y>276</y>
     <width>62</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2733,7 +2765,7 @@
     <x>562</x>
     <y>534</y>
     <width>45</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2761,7 +2793,7 @@
     <x>562</x>
     <y>556</y>
     <width>38</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2789,7 +2821,7 @@
     <x>562</x>
     <y>578</y>
     <width>38</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -2817,7 +2849,7 @@
     <x>562</x>
     <y>600</y>
     <width>38</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>

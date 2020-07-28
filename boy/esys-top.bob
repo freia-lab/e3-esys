@@ -134,6 +134,7 @@
       <color name="BACKGROUND" red="220" green="225" blue="221">
       </color>
     </background_color>
+    <active_tab>1</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -518,26 +519,5 @@
         </color>
       </border_color>
     </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_1</name>
-    <actions>
-      <action type="open_display">
-        <file>helper-opi-files/extras.bob</file>
-        <target>window</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <x>80</x>
-    <y>40</y>
-    <rules>
-      <rule name="LocalRule" prop_id="enabled" out_exp="false">
-        <exp bool_exp="pv0 == 1">
-          <value>false</value>
-        </exp>
-        <pv_name>$(PLOC)</pv_name>
-      </rule>
-    </rules>
-    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

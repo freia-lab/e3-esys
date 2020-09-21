@@ -352,7 +352,8 @@
       <widget type="tank" version="2.0.0">
         <name>Progress Bar Template</name>
         <pv_name>$(P):Ampl:sFwdPwr</pv_name>
-        <x>102</x>
+        <x>170</x>
+        <width>80</width>
         <height>170</height>
         <background_color>
           <color name="BACKGROUND" red="220" green="225" blue="221">
@@ -369,11 +370,11 @@
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label Template_1</name>
-        <text>Reflected:</text>
-        <x>275</x>
-        <y>5</y>
-        <width>96</width>
-        <height>29</height>
+        <text>Reflected [W]:</text>
+        <x>280</x>
+        <y>20</y>
+        <width>140</width>
+        <height>28</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
@@ -386,6 +387,7 @@
           <color name="BACKGROUND" red="220" green="225" blue="221">
           </color>
         </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <auto_size>true</auto_size>
         <actions>
@@ -398,10 +400,12 @@
       <widget type="textupdate" version="2.0.0">
         <name>Text Update Template</name>
         <pv_name>$(P):Ampl:sFwdPwr</pv_name>
-        <y>33</y>
-        <height>26</height>
+        <x>10</x>
+        <y>62</y>
+        <width>150</width>
+        <height>49</height>
         <font>
-          <font family="Source Sans Pro" style="BOLD" size="16.0">
+          <font family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
           </font>
         </font>
         <foreground_color>
@@ -412,18 +416,22 @@
           <color name="WHITE" red="255" green="255" blue="255">
           </color>
         </background_color>
+        <precision></precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
         <actions>
         </actions>
         <border_width>2</border_width>
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update Template_2</name>
-        <pv_name>$(P):Ampl:sReflPwr</pv_name>
-        <x>275</x>
-        <y>33</y>
-        <height>26</height>
+        <pv_name>=1000*`$(P):Ampl:sReflPwr`</pv_name>
+        <x>280</x>
+        <y>62</y>
+        <width>140</width>
+        <height>49</height>
         <font>
-          <font family="Source Sans Pro" style="BOLD" size="16.0">
+          <font family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
           </font>
         </font>
         <foreground_color>
@@ -434,16 +442,19 @@
           <color name="WHITE" red="255" green="255" blue="255">
           </color>
         </background_color>
+        <precision>0</precision>
+        <horizontal_alignment>1</horizontal_alignment>
         <actions>
         </actions>
         <border_width>2</border_width>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label Template</name>
-        <text>Forward:</text>
-        <y>5</y>
-        <width>87</width>
-        <height>29</height>
+        <text>Forward [kW]:</text>
+        <x>10</x>
+        <y>20</y>
+        <width>150</width>
+        <height>28</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
@@ -456,6 +467,7 @@
           <color name="BACKGROUND" red="220" green="225" blue="221">
           </color>
         </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <auto_size>true</auto_size>
         <actions>
@@ -467,8 +479,9 @@
       </widget>
       <widget type="tank" version="2.0.0">
         <name>Progress Bar Template</name>
-        <pv_name>$(P):Ampl:sReflPwr</pv_name>
-        <x>379</x>
+        <pv_name>=1000*`$(P):Ampl:sReflPwr`</pv_name>
+        <x>450</x>
+        <width>80</width>
         <height>170</height>
         <background_color>
           <color name="BACKGROUND" red="220" green="225" blue="221">
@@ -481,7 +494,7 @@
         <actions>
         </actions>
         <limits_from_pv>false</limits_from_pv>
-        <maximum>440.0</maximum>
+        <maximum>6000.0</maximum>
       </widget>
     </widget>
     <widget type="embedded" version="2.0.0">

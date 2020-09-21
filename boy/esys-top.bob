@@ -70,10 +70,10 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container Template</name>
-            <file>helper-opi-files/hpa-Main.bob</file>
             <macros>
               <nr>1</nr>
             </macros>
+            <file>helper-opi-files/hpa-Main.bob</file>
             <x>5</x>
             <y>10</y>
             <width>1188</width>
@@ -373,7 +373,7 @@
         <x>275</x>
         <y>5</y>
         <width>96</width>
-        <height>28</height>
+        <height>29</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
@@ -443,7 +443,7 @@
         <text>Forward:</text>
         <y>5</y>
         <width>87</width>
-        <height>28</height>
+        <height>29</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
@@ -486,10 +486,10 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Linking Container Template</name>
-      <file>helper-opi-files/hpaGlbStat.bob</file>
       <macros>
         <nr>1</nr>
       </macros>
+      <file>helper-opi-files/hpaGlbStat.bob</file>
       <x>790</x>
       <y>10</y>
       <width>207</width>
@@ -503,10 +503,10 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Linking Container Template_1</name>
-      <file>helper-opi-files/hpaGlbStat.bob</file>
       <macros>
         <nr>2</nr>
       </macros>
+      <file>helper-opi-files/hpaGlbStat.bob</file>
       <x>1010</x>
       <y>10</y>
       <width>207</width>
@@ -518,26 +518,5 @@
         </color>
       </border_color>
     </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_1</name>
-    <actions>
-      <action type="open_display">
-        <file>helper-opi-files/extras.bob</file>
-        <target>window</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <x>80</x>
-    <y>40</y>
-    <rules>
-      <rule name="LocalRule" prop_id="enabled" out_exp="false">
-        <exp bool_exp="pv0 == 1">
-          <value>false</value>
-        </exp>
-        <pv_name>$(PLOC)</pv_name>
-      </rule>
-    </rules>
-    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

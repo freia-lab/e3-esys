@@ -60,7 +60,7 @@
       <height>26</height>
       <off_label>Standby</off_label>
       <off_color>
-        <color name="GRAY-BORDER" red="121" green="121" blue="121">
+        <color red="0" green="91" blue="255">
         </color>
       </off_color>
       <on_label>Pwr On</on_label>
@@ -93,7 +93,7 @@
       <height>26</height>
       <off_label>RF Disabled</off_label>
       <off_color>
-        <color name="GRAY-BORDER" red="121" green="121" blue="121">
+        <color name="LED-RED-ON" red="255" green="60" blue="46">
         </color>
       </off_color>
       <on_label>RF Enabled</on_label>
@@ -172,7 +172,7 @@
       <text>Reflected:</text>
       <y>119</y>
       <width>59</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>

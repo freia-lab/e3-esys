@@ -98,7 +98,7 @@
       <x>2</x>
       <y>3</y>
       <width>111</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -220,7 +220,7 @@
       <text>Code</text>
       <x>86</x>
       <width>31</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -247,7 +247,7 @@
       <text>Start</text>
       <x>425</x>
       <width>29</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -274,7 +274,7 @@
       <text>Stop</text>
       <x>575</x>
       <width>28</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -680,5 +680,91 @@
     </labels>
     <actions>
     </actions>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Change Tube Id</name>
+    <x>5</x>
+    <y>160</y>
+    <width>214</width>
+    <height>90</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="../scripts/enabled-remote.js">
+        <pv_name>$(P):Ampl:sLocal</pv_name>
+      </script>
+    </scripts>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_3</name>
+      <text>HPA1:</text>
+      <x>14</x>
+      <y>8</y>
+      <width>41</width>
+      <height>21</height>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_4</name>
+      <text>HPA2:</text>
+      <x>14</x>
+      <y>38</y>
+      <width>41</width>
+      <height>21</height>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P):hpa1:TubeId</pv_name>
+      <x>74</x>
+      <y>8</y>
+      <width>110</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P):hpa2:TubeId</pv_name>
+      <x>74</x>
+      <y>38</y>
+      <width>110</width>
+    </widget>
   </widget>
 </display>

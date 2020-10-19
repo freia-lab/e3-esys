@@ -1,0 +1,4 @@
+record (longout, "$(DEV):$(SIG):TubeId") {
+  field (DESC, "Tube id number")
+  field (UDFS, "NO_ALARM")
+}

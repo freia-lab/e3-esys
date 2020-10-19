@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <name>Esys</name>
   <macros>
     <P>HPRF-Esys</P>
     <PLOC>$(P):Ampl:sLocal</PLOC>
@@ -373,8 +374,8 @@
         <text>Reflected [W]:</text>
         <x>280</x>
         <y>20</y>
-        <width>140</width>
-        <height>28</height>
+        <width>132</width>
+        <height>29</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>
@@ -453,8 +454,8 @@
         <text>Forward [kW]:</text>
         <x>10</x>
         <y>20</y>
-        <width>150</width>
-        <height>28</height>
+        <width>135</width>
+        <height>29</height>
         <font>
           <font family="Source Sans Pro" style="BOLD_ITALIC" size="22.0">
           </font>

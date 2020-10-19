@@ -23,7 +23,8 @@ save_restoreSet_NumSeqFiles(3)
 save_restoreSet_SeqPeriodInSeconds(300)
 
 # specify where save files should be
-set_savefile_path("$(EPICS_AUTOSAVE_VAR)/$(UNIT_NAME)")
+#set_savefile_path("$(EPICS_AUTOSAVE_VAR)/$(UNIT_NAME)")
+set_savefile_path("/opt/epics/autosave/esys")
 
 # specify what save files should be restored.  Note these files must be
 # in the directory specified in set_savefile_path(), or, if that function
@@ -35,6 +36,7 @@ set_savefile_path("$(EPICS_AUTOSAVE_VAR)/$(UNIT_NAME)")
 set_pass1_restoreFile("ioc-esys-freia.sav")
 
 # specify directories in which to to search for included request files
-set_requestfile_path("./")
+#set_requestfile_path("./")
+set_requestfile_path("$(REQUIRE_ioc_esys_freia_PATH)/misc/")
 
-dbLoadRecords("$(EPICS_MODULES)/autosave/db/save_restoreStatus.db"), "P=$(AUTOSAVE_SYSM_PV_PREFIX)")
+dbLoadRecords("save_restoreStatus.db"), "P=$(AUTOSAVE_SYSM_PV_PREFIX)")

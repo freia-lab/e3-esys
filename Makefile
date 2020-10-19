@@ -1,5 +1,6 @@
 EXCLUDE_ARCHS += eldk
 #EXCLUDE_VERSIONS = 3.15.2
+EXCLUDE_VERSIONS = 3.14
 
 include ${EPICS_ENV_PATH}/module.Makefile
 
@@ -22,4 +23,5 @@ OPIS= boy
 #vpath %.mib ../../src/main/epics/mibs
 
 MISCS += $(wildcard src/main/epics/mibs/*.mib)
+MISCS += src/main/ioc/ioc-esys-freia.req
 

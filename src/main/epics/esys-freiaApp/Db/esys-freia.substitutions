@@ -154,3 +154,8 @@ file "hlogcode.template" { pattern
 {HPRF-Esys, sysHLogRecord3code,	sR3code, sR3Msg,	NotUsed, public, 0}
 }
 
+file "esys-tubeid.template" { pattern
+{DEV,      SIG}
+{HPRF-Esys, hpa1}
+{HPRF-Esys, hpa2}
+}

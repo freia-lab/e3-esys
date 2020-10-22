@@ -5,6 +5,7 @@ record(longout, "$(DEV):Ampl:cmdStart")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdSystemStart.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):Ampl:cmdStop")
@@ -12,6 +13,7 @@ record(longout, "$(DEV):Ampl:cmdStop")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdSystemStop.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):Ampl:cmdReset")
@@ -19,6 +21,7 @@ record(longout, "$(DEV):Ampl:cmdReset")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdResetSystem.$(CHAN) INTEGER: 100 i")
 }
 
@@ -27,6 +30,7 @@ record(longout, "$(DEV):Ampl:cmdStandby")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdSystemStandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
@@ -35,6 +39,7 @@ record(longout, "$(DEV):Ampl-IpSrv:cmdReset")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdExecIpServerReset.$(CHAN) INTEGER: 100 i")
 }
 
@@ -43,6 +48,7 @@ record(longout, "$(DEV):hpa1:cmdStart")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Start.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):hpa1:cmdStop")
@@ -50,6 +56,7 @@ record(longout, "$(DEV):hpa1:cmdStop")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa1Stop.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):hpa1:cmdReset")
@@ -57,6 +64,7 @@ record(longout, "$(DEV):hpa1:cmdReset")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa1.$(CHAN) INTEGER: 100 i")
 }
 
@@ -65,6 +73,7 @@ record(longout, "$(DEV):hpa1:cmdStandby")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa1StandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
@@ -73,6 +82,7 @@ record(longout, "$(DEV):hpa2:cmdStart")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Start.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):hpa2:cmdStop")
@@ -80,6 +90,7 @@ record(longout, "$(DEV):hpa2:cmdStop")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa2Stop.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):hpa2:cmdReset")
@@ -87,6 +98,7 @@ record(longout, "$(DEV):hpa2:cmdReset")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdResetHpa2.$(CHAN) INTEGER: 100 i")
 }
 
@@ -95,6 +107,7 @@ record(longout, "$(DEV):hpa2:cmdStandby")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdHpa2StandByPowerOn.$(CHAN) INTEGER: 100 i")
 }
 
@@ -104,6 +117,7 @@ record(longout, "$(DEV):cmdSaveHistoryLog")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdDownloadLogPage.$(CHAN) INTEGER: 100 i")
 }
 
@@ -113,6 +127,7 @@ record(longout, "$(DEV):Ampl:cmdAGCOn")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdSetAgcEnabled.$(CHAN) INTEGER: 100 i")
 }
 record(longout, "$(DEV):Ampl:cmdAGCOff")
@@ -120,6 +135,7 @@ record(longout, "$(DEV):Ampl:cmdAGCOff")
   field(DESC, "SNMP channel")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdSetAgcDisabled.$(CHAN) INTEGER: 100 i")
 }
 
@@ -150,6 +166,7 @@ record(longout, "$(DEV):Log:cmdReset")
   field(DESC, "SNMP channel- clear history log")
   field(SCAN, "Passive")
   field(DTYP, "Snmp")
+  field(UDFS, "NO_ALARM")
   field(OUT, "@$(HOST) public %(E)cmdResetHistoryLog.$(CHAN) INTEGER: 100 i")
 }
 

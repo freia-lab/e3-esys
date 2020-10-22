@@ -1,2 +1,12 @@
 HPRF-Esys:hpa1:TubeId
 HPRF-Esys:hpa2:TubeId
+HPRF-Esys:hpa1-SGridV:cSetV
+HPRF-Esys:hpa1-CGridOpV:cSetV
+HPRF-Esys:hpa1-CGridBlV:cSetV
+HPRF-Esys:hpa1-FilV:cSetV
+HPRF-Esys:hpa2-SGridV:cSetV
+HPRF-Esys:hpa2-CGridOpV:cSetV
+HPRF-Esys:hpa2-CGridBlV:cSetV
+HPRF-Esys:hpa2-FilV:cSetV
+HPRF-Esys:Ampl-RFPwr:cSetV
+HPRF-Esys:Ampl-RFV:cSetV

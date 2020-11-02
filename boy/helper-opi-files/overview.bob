@@ -27,11 +27,6 @@
     <transparent>true</transparent>
     <actions>
     </actions>
-    <scripts>
-      <script file="../scripts/enabled-remote.js">
-        <pv_name>$(P):Ampl:sLocal</pv_name>
-      </script>
-    </scripts>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor Template</name>
       <pv_name>$(P):CentrSys:sStat</pv_name>
@@ -99,7 +94,7 @@
       <text>Unbal. Load Pwr</text>
       <y>2</y>
       <width>97</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -149,7 +144,7 @@
       <text>Cap. Charging V</text>
       <y>27</y>
       <width>92</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -199,7 +194,7 @@
       <text>Cap. Charging I</text>
       <y>52</y>
       <width>89</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -242,6 +237,14 @@
       </background_color>
       <actions>
       </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
       <border_width>2</border_width>
     </widget>
     <widget type="label" version="2.0.0">
@@ -250,7 +253,7 @@
       <x>2</x>
       <y>129</y>
       <width>57</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -278,7 +281,7 @@
       <x>2</x>
       <y>75</y>
       <width>111</width>
-      <height>18</height>
+      <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -321,6 +324,14 @@
       </background_color>
       <actions>
       </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
       <border_width>2</border_width>
     </widget>
     <widget type="textentry" version="3.0.0">

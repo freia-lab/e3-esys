@@ -27,11 +27,6 @@
     <transparent>true</transparent>
     <actions>
     </actions>
-    <scripts>
-      <script file="../scripts/enabled-remote.js">
-        <pv_name>$(P):Ampl:sLocal</pv_name>
-      </script>
-    </scripts>
     <widget type="action_button" version="3.0.0">
       <name>Action Button Template_1</name>
       <actions execute_as_one="true">
@@ -82,11 +77,11 @@
       <actions>
       </actions>
       <rules>
-        <rule name="Init_val" prop_id="pv_value" out_exp="true">
-          <exp bool_exp="1">
-            <expression>pv0</expression>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
           </exp>
-          <pv_name>$(P):Log:sRecNo</pv_name>
+          <pv_name>$(PLOC)</pv_name>
         </rule>
       </rules>
       <minimum>-100.0</minimum>
@@ -98,7 +93,7 @@
       <x>2</x>
       <y>3</y>
       <width>111</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -220,7 +215,7 @@
       <text>Code</text>
       <x>86</x>
       <width>31</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -247,7 +242,7 @@
       <text>Start</text>
       <x>425</x>
       <width>29</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -274,7 +269,7 @@
       <text>Stop</text>
       <x>575</x>
       <width>28</width>
-      <height>19</height>
+      <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
         </font>
@@ -699,11 +694,6 @@
     <transparent>true</transparent>
     <actions>
     </actions>
-    <scripts>
-      <script file="../scripts/enabled-remote.js">
-        <pv_name>$(P):Ampl:sLocal</pv_name>
-      </script>
-    </scripts>
     <widget type="label" version="2.0.0">
       <name>Label Template_3</name>
       <text>HPA1:</text>

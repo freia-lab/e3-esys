@@ -364,3 +364,24 @@ record(calc, "$(DEV):Ampl-hpa2:sComStat")
   field(HIGH, 1)
   field(HSV, "MAJOR")
 }
+
+# Combined status of the RF station
+
+record (calc, "$(DEV):Ampl:sFault-calc") { 
+    field(SCAN, "1 second")
+    field(INPA, "$(DEV):hpa1:sGlobStat.SEVR")
+    field(INPB, "$(DEV):hpa2:sGlobStat.SEVR")
+    field(CALC, "MAX(A,B)")
+    field(FLNK,  "$(DEV):Ampl:sFault")
+}
+
+record (mbbi,  "$(DEV):Ampl:sFault") {
+    field(DESC, "General RF station status")
+    field(DTYP, "Soft Channel")
+    field(INP, "$(DEV):Ampl:sFault-calc")
+    field(ZRST, "OK")
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(TWST, "FAULT")
+    field(TWSV, "MAJOR")
+}

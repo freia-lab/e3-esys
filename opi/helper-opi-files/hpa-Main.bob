@@ -1,0 +1,2984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1200</width>
+  <height>645</height>
+  <background_color>
+    <color name="BACKGROUND" red="220" green="225" blue="221">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2</name>
+    <width>530</width>
+    <height>171</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_2</name>
+      <text>Forward</text>
+      <x>151</x>
+      <width>50</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):hpa$(nr):sFwdPwr</pv_name>
+      <x>233</x>
+      <y>2</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_2</name>
+      <text>Reflected</text>
+      <x>364</x>
+      <width>56</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):hpa$(nr):sReflPwr</pv_name>
+      <x>431</x>
+      <y>2</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Forward</text>
+      <x>151</x>
+      <y>25</y>
+      <width>50</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-Drv:sFwdPwr</pv_name>
+      <x>233</x>
+      <y>27</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Reflected</text>
+      <x>364</x>
+      <y>25</y>
+      <width>56</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-Drv:sReflPwr</pv_name>
+      <x>431</x>
+      <y>27</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Voltage</text>
+      <x>151</x>
+      <y>50</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
+      <x>233</x>
+      <y>52</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Current</text>
+      <x>364</x>
+      <y>50</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-FilI:sRdV</pv_name>
+      <x>431</x>
+      <y>52</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Voltage</text>
+      <x>151</x>
+      <y>75</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
+      <x>233</x>
+      <y>77</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Current</text>
+      <x>364</x>
+      <y>75</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-CGridOpI:sRdV</pv_name>
+      <x>431</x>
+      <y>77</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Voltage</text>
+      <x>151</x>
+      <y>100</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
+      <x>233</x>
+      <y>102</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Current</text>
+      <x>364</x>
+      <y>100</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-CGridBlI:sRdV</pv_name>
+      <x>431</x>
+      <y>102</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Voltage</text>
+      <x>151</x>
+      <y>125</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr):sAnodeV</pv_name>
+      <x>233</x>
+      <y>127</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Current</text>
+      <x>364</x>
+      <y>125</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr):sAnodeI</pv_name>
+      <x>431</x>
+      <y>127</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Voltage</text>
+      <x>151</x>
+      <y>150</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
+      <x>233</x>
+      <y>152</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Current</text>
+      <x>364</x>
+      <y>150</y>
+      <width>45</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-SGridI:sRdV</pv_name>
+      <x>431</x>
+      <y>152</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2_2</name>
+    <x>10</x>
+    <y>175</y>
+    <width>415</width>
+    <height>125</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Device</text>
+      <x>7</x>
+      <width>38</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>cSetV</text>
+      <x>117</x>
+      <width>32</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>sSetV</text>
+      <x>219</x>
+      <width>31</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_11</name>
+      <text>sRdV</text>
+      <x>321</x>
+      <width>28</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template</name>
+      <pv_name>$(P):hpa$(nr)-SGridV:cSetV</pv_name>
+      <x>112</x>
+      <y>20</y>
+      <width>96</width>
+      <height>21</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="(pv0==1)||(pv1==1)||(pv1==2)">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P):Ampl:sLocal</pv_name>
+          <pv_name>$(P):hpa$(nr)-Fil:sRampStat</pv_name>
+        </rule>
+      </rules>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_1</name>
+      <pv_name>$(P):hpa$(nr)-SGridV:sSetV</pv_name>
+      <x>214</x>
+      <y>20</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_9</name>
+      <pv_name>$(P):hpa$(nr)-SGridV:sRdV</pv_name>
+      <x>316</x>
+      <y>20</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template_1</name>
+      <pv_name>$(P):hpa$(nr)-CGridOpV:cSetV</pv_name>
+      <x>112</x>
+      <y>47</y>
+      <width>96</width>
+      <height>21</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="(pv0==1)||(pv1==1)||(pv1==2)">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P):Ampl:sLocal</pv_name>
+          <pv_name>$(P):hpa$(nr)-Fil:sRampStat</pv_name>
+        </rule>
+      </rules>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-CGridOpV:sSetV</pv_name>
+      <x>214</x>
+      <y>47</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_13</name>
+      <pv_name>$(P):hpa$(nr)-CGridOpV:sRdV</pv_name>
+      <x>316</x>
+      <y>47</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template_2</name>
+      <pv_name>$(P):hpa$(nr)-CGridBlV:cSetV</pv_name>
+      <x>112</x>
+      <y>74</y>
+      <width>96</width>
+      <height>21</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="(pv0==1)||(pv1==1)||(pv1==2)">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P):Ampl:sLocal</pv_name>
+          <pv_name>$(P):hpa$(nr)-Fil:sRampStat</pv_name>
+        </rule>
+      </rules>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-CGridBlV:sSetV</pv_name>
+      <x>214</x>
+      <y>74</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_16</name>
+      <pv_name>$(P):hpa$(nr)-CGridBlV:sRdV</pv_name>
+      <x>316</x>
+      <y>74</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input Template_3</name>
+      <pv_name>$(P):hpa$(nr)-FilV:cSetV</pv_name>
+      <x>112</x>
+      <y>101</y>
+      <width>96</width>
+      <height>21</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="(pv0==1)||(pv1==1)||(pv1==2)">
+            <value>false</value>
+          </exp>
+          <pv_name>$(P):Ampl:sLocal</pv_name>
+          <pv_name>$(P):hpa$(nr)-Fil:sRampStat</pv_name>
+        </rule>
+      </rules>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-FilV:sSetV</pv_name>
+      <x>214</x>
+      <y>101</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update Template_18</name>
+      <pv_name>$(P):hpa$(nr)-FilV:sRdV</pv_name>
+      <x>316</x>
+      <y>101</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>HPA$(nr) Commands</name>
+    <x>830</x>
+    <width>358</width>
+    <height>68</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button Template</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Reset</description>
+        </action>
+      </actions>
+      <pv_name>$(P):hpa$(nr):cmdReset</pv_name>
+      <text>Reset</text>
+      <y>8</y>
+      <width>80</width>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button Template_1</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Stby/PwrOn (Turn off/on the high voltage)</description>
+        </action>
+      </actions>
+      <pv_name>$(P):hpa$(nr):cmdStandby</pv_name>
+      <text>Stby/PwrOn</text>
+      <x>85</x>
+      <y>8</y>
+      <width>95</width>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button Template</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Start</description>
+        </action>
+      </actions>
+      <pv_name>$(P):hpa$(nr):cmdStart</pv_name>
+      <text>Start</text>
+      <x>185</x>
+      <y>8</y>
+      <width>81</width>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button Template_1</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Stop</description>
+        </action>
+      </actions>
+      <pv_name>$(P):hpa$(nr):cmdStop</pv_name>
+      <text>Stop</text>
+      <x>275</x>
+      <y>8</y>
+      <width>80</width>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <rules>
+        <rule name="LocalRule" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pv0 == 1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PLOC)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2_4</name>
+    <x>949</x>
+    <y>75</y>
+    <width>237</width>
+    <height>21</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Global Status:</text>
+      <y>2</y>
+      <width>82</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template</name>
+      <pv_name>$(P):hpa$(nr):sGlobStat</pv_name>
+      <x>92</x>
+      <y>2</y>
+      <width>142</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2_1</name>
+    <x>570</x>
+    <y>534</y>
+    <width>616</width>
+    <height>87</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_5</name>
+      <text>Anode In Wtr T</text>
+      <x>50</x>
+      <width>86</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_5</name>
+      <pv_name>$(P):hpa$(nr)-Anode:sInWtrT</pv_name>
+      <x>145</x>
+      <y>2</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Anode Out Wtr T</text>
+      <x>240</x>
+      <width>96</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-Anode:sOutWtrT</pv_name>
+      <x>347</x>
+      <y>2</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_6</name>
+      <text>Air Press.</text>
+      <x>468</x>
+      <width>54</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_6</name>
+      <pv_name>$(P):hpa$(nr)-Anode:sAirPress</pv_name>
+      <x>529</x>
+      <y>2</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_9</name>
+      <text>In Wtr T</text>
+      <x>50</x>
+      <y>22</y>
+      <width>46</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_9</name>
+      <pv_name>$(P):hpa$(nr)-DrvM1:sInWtrT</pv_name>
+      <x>145</x>
+      <y>24</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_10</name>
+      <text>Out Wtr T</text>
+      <x>240</x>
+      <y>23</y>
+      <width>56</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_10</name>
+      <pv_name>$(P):hpa$(nr)-DrvM1:sOutWtrT</pv_name>
+      <x>347</x>
+      <y>24</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_11</name>
+      <text>Ampl V</text>
+      <x>468</x>
+      <y>23</y>
+      <width>41</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_11</name>
+      <pv_name>$(P):hpa$(nr)-DrvM1:sAmplV</pv_name>
+      <x>529</x>
+      <y>24</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_13</name>
+      <text>In Wtr T</text>
+      <x>50</x>
+      <y>44</y>
+      <width>46</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_13</name>
+      <pv_name>$(P):hpa$(nr)-DrvM2:sInWtrT</pv_name>
+      <x>145</x>
+      <y>46</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_14</name>
+      <text>Out Wtr T</text>
+      <x>240</x>
+      <y>45</y>
+      <width>56</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_14</name>
+      <pv_name>$(P):hpa$(nr)-DrvM2:sOutWtrT</pv_name>
+      <x>347</x>
+      <y>46</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_15</name>
+      <text>Ampl V</text>
+      <x>468</x>
+      <y>45</y>
+      <width>41</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_15</name>
+      <pv_name>$(P):hpa$(nr)-DrvM2:sAmplV</pv_name>
+      <x>529</x>
+      <y>46</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_17</name>
+      <text>In Wtr T</text>
+      <x>50</x>
+      <y>66</y>
+      <width>46</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_17</name>
+      <pv_name>$(P):hpa$(nr)-DrvM3:sInWtrT</pv_name>
+      <x>145</x>
+      <y>68</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_18</name>
+      <text>Out Wtr T</text>
+      <x>240</x>
+      <y>67</y>
+      <width>56</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_18</name>
+      <pv_name>$(P):hpa$(nr)-DrvM3:sOutWtrT</pv_name>
+      <x>347</x>
+      <y>68</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_19</name>
+      <text>Ampl V</text>
+      <x>468</x>
+      <y>67</y>
+      <width>41</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_19</name>
+      <pv_name>$(P):hpa$(nr)-DrvM3:sAmplV</pv_name>
+      <x>529</x>
+      <y>68</y>
+      <width>81</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>FIlament V Ramping</name>
+    <x>535</x>
+    <width>281</width>
+    <height>150</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Status:</text>
+      <x>15</x>
+      <y>10</y>
+      <width>41</width>
+      <height>18</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template</name>
+      <pv_name>$(P):hpa$(nr)-Fil:sRampStat</pv_name>
+      <x>5</x>
+      <y>35</y>
+      <width>120</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="tank" version="2.0.0">
+      <name>Progress Bar Template</name>
+      <pv_name>$(P):hpa$(nr)-Fil:sRampPerc</pv_name>
+      <x>142</x>
+      <y>4</y>
+      <width>130</width>
+      <height>120</height>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <fill_color>
+        <color red="0" green="64" blue="255">
+        </color>
+      </fill_color>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_2</name>
+    <pv_name>$(P):Ampl-hpa$(nr):sComStat</pv_name>
+    <x>830</x>
+    <y>75</y>
+    <width>116</width>
+    <height>60</height>
+    <numBits>3</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>DrvM1 Comm</text>
+      <text>DrvM2 Comm</text>
+      <text>DrvM3 Comm</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template</name>
+    <pv_name>$(P):hpa$(nr):sStat1</pv_name>
+    <x>550</x>
+    <y>240</y>
+    <width>190</width>
+    <height>265</height>
+    <startBit>16</startBit>
+    <numBits>16</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Filament Cooling OK</text>
+      <text>Filament Overvoltage</text>
+      <text>Control Grid Start/Stop</text>
+      <text>Control Grid Ready</text>
+      <text>Control Grid Status OK</text>
+      <text>Control Grid Temp OK</text>
+      <text>Control Grid Overcurrent</text>
+      <text>Control Grid Pulsing OK</text>
+      <text>Anode Start/Stop</text>
+      <text>Anode Ready</text>
+      <text>Anode Status OK</text>
+      <text>Anode Peak Current OK</text>
+      <text>Anode dV/dT OK</text>
+      <text>Anode Overvoltage</text>
+      <text>Anode Average Power OK</text>
+      <text>Anode Cooling OK</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_2</name>
+    <pv_name>$(P):hpa$(nr):sStat1</pv_name>
+    <x>550</x>
+    <y>190</y>
+    <width>190</width>
+    <height>50</height>
+    <numBits>3</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Filament Start/Stop</text>
+      <text>Filament ready</text>
+      <text>Filament OK</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabbed ContainerTemplate</name>
+    <tabs>
+      <tab>
+        <name>Driver Module 1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <macros>
+              <mod>1</mod>
+            </macros>
+            <file>DrvModule.opi</file>
+            <x>5</x>
+            <y>3</y>
+            <width>415</width>
+            <height>290</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Driver Module 2</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <macros>
+              <mod>2</mod>
+            </macros>
+            <file>DrvModule.opi</file>
+            <x>5</x>
+            <y>3</y>
+            <width>415</width>
+            <height>290</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Driver Module 3</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container Template</name>
+            <macros>
+              <mod>3</mod>
+            </macros>
+            <file>DrvModule.opi</file>
+            <x>5</x>
+            <y>3</y>
+            <width>415</width>
+            <height>290</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color name="IO Border" red="215" green="215" blue="215">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>10</x>
+    <y>305</y>
+    <width>466</width>
+    <height>326</height>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <active_tab>2</active_tab>
+    <tab_height>10</tab_height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_3</name>
+    <pv_name>$(P):hpa$(nr):sStat2</pv_name>
+    <x>755</x>
+    <y>165</y>
+    <width>190</width>
+    <height>102</height>
+    <numBits>6</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Screen Grid Start/Stop</text>
+      <text>Screen Grid Ready</text>
+      <text>Screen Grid OK</text>
+      <text>Screen Grid Power OK</text>
+      <text>Screen Grid Overcurrent</text>
+      <text>Screen Grid Arc Detector</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_4</name>
+    <pv_name>$(P):hpa$(nr):sStat2</pv_name>
+    <x>755</x>
+    <y>270</y>
+    <width>190</width>
+    <height>85</height>
+    <startBit>6</startBit>
+    <numBits>5</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>HV Series Switch Closed</text>
+      <text>HV Series Switch OK</text>
+      <text>HV Ext. Interlock OK</text>
+      <text>RF Ext. Interlock OK</text>
+      <text>Cavity Interlock OK</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_5</name>
+    <pv_name>$(P):hpa$(nr):sStat2</pv_name>
+    <x>755</x>
+    <y>360</y>
+    <width>190</width>
+    <height>68</height>
+    <startBit>11</startBit>
+    <numBits>4</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Mains Voltage OK</text>
+      <text>Mains Phase OK</text>
+      <text>Reflected Power OK</text>
+      <text>Cooling OK</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_6</name>
+    <pv_name>$(P):hpa$(nr):sStat2</pv_name>
+    <x>957</x>
+    <y>165</y>
+    <width>190</width>
+    <height>272</height>
+    <startBit>15</startBit>
+    <numBits>17</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Cooling Start/Stop Cmd</text>
+      <text>Cooling Start/Stop Ack</text>
+      <text>Rack Blower OK</text>
+      <text>Cooling Mains Overload</text>
+      <text>Anode Cooling OK</text>
+      <text>Air Pressure OK</text>
+      <text>Temperature Detector OK</text>
+      <text>Water Flow OK</text>
+      <text>Delayed Water Flow OK</text>
+      <text>Anode In Water Temp OK</text>
+      <text>Anode Out Water Temp OK</text>
+      <text>Water Pressure OK</text>
+      <text>Water Conductivity OK</text>
+      <text>Driver OK</text>
+      <text>Driver Water Flow OK</text>
+      <text>Driver Unbal Load OK</text>
+      <text>Water Conductivity OK</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>RF Power</text>
+    <x>3</x>
+    <y>2</y>
+    <width>56</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Driver RF Power</text>
+    <x>3</x>
+    <y>27</y>
+    <width>94</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Filament</text>
+    <x>3</x>
+    <y>52</y>
+    <width>52</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Control Grid Oper.</text>
+    <x>3</x>
+    <y>77</y>
+    <width>107</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Control Grid Blanking</text>
+    <x>3</x>
+    <y>102</y>
+    <width>126</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Anode</text>
+    <x>3</x>
+    <y>127</y>
+    <width>38</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Screen Grid</text>
+    <x>3</x>
+    <y>152</y>
+    <width>68</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Screen Grid  V</text>
+    <x>13</x>
+    <y>195</y>
+    <width>81</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Control Grid Op. V</text>
+    <x>13</x>
+    <y>222</y>
+    <width>105</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Control Grid Bl. V</text>
+    <x>13</x>
+    <y>249</y>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Filament V</text>
+    <x>13</x>
+    <y>276</y>
+    <width>62</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template</name>
+    <text>Cooling</text>
+    <x>562</x>
+    <y>534</y>
+    <width>45</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template_8</name>
+    <text>DrvM1</text>
+    <x>562</x>
+    <y>556</y>
+    <width>38</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template_12</name>
+    <text>DrvM2</text>
+    <x>562</x>
+    <y>578</y>
+    <width>38</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label Template_16</name>
+    <text>DrvM3</text>
+    <x>562</x>
+    <y>600</y>
+    <width>38</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor Template_7</name>
+    <pv_name>$(P):hpa$(nr):sStat1</pv_name>
+    <x>549</x>
+    <y>171</y>
+    <width>190</width>
+    <height>17</height>
+    <startBit>3</startBit>
+    <numBits>1</numBits>
+    <horizontal>false</horizontal>
+    <off_color>
+      <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <labels>
+      <text>Filament V Protection</text>
+    </labels>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Panel 2_5</name>
+    <x>949</x>
+    <y>110</y>
+    <width>237</width>
+    <height>21</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_1</name>
+      <text>Tube Id:</text>
+      <y>2</y>
+      <width>81</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="IO Background" red="255" green="255" blue="205">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_3</name>
+      <pv_name>$(P):hpa$(nr):TubeId</pv_name>
+      <x>92</x>
+      <y>2</y>
+      <width>142</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+  </widget>
+</display>

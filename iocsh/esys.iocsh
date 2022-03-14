@@ -1,0 +1,34 @@
+# This should be the included snippet to configure and run the deployed IOC. It should be loaded with
+#
+#   iocshLoad("$(esys_DIR)/esys.iocsh", "CCU_IP=xxx.yyy.zzz.nnn,...")
+
+#- ###                esys iocsh                    ###
+#- ####################################################
+#- >> Mandatory
+#- CCU_IP	  - IP address of the Central Control Unit (CCU)        
+#- TOP		  - top directory for autosave files
+#- IOCNAME	  - iocname fot the autosave PVs
+#
+
+epicsEnvSet("MIBDIRS", "+$(esys_DIR)/db")
+epicsEnvSet("E", "ESSV900-1-6::")
+epicsEnvSet("W", "SNMPv2-MIB::")
+epicsEnvSet("N", "NOTIFICATION-LOG-MIB::")
+
+epicsEnvSet("CCU_IPADDR", $(CCU_IP))
+
+
+devSnmpSetSnmpVersion($(CCU_IPADDR),SNMP_VERSION_1)
+
+devSnmpSetMaxOidsPerReq($(CCU_IPADDR),50)
+devSnmpSetParam(MaxOidCompFailures, 0)
+devSnmpSetParam(DoNotPollWeight, 100)
+devSnmpSetParam(SetSkipReadbackMSec, 8000)
+devSnmpSetParam(SessionTimeout, 15000000)
+
+#devSnmpSetParam("DebugLevel",10)
+
+dbLoadRecords("snmp-freia.db","DEV=HPRF-Esys,HOST=$(CCU_IP),CHAN=0,GROUP=0")
+dbLoadRecords("esys-freia.db")
+
+#iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IOCDIR=esys")

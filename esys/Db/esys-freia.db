@@ -1,0 +1,3439 @@
+record(longin, "HPRF-Esys:Ampl:sGlobStat")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysGlobalStatus.0 INTEGER: 100 i")
+}
+record(longin, "HPRF-Esys:Ampl:sGenInfo")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysGeneralInfo.0 INTEGER: 100 i")
+}
+record(longin, "HPRF-Esys:hpa1:sStat1-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1Status1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1:sStat1")
+}
+
+record(calc, "HPRF-Esys:hpa1:sStat1")
+{
+  field(INPA, "HPRF-Esys:hpa1:sStat1-raw MSI")
+  field(INPB, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa1:sStat2-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1Status2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1:sStat2")
+}
+
+record(calc, "HPRF-Esys:hpa1:sStat2")
+{
+  field(INPA, "HPRF-Esys:hpa1:sStat2-raw MSI")
+  field(INPB, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa1-DrvM1:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa1-DrvM1:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa1-DrvM2:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa1-DrvM2:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa1-DrvM3:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa1-DrvM3:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa2:sStat1-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2Status1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2:sStat1")
+}
+
+record(calc, "HPRF-Esys:hpa2:sStat1")
+{
+  field(INPA, "HPRF-Esys:hpa2:sStat1-raw MSI")
+  field(INPB, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa2:sStat2-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2Status2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2:sStat2")
+}
+
+record(calc, "HPRF-Esys:hpa2:sStat2")
+{
+  field(INPA, "HPRF-Esys:hpa2:sStat2-raw MSI")
+  field(INPB, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa2-DrvM1:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa2-DrvM1:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa2-DrvM2:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa2-DrvM2:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:hpa2-DrvM3:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Status.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sStat")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sStat")
+{
+  field(INPA, "HPRF-Esys:hpa2-DrvM3:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(CALC, "A")
+}
+record(longin, "HPRF-Esys:CentrSys:sStat-raw")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, ".5 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)csStatus.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:CentrSys:sStat")
+}
+
+record(calc, "HPRF-Esys:CentrSys:sStat")
+{
+  field(INPA, "HPRF-Esys:CentrSys:sStat-raw MSI")
+  field(INPB, "HPRF-Esys:CentrS:sComStat MS")
+  field(CALC, "A")
+}
+record(mbbi, "HPRF-Esys:CentrSys:sAlrm-CChrgHV")
+{
+  field(DESC, "Capacity charger HV")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:CentrSys:sStat MS")
+  field (SHFT, "0")
+  field (NOBT, 1)
+  field (ZRST, "OK")
+  field (ONST, "Alarm")
+  field (ZRVL, "1")
+  field (ONVL, "0")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "MAJOR")
+}
+record(mbbi, "HPRF-Esys:hpa1-DrvM3:sIntlk")
+{
+  field(DESC, "DrvM3 Interlock")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:hpa1-DrvM3:sStat MS")
+  field (SHFT, "0")
+  field (NOBT, 1)
+  field (ZRST, "Alarm")
+  field (ONST, "OK")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "MAJOR")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:Ampl:sLocal")
+{
+  field(DESC, "Local Mode")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "0")
+  field (NOBT, 1)
+  field (ZRST, "Remote")
+  field (ONST, "Local")
+  field (ZRVL, "1")
+  field (ONVL, "0")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "MINOR")
+}
+record(mbbi, "HPRF-Esys:hpa1:sCmdStart")
+{
+  field(DESC, "Start cmd status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "20")
+  field (NOBT, 1)
+  field (ZRST, "Stopped")
+  field (ONST, "Started")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa1:sStart")
+{
+  field(DESC, "Run status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "21")
+  field (NOBT, 1)
+  field (ZRST, "Not running")
+  field (ONST, "Running")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa2:sCmdStart")
+{
+  field(DESC, "Start cmd status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "22")
+  field (NOBT, 1)
+  field (ZRST, "Stopped")
+  field (ONST, "Started")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa2:sStart")
+{
+  field(DESC, "Run status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "23")
+  field (NOBT, 1)
+  field (ZRST, "Not running")
+  field (ONST, "Running")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa1:sPwrOn")
+{
+  field(DESC, "RF status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "25")
+  field (NOBT, 1)
+  field (ZRST, "Pwr Stby")
+  field (ONST, "Pwr On")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa2:sPwrOn")
+{
+  field(DESC, "RF status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "27")
+  field (NOBT, 1)
+  field (ZRST, "Pwr Stby")
+  field (ONST, "Pwr On")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa1:sRF-Enbld")
+{
+  field(DESC, "RF status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "28")
+  field (NOBT, 1)
+  field (ZRST, "RF Disabled")
+  field (ONST, "RF Enabled")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(mbbi, "HPRF-Esys:hpa2:sRF-Enbld")
+{
+  field(DESC, "RF status")
+  field(SCAN, "1 second")
+  field(PHAS, "2")
+  field(DTYP, "Raw Soft Channel")
+  field(INP, "HPRF-Esys:Ampl:sGlobStat MS")
+  field (SHFT, "29")
+  field (NOBT, 1)
+  field (ZRST, "RF Disabled")
+  field (ONST, "RF Enabled")
+  field (ZRVL, "0")
+  field (ONVL, "1")
+  field (ZRSV, "NO_ALARM")
+  field (ONSV, "NO_ALARM")
+}
+record(calc, "HPRF-Esys:hpa1:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>4)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa2:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>5)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:CentrS:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>6)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa1-DrvM1:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>8)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa1-DrvM2:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>9)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa1-DrvM3:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>10)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa2-DrvM1:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>12)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa2-DrvM2:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>13)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(calc, "HPRF-Esys:hpa2-DrvM3:sComStat")
+{
+  field(INPA, "HPRF-Esys:Ampl:sGlobStat MSI")
+  field (SCAN, "1 second")
+  field(INPB, "0x1")
+  field(PREC, "0")
+  field(CALC, "(A>>14)&B")
+  field(LOPR, 0)
+  field(HOPR, 1)
+  field(HIGH, 1)
+  field(HSV, "MAJOR")
+}
+record(longin, "HPRF-Esys:sysRfPower")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysRfPower.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:Ampl:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:Ampl:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:sysRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:Ampl:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:Ampl:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:sysRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:csMeasures1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)csMeasures1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:CentrS:sUnbalLdPwr")
+}
+
+record(calc, "HPRF-Esys:CentrS:sUnbalLdPwr")
+{
+  field(INPA, "HPRF-Esys:csMeasures1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:CentrS:CapChargePwr")
+}
+
+record(calc, "HPRF-Esys:CentrS:CapChargePwr")
+{
+  field(INPA, "HPRF-Esys:csMeasures1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:csMeasures2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)csMeasures2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:CentrS:sCapChargeV")
+}
+
+record(calc, "HPRF-Esys:CentrS:sCapChargeV")
+{
+  field(INPA, "HPRF-Esys:csMeasures2 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kV")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:CentrS:sCapChargeI")
+}
+
+record(calc, "HPRF-Esys:CentrS:sCapChargeI")
+{
+  field(INPA, "HPRF-Esys:csMeasures2 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1RfPower")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1RfPower.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1RfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1RfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverRfPower")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverRfPower.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-Drv:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-Drv:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-Drv:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-Drv:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1FilamentMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1FilamentMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-FilV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-FilV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1FilamentMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-FilI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-FilI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1FilamentMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1ControlGridMeas1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1ControlGridMeas1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-CGridOpV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridOpV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ControlGridMeas1 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-CGridOpI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridOpI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ControlGridMeas1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "100")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1ControlGridMeas2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1ControlGridMeas2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-CGridBlV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridBlV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ControlGridMeas2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-CGridBlI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridBlI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ControlGridMeas2 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "100")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1AnodeMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1AnodeMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1:sAnodeV")
+}
+
+record(calc, "HPRF-Esys:hpa1:sAnodeV")
+{
+  field(INPA, "HPRF-Esys:hpa1AnodeMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kV")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1:sAnodeI")
+}
+
+record(calc, "HPRF-Esys:hpa1:sAnodeI")
+{
+  field(INPA, "HPRF-Esys:hpa1AnodeMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1ScreenGridMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1ScreenGridMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-SGridV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-SGridV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ScreenGridMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-SGridI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa1-SGridI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa1ScreenGridMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1ElectrodeSettings1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1ElectrodeSettings1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-FilV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa1-FilV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa1ElectrodeSettings1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-SGridV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa1-SGridV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa1ElectrodeSettings1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1ElectrodeSettings2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1ElectrodeSettings2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-CGridBlV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridBlV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa1ElectrodeSettings2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-CGridOpV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa1-CGridOpV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa1ElectrodeSettings2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hvSettings")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hvSettings.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:Ampl-RFPwr:sSetV")
+}
+
+record(calc, "HPRF-Esys:Ampl-RFPwr:sSetV")
+{
+  field(INPA, "HPRF-Esys:hvSettings MSI")
+  field(INPB, "10")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:Ampl-RFV:sSetV")
+}
+
+record(calc, "HPRF-Esys:Ampl-RFV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hvSettings MSI")
+  field(INPB, "10")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2RfPower")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2RfPower.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2RfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2RfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverRfPower")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverRfPower.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-Drv:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-Drv:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-Drv:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-Drv:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverRfPower MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2FilamentMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2FilamentMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-FilV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-FilV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2FilamentMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-FilI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-FilI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2FilamentMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2ControlGridMeas1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2ControlGridMeas1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-CGridOpV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridOpV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ControlGridMeas1 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-CGridOpI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridOpI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ControlGridMeas1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "100")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2ControlGridMeas2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2ControlGridMeas2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-CGridBlV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridBlV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ControlGridMeas2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-CGridBlI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridBlI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ControlGridMeas2 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "100")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2AnodeMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2AnodeMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2:sAnodeV")
+}
+
+record(calc, "HPRF-Esys:hpa2:sAnodeV")
+{
+  field(INPA, "HPRF-Esys:hpa2AnodeMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "kV")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2:sAnodeI")
+}
+
+record(calc, "HPRF-Esys:hpa2:sAnodeI")
+{
+  field(INPA, "HPRF-Esys:hpa2AnodeMeasures MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "A")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2ScreenGridMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2ScreenGridMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-SGridV:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-SGridV:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ScreenGridMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-SGridI:sRdV")
+}
+
+record(calc, "HPRF-Esys:hpa2-SGridI:sRdV")
+{
+  field(INPA, "HPRF-Esys:hpa2ScreenGridMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sFwdPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sFwdPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sInPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sInPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure1 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "µW")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sReflPwr")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sReflPwr")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure2 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "W")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure2 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure3")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure3.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sSvcV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sSvcV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure3 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sPDI")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sPDI")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure3 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure5")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure5.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sD1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sD1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sD2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sD2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure5 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure6")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure6.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sF1I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sF1I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sF2I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sF2I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure6 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure7")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure7.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sF3I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sF3I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sF4I")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sF4I")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure7 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mA")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2ElectrodeSettings1")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2ElectrodeSettings1.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-FilV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa2-FilV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa2ElectrodeSettings1 MSI")
+  field(INPB, "0.01")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-SGridV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa2-SGridV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa2ElectrodeSettings1 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa2ElectrodeSettings2")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2ElectrodeSettings2.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-CGridBlV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridBlV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa2ElectrodeSettings2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-CGridOpV:sSetV")
+}
+
+record(calc, "HPRF-Esys:hpa2-CGridOpV:sSetV")
+{
+  field(INPA, "HPRF-Esys:hpa2ElectrodeSettings2 MSI")
+  field(INPB, "-1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:sysHistoryLogRecordCount")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHistoryLogRecordCount.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:Log:sBufLen")
+}
+
+record(calc, "HPRF-Esys:Log:sBufLen")
+{
+  field(INPA, "HPRF-Esys:sysHistoryLogRecordCount MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:Log:sRecNo")
+}
+
+record(calc, "HPRF-Esys:Log:sRecNo")
+{
+  field(INPA, "HPRF-Esys:sysHistoryLogRecordCount MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPD, "0")
+  field(INPE, "HPRF-Esys:CentrS:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "")
+  field(CALC, "(((A>>16)&C)-D)*B")
+}
+record(longin, "HPRF-Esys:hpa1CoolingMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1CoolingMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-Anode:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-Anode:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-Anode:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-Anode:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-Anode:sAirPress")
+}
+
+record(calc, "HPRF-Esys:hpa1-Anode:sAirPress")
+{
+  field(INPA, "HPRF-Esys:hpa1CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mbar")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa2CoolingMeasures")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2CoolingMeasures.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-Anode:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-Anode:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-Anode:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-Anode:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-Anode:sAirPress")
+}
+
+record(calc, "HPRF-Esys:hpa2-Anode:sAirPress")
+{
+  field(INPA, "HPRF-Esys:hpa2CoolingMeasures MSI")
+  field(INPB, "1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:Ampl-hpa2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "mbar")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa1DriverMod1Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod1Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM1:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM1:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod1Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa1DriverMod2Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod2Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM2:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM2:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod2Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa1DriverMod3Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa1DriverMod3Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa1-DrvM3:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa1-DrvM3:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa1DriverMod3Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa1-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa2DriverMod1Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod1Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM1:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM1:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod1Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM1:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa2DriverMod2Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod2Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM2:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM2:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod2Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM2:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+record(longin, "HPRF-Esys:hpa2DriverMod3Measure4")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(INP, "@%(CCU_IPADDR) public %(E)hpa2DriverMod3Measure4.0 INTEGER: 100 i")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sInWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sInWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "(A&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sOutWtrT")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sOutWtrT")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure4 MSI")
+  field(INPB, "1")
+  field(INPC, "0xFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "0")
+  field(EGU, "°C")
+  field(CALC, "((A>>8)&C)*B")
+  field(FLNK, "HPRF-Esys:hpa2-DrvM3:sAmplV")
+}
+
+record(calc, "HPRF-Esys:hpa2-DrvM3:sAmplV")
+{
+  field(INPA, "HPRF-Esys:hpa2DriverMod3Measure4 MSI")
+  field(INPB, "0.1")
+  field(INPC, "0xFFFF")
+  field(INPE, "HPRF-Esys:hpa2-DrvM3:sComStat MS")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(CALC, "((A>>16)&C)*B")
+}
+
+# Settings
+
+#record(longout, "HPRF-Esys:hpa1-SGridV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa1.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa1-SGridV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa1.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa1-SGridV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "1200")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa1.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa1-SGridV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "1200")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa1.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa1-CGridOpV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa1.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa1-CGridOpV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa1.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa1-CGridOpV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "-400")
+  field(HOPR, "-150")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa1.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa1-CGridOpV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "-400")
+#  field(HOPR, "-150")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa1.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa1-CGridBlV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa1.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa1-CGridBlV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa1.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa1-CGridBlV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "-400")
+  field(HOPR, "-150")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa1.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa1-CGridBlV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "-400")
+#  field(HOPR, "-150")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa1.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa1-FilV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa1.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa1-FilV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa1.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa1-FilV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "50")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "0.01")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa1.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa1-FilV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "50")
+#  field(EGU, "V")
+#  field(PREC, "2")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "0.01")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa1.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa2-SGridV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa2.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa2-SGridV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa2.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa2-SGridV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "1200")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa2.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa2-SGridV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "1200")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetScreenGridVhpa2.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa2-CGridOpV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa2.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa2-CGridOpV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa2.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa2-CGridOpV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "-400")
+  field(HOPR, "-150")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa2.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa2-CGridOpV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "-400")
+#  field(HOPR, "-150")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridOVhpa2.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa2-CGridBlV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa2.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa2-CGridBlV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa2.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa2-CGridBlV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "-400")
+  field(HOPR, "-150")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa2.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa2-CGridBlV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "-400")
+#  field(HOPR, "-150")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetCtrlGridBVhpa2.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:hpa2-FilV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa2.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:hpa2-FilV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa2.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:hpa2-FilV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "50")
+  field(PREC, "2")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "0.01")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa2.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:hpa2-FilV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "50")
+#  field(EGU, "V")
+#  field(PREC, "2")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "0.01")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetFilamentVhpa2.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:Ampl-RFPwr:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "kW")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetHVpower.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:Ampl-RFPwr:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "kW")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetHVpower.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:Ampl-RFPwr:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "400")
+  field(PREC, "2")
+  field(EGU, "kW")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "0.01")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetHVpower.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:Ampl-RFPwr:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "400")
+#  field(EGU, "kW")
+#  field(PREC, "2")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "0.01")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetHVpower.0 INTEGER: 100 iR")
+#}
+# Settings
+
+#record(longout, "HPRF-Esys:Ampl-RFV:cSetV-i")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "Passive")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetHV.0 INTEGER: 100 i")
+#}
+
+#record(longin, "HPRF-Esys:Ampl-RFV:cSetV-ir")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(EGU, "V")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetHV.0 INTEGER: 100 i")
+#}
+
+
+record(ao, "HPRF-Esys:Ampl-RFV:cSetV")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "Passive")
+  field(DTYP, "Snmp")
+  field(LOPR, "0")
+  field(HOPR, "18000")
+  field(PREC, "0")
+  field(EGU, "V")
+  field(LINR, "LINEAR")
+  field(EOFF, "0")
+  field(ASLO, "1")
+  field(OUT, "@%(CCU_IPADDR) public %(E)cmdSetHV.0 INTEGER: 100 iR")
+  info(autosaveFields,"VAL")
+}
+
+#record(ai, "HPRF-Esys:Ampl-RFV:cSetV-fr")
+#{
+#  field(DESC, "SNMP channel")
+#  field(SCAN, "1 second")
+#  field(DTYP, "Snmp")
+#  field(LOPR, "0")
+#  field(HOPR, "18000")
+#  field(EGU, "V")
+#  field(PREC, "0")
+#  field(LINR, "LINEAR")
+#  field(EOFF, "0")
+#  field(ASLO, "1")
+#  field(INP, "@%(CCU_IPADDR) public %(E)cmdSetHV.0 INTEGER: 100 iR")
+#}
+record(longin, "HPRF-Esys:Log:R1Tstart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R1Tstart-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord1timestart.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R1Tstart-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R1Tstart MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR1Tstart MS")
+  field(FLNK, "HPRF-Esys:Log:sR1Tstart PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR1Tstart")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:R1Tstop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R1Tstop-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord1timestop.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R1Tstop-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R1Tstop MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR1Tstop MS")
+  field(FLNK, "HPRF-Esys:Log:sR1Tstop PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR1Tstop")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:R2Tstart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R2Tstart-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord2timestart.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R2Tstart-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R2Tstart MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR2Tstart MS")
+  field(FLNK, "HPRF-Esys:Log:sR2Tstart PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR2Tstart")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:R2Tstop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R2Tstop-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord2timestop.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R2Tstop-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R2Tstop MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR2Tstop MS")
+  field(FLNK, "HPRF-Esys:Log:sR2Tstop PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR2Tstop")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:R3Tstart")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R3Tstart-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord3timestart.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R3Tstart-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R3Tstart MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR3Tstart MS")
+  field(FLNK, "HPRF-Esys:Log:sR3Tstart PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR3Tstart")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:R3Tstop")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:R3Tstop-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord3timestop.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:R3Tstop-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "HPRF-Esys:Log:R3Tstop MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR3Tstop MS")
+  field(FLNK, "HPRF-Esys:Log:sR3Tstop PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR3Tstop")
+{
+  field(DESC, "Time stamp string")
+}
+record(longin, "HPRF-Esys:Log:sR1code")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:sR1code-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord1code.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:sR1code-aSub")
+{
+  field(DESC, "Event code decoding")
+  field(INPA, "HPRF-Esys:Log:sR1code MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR1Msg MS")
+  field(FLNK, "HPRF-Esys:Log:sR1Msg PP")
+  field(SNAM, "code2msgProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR1Msg")
+{
+  field(DESC, "Log event string")
+}
+record(longin, "HPRF-Esys:Log:sR2code")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:sR2code-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord2code.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:sR2code-aSub")
+{
+  field(DESC, "Event code decoding")
+  field(INPA, "HPRF-Esys:Log:sR2code MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR2Msg MS")
+  field(FLNK, "HPRF-Esys:Log:sR2Msg PP")
+  field(SNAM, "code2msgProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR2Msg")
+{
+  field(DESC, "Log event string")
+}
+record(longin, "HPRF-Esys:Log:sR3code")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "HPRF-Esys:Log:sR3code-aSub")
+  field(INP, "@%(CCU_IPADDR) public %(E)sysHLogRecord3code.0 INTEGER: 100 i")
+}
+
+record(aSub, "HPRF-Esys:Log:sR3code-aSub")
+{
+  field(DESC, "Event code decoding")
+  field(INPA, "HPRF-Esys:Log:sR3code MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "HPRF-Esys:Log:sR3Msg MS")
+  field(FLNK, "HPRF-Esys:Log:sR3Msg PP")
+  field(SNAM, "code2msgProcess")
+}
+
+record(stringin, "HPRF-Esys:Log:sR3Msg")
+{
+  field(DESC, "Log event string")
+}
+record (longout, "HPRF-Esys:hpa1:TubeId") {
+  field (DESC, "Tube id number")
+  field (UDFS, "NO_ALARM")
+  info(autosaveFields,"VAL")
+}
+record (longout, "HPRF-Esys:hpa2:TubeId") {
+  field (DESC, "Tube id number")
+  field (UDFS, "NO_ALARM")
+  info(autosaveFields,"VAL")
+}

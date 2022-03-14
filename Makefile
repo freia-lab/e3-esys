@@ -1,25 +1,19 @@
-EXCLUDE_ARCHS += eldk
-#EXCLUDE_VERSIONS = 3.15.2
+# Copyright (C) 2022  FREIA Laboratory
 
-include ${EPICS_ENV_PATH}/module.Makefile
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 
-PROJECT = ioc_esys_freia
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 
-#EPICSVERSION = 3.14.15.2
-#EPICS_VERSION = 3.14.15.2
-
-#HEADERS += $(wildcard src/main/epics/esys-freiaApp/src/*.h)
-SOURCES += $(wildcard src/main/epics/esys-freiaApp/src/*.c)
-SOURCES += $(wildcard src/main/epics/esys-freiaApp/src/*.cpp)
-
-
-STARTUPS = $(wildcard src/main/ioc/*.cmd)
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-OPIS= boy
-
-# The line below id the fix needed in environment <= 1.7.0
-#vpath %.mib ../../src/main/epics/mibs
-
-MISCS += $(wildcard src/main/epics/mibs/*.mib)
-
+TOP := $(CURDIR)
+include $(TOP)/configure/CONFIG
+include $(TOP)/configure/RULES

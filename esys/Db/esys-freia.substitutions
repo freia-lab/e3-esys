@@ -1,0 +1,161 @@
+file "states.template" { pattern
+{DEV,      SIG,			PVSIG,		HOST,	     PASSWD, CHAN}
+{HPRF-Esys, sysGlobalStatus,	Ampl:sGlobStat,	NotUsed, public, 0}
+{HPRF-Esys, sysGeneralInfo,	Ampl:sGenInfo,	NotUsed, public, 0}
+}
+
+file "states_MS.template" { pattern
+{DEV,       SIG,		PVSIG,		HOST,	       PASSWD,  INPMS}
+{HPRF-Esys, hpa1Status1,	hpa1:sStat1,	NotUsed, public, 	Ampl-hpa1}
+{HPRF-Esys, hpa1Status2,	hpa1:sStat2,	NotUsed, public, 	Ampl-hpa1}
+{HPRF-Esys, hpa1DriverMod1Status,hpa1-DrvM1:sStat,NotUsed,public, hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod2Status,hpa1-DrvM2:sStat,NotUsed,public, hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod3Status,hpa1-DrvM3:sStat,NotUsed,public, hpa1-DrvM3}
+{HPRF-Esys, hpa2Status1,	hpa2:sStat1,	NotUsed, 	public, Ampl-hpa2}
+{HPRF-Esys, hpa2Status2,	hpa2:sStat2,	NotUsed, 	public, Ampl-hpa2}
+{HPRF-Esys, hpa2DriverMod1Status,hpa2-DrvM1:sStat,NotUsed, public, hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod2Status,hpa2-DrvM2:sStat,NotUsed, public, hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod3Status,hpa2-DrvM3:sStat,NotUsed, public, hpa2-DrvM2}
+{HPRF-Esys, csStatus,		CentrSys:sStat,	NotUsed, 	 public, CentrS}
+}
+
+file "sngl_statusbit.template" { pattern
+{P,         DEV,        PVSIG,        INP,		SHFT,	  ZRVL, ONVL, ZRST,  ONST,   ZRSV,  ONSV,	DESCR}
+{HPRF-Esys, CentrSys, 	sAlrm-CChrgHV,CentrSys:sStat,	0,	  1,	0,    "OK", "Alarm", NO_ALARM, MAJOR, "Capacity charger HV"}
+{HPRF-Esys, hpa1-DrvM3, sIntlk,       hpa1-DrvM3:sStat,	0,	  0,	1,    "Alarm", "OK", MAJOR, NO_ALARM, "DrvM3 Interlock"}
+{HPRF-Esys, Ampl,     	sLocal,       Ampl:sGlobStat,	0,	  1,	0,    "Remote", "Local", NO_ALARM, MINOR, "Local Mode"}
+{HPRF-Esys, hpa1,     	sCmdStart,    Ampl:sGlobStat,	20,	  0,	1,    "Stopped", "Started", NO_ALARM, NO_ALARM, "Start cmd status"}
+{HPRF-Esys, hpa1,     	sStart,       Ampl:sGlobStat,	21,	  0,	1,    "Not running", "Running", NO_ALARM, NO_ALARM, "Run status"}
+{HPRF-Esys, hpa2,     	sCmdStart,    Ampl:sGlobStat,	22,	  0,	1,    "Stopped", "Started", NO_ALARM, NO_ALARM, "Start cmd status"}
+{HPRF-Esys, hpa2,     	sStart,       Ampl:sGlobStat,	23,	  0,	1,    "Not running", "Running", NO_ALARM, NO_ALARM, "Run status"}
+{HPRF-Esys, hpa1,     	sPwrOn,       Ampl:sGlobStat,	25,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa2,     	sPwrOn,       Ampl:sGlobStat,	27,	  0,	1,    "Pwr Stby", "Pwr On", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa1,     	sRF-Enbld,    Ampl:sGlobStat,	28,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
+{HPRF-Esys, hpa2,     	sRF-Enbld,    Ampl:sGlobStat,	29,	  0,	1,    "RF Disabled", "RF Enabled", NO_ALARM, NO_ALARM, "RF status"}
+}
+
+file "comstat.template" { pattern
+{P,  		DEV,		BIT}
+{HPRF-Esys, 	hpa1,	  	4}
+{HPRF-Esys, 	hpa2,	  	5}
+{HPRF-Esys, 	CentrS,	  	6}
+{HPRF-Esys, 	hpa1-DrvM1,	8}
+{HPRF-Esys, 	hpa1-DrvM2,	9}
+{HPRF-Esys, 	hpa1-DrvM3,	10}
+{HPRF-Esys, 	hpa2-DrvM1,	12}
+{HPRF-Esys, 	hpa2-DrvM2,	13}
+{HPRF-Esys, 	hpa2-DrvM3,	14}
+}
+
+file "integer.template" { pattern
+{DEV,      SIG,		HOST,	        PASSWD, CHAN, SIG1, SCAL1, EGU1, PREC1, SIG2, SCAL2, OFFS2, EGU2, PREC2, INPMS}
+{HPRF-Esys, sysRfPower,	NotUsed, public, 0, Ampl:sFwdPwr, 0.01, "kW", 2, Ampl:sReflPwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, csMeasures1,	NotUsed, public, 0, CentrS:sUnbalLdPwr, 0.01, "kW", 2, CentrS:CapChargePwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, csMeasures2,	NotUsed, public, 0, CentrS:sCapChargeV, 0.01, "kV", 2, CentrS:sCapChargeI, 0.01, 0, "A", 2,	CentrS}
+{HPRF-Esys, hpa1RfPower,	NotUsed, public, 0, hpa1:sFwdPwr, 0.01, "kW", 2, hpa1:sReflPwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, hpa1DriverRfPower,	NotUsed, public, 0, hpa1-Drv:sFwdPwr, 0.01, "kW", 2, hpa1-Drv:sReflPwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, hpa1FilamentMeasures,	NotUsed, public, 0, hpa1-FilV:sRdV, 0.01, "V", 2, hpa1-FilI:sRdV, 1, 0, "A", 0,	Ampl-hpa1}
+{HPRF-Esys, hpa1ControlGridMeas1,	NotUsed, public, 0, hpa1-CGridOpV:sRdV, -1, "V", 0, hpa1-CGridOpI:sRdV, 0.01, 100, "A", 2,	Ampl-hpa1}
+{HPRF-Esys, hpa1ControlGridMeas2,	NotUsed, public, 0, hpa1-CGridBlV:sRdV, -1, "V", 0, hpa1-CGridBlI:sRdV, 0.01, 100, "A", 2,	Ampl-hpa1}
+{HPRF-Esys, hpa1AnodeMeasures,	NotUsed, public, 0, hpa1:sAnodeV, 0.01, "kV", 2, hpa1:sAnodeI, 0.01, 0, "A", 2,	Ampl-hpa1}
+{HPRF-Esys, hpa1ScreenGridMeasures,	NotUsed, public, 0, hpa1-SGridV:sRdV, 1, "V", 0, hpa1-SGridI:sRdV, 1, 0, "mA", 0,	Ampl-hpa1}
+{HPRF-Esys, hpa1DriverMod1Measure1,	NotUsed, public, 0, hpa1-DrvM1:sFwdPwr, 1, "W", 0, hpa1-DrvM1:sInPwr, 0.1, 0, "µW", 1,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod1Measure2,	NotUsed, public, 0, hpa1-DrvM1:sReflPwr, 1, "W", 0, hpa1-DrvM1:sV, 0.1, 0, "V", 1,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod1Measure3,	NotUsed, public, 0, hpa1-DrvM1:sSvcV, 0.1, "V", 1, hpa1-DrvM1:sPDI, 1, 0, "mA", 0,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod1Measure5,	NotUsed, public, 0, hpa1-DrvM1:sD1I, 1, "mA", 0, hpa1-DrvM1:sD2I, 1, 0, "mA", 0,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod1Measure6,	NotUsed, public, 0, hpa1-DrvM1:sF1I, 1, "mA", 0, hpa1-DrvM1:sF2I, 1, 0, "mA", 0,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod1Measure7,	NotUsed, public, 0, hpa1-DrvM1:sF3I, 1, "mA", 0, hpa1-DrvM1:sF4I, 1, 0, "mA", 0,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod2Measure1,	NotUsed, public, 0, hpa1-DrvM2:sFwdPwr, 1, "W", 0, hpa1-DrvM2:sInPwr, 0.1, 0, "µW", 1,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure2,	NotUsed, public, 0, hpa1-DrvM2:sReflPwr, 1, "W", 0, hpa1-DrvM2:sV, 0.1, 0, "V", 1,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure3,	NotUsed, public, 0, hpa1-DrvM2:sSvcV, 0.1, "V", 1, hpa1-DrvM2:sPDI, 1, 0, "mA", 0,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure5,	NotUsed, public, 0, hpa1-DrvM2:sD1I, 1, "mA", 0, hpa1-DrvM2:sD2I, 1, 0, "mA", 0,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure6,	NotUsed, public, 0, hpa1-DrvM2:sF1I, 1, "mA", 0, hpa1-DrvM2:sF2I, 1, 0, "mA", 0,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod2Measure7,	NotUsed, public, 0, hpa1-DrvM2:sF3I, 1, "mA", 0, hpa1-DrvM2:sF4I, 1, 0, "mA", 0,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod3Measure1,	NotUsed, public, 0, hpa1-DrvM3:sFwdPwr, 1, "W", 0, hpa1-DrvM3:sInPwr, 0.1, 0, "µW", 1,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure2,	NotUsed, public, 0, hpa1-DrvM3:sReflPwr, 1, "W", 0, hpa1-DrvM3:sV, 0.1, 0, "V", 1,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure3,	NotUsed, public, 0, hpa1-DrvM3:sSvcV, 0.1, "V", 1, hpa1-DrvM3:sPDI, 1, 0, "mA", 0,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure5,	NotUsed, public, 0, hpa1-DrvM3:sD1I, 1, "mA", 0, hpa1-DrvM3:sD2I, 1, 0, "mA", 0,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure6,	NotUsed, public, 0, hpa1-DrvM3:sF1I, 1, "mA", 0, hpa1-DrvM3:sF2I, 1, 0, "mA", 0,	hpa1-DrvM3}
+{HPRF-Esys, hpa1DriverMod3Measure7,	NotUsed, public, 0, hpa1-DrvM3:sF3I, 1, "mA", 0, hpa1-DrvM3:sF4I, 1, 0, "mA", 0,	hpa1-DrvM3}
+{HPRF-Esys, hpa1ElectrodeSettings1,	NotUsed, public, 0, hpa1-FilV:sSetV, 0.01, "V", 2, hpa1-SGridV:sSetV, 1, 0, "V", 0,	Ampl-hpa1}
+{HPRF-Esys, hpa1ElectrodeSettings2,	NotUsed, public, 0, hpa1-CGridBlV:sSetV, -1, "V", 0, hpa1-CGridOpV:sSetV, -1, 0, "V", 0,	Ampl-hpa1}
+{HPRF-Esys, hvSettings,			NotUsed, public, 0, Ampl-RFPwr:sSetV, 10, "W", 0, Ampl-RFV:sSetV, 10, 0, "V", 0,	CentrS}
+{HPRF-Esys, hpa2RfPower,	NotUsed, public, 0, hpa2:sFwdPwr, 0.01, "kW", 2, hpa2:sReflPwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, hpa2DriverRfPower,	NotUsed, public, 0, hpa2-Drv:sFwdPwr, 0.01, "kW", 2, hpa2-Drv:sReflPwr, 0.01, 0, "kW", 2,	CentrS}
+{HPRF-Esys, hpa2FilamentMeasures,	NotUsed, public, 0, hpa2-FilV:sRdV, 0.01, "V", 2, hpa2-FilI:sRdV, 1, 0, "A", 0,	Ampl-hpa2}
+{HPRF-Esys, hpa2ControlGridMeas1,	NotUsed, public, 0, hpa2-CGridOpV:sRdV, -1, "V", 0, hpa2-CGridOpI:sRdV, 0.01, 100, "A", 2,	Ampl-hpa2}
+{HPRF-Esys, hpa2ControlGridMeas2,	NotUsed, public, 0, hpa2-CGridBlV:sRdV, -1, "V", 0, hpa2-CGridBlI:sRdV, 0.01, 100, "A", 2,	Ampl-hpa2}
+{HPRF-Esys, hpa2AnodeMeasures,	NotUsed, public, 0, hpa2:sAnodeV, 0.01, "kV", 2, hpa2:sAnodeI, 0.01, 0, "A", 2,	Ampl-hpa2}
+{HPRF-Esys, hpa2ScreenGridMeasures,	NotUsed, public, 0, hpa2-SGridV:sRdV, 1, "V", 0, hpa2-SGridI:sRdV, 1, 0, "mA", 0,	Ampl-hpa2}
+{HPRF-Esys, hpa2DriverMod1Measure1,	NotUsed, public, 0, hpa2-DrvM1:sFwdPwr, 1, "W", 0, hpa2-DrvM1:sInPwr, 0.1, 0, "µW", 1,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod1Measure2,	NotUsed, public, 0, hpa2-DrvM1:sReflPwr, 1, "W", 0, hpa2-DrvM1:sV, 0.1, 0, "V", 1,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod1Measure3,	NotUsed, public, 0, hpa2-DrvM1:sSvcV, 0.1, "V", 1, hpa2-DrvM1:sPDI, 1, 0, "mA", 0,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod1Measure5,	NotUsed, public, 0, hpa2-DrvM1:sD1I, 1, "mA", 0, hpa2-DrvM1:sD2I, 1, 0, "mA", 0,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod1Measure6,	NotUsed, public, 0, hpa2-DrvM1:sF1I, 1, "mA", 0, hpa2-DrvM1:sF2I, 1, 0, "mA", 0,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod1Measure7,	NotUsed, public, 0, hpa2-DrvM1:sF3I, 1, "mA", 0, hpa2-DrvM1:sF4I, 1, 0, "mA", 0,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod2Measure1,	NotUsed, public, 0, hpa2-DrvM2:sFwdPwr, 1, "W", 0, hpa2-DrvM2:sInPwr, 0.1, 0, "µW", 1,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod2Measure2,	NotUsed, public, 0, hpa2-DrvM2:sReflPwr, 1, "W", 0, hpa2-DrvM2:sV, 0.1, 0, "V", 2,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod2Measure3,	NotUsed, public, 0, hpa2-DrvM2:sSvcV, 0.1, "V", 1, hpa2-DrvM2:sPDI, 1, 0, "mA", 0,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod2Measure5,	NotUsed, public, 0, hpa2-DrvM2:sD1I, 1, "mA", 0, hpa2-DrvM2:sD2I, 1, 0, "mA", 0,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod2Measure6,	NotUsed, public, 0, hpa2-DrvM2:sF1I, 1, "mA", 0, hpa2-DrvM2:sF2I, 1, 0, "mA", 0,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod2Measure7,	NotUsed, public, 0, hpa2-DrvM2:sF3I, 1, "mA", 0, hpa2-DrvM2:sF4I, 1, 0, "mA", 0,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod3Measure1,	NotUsed, public, 0, hpa2-DrvM3:sFwdPwr, 1, "W", 0, hpa2-DrvM3:sInPwr, 0.1, 0, "µW", 1,	hpa2-DrvM3}
+{HPRF-Esys, hpa2DriverMod3Measure2,	NotUsed, public, 0, hpa2-DrvM3:sReflPwr, 1, "W", 0, hpa2-DrvM3:sV, 0.1, 0, "V", 2,	hpa2-DrvM3}
+{HPRF-Esys, hpa2DriverMod3Measure3,	NotUsed, public, 0, hpa2-DrvM3:sSvcV, 0.1, "V", 1, hpa2-DrvM3:sPDI, 1, 0, "mA", 0,	hpa2-DrvM3}
+{HPRF-Esys, hpa2DriverMod3Measure5,	NotUsed, public, 0, hpa2-DrvM3:sD1I, 1, "mA", 0, hpa2-DrvM3:sD2I, 1, 0, "mA", 0,	hpa2-DrvM3}
+{HPRF-Esys, hpa2DriverMod3Measure6,	NotUsed, public, 0, hpa2-DrvM3:sF1I, 1, "mA", 0, hpa2-DrvM3:sF2I, 1, 0, "mA", 0,	hpa2-DrvM3}
+{HPRF-Esys, hpa2DriverMod3Measure7,	NotUsed, public, 0, hpa2-DrvM3:sF3I, 1, "mA", 0, hpa2-DrvM3:sF4I, 1, 0, "mA", 0,	hpa2-DrvM3}
+{HPRF-Esys, hpa2ElectrodeSettings1,	NotUsed, public, 0, hpa2-FilV:sSetV, 0.01, "V", 2, hpa2-SGridV:sSetV, 1, 0, "V", 0,	Ampl-hpa2}
+{HPRF-Esys, hpa2ElectrodeSettings2,	NotUsed, public, 0, hpa2-CGridBlV:sSetV, -1, "V", 0, hpa2-CGridOpV:sSetV, -1, 0, "V", 0,	Ampl-hpa2}
+#{HPRF-Esys, hvNotUsed,			NotUsed, public, 0, hpa2RFPwr:sSetV, 10, "W", 0, hpa2RFV:sSetV, 10, 0, "V", 0,	CentrS}
+{HPRF-Esys, sysHistoryLogRecordCount,	NotUsed, public, 0, Log:sBufLen, 1, "", 0, Log:sRecNo, 1, 0, "", 0,	CentrS}
+}
+
+file "3integer.template" { pattern
+{DEV,      SIG,		HOST,	        PASSWD, CHAN, SIG1, SCAL1, EGU1, PREC1, SIG2, SCAL2, EGU2, PREC2, SIG3, SCAL3, EGU3, PREC3, INPMS}
+{HPRF-Esys, hpa1CoolingMeasures,	NotUsed, public, 0, hpa1-Anode:sInWtrT, 1, "°C", 0, hpa1-Anode:sOutWtrT, 1, "°C", 0, hpa1-Anode:sAirPress, 1, "mbar", 0,	Ampl-hpa1}
+{HPRF-Esys, hpa2CoolingMeasures,	NotUsed, public, 0, hpa2-Anode:sInWtrT, 1, "°C", 0, hpa2-Anode:sOutWtrT, 1, "°C", 0, hpa2-Anode:sAirPress, 1, "mbar", 0,	Ampl-hpa2}
+{HPRF-Esys, hpa1DriverMod1Measure4,	NotUsed, public, 0, hpa1-DrvM1:sInWtrT, 1, "°C", 0, hpa1-DrvM1:sOutWtrT, 1, "°C", 0, hpa1-DrvM1:sAmplV, 0.1, "V", 1,	hpa1-DrvM1}
+{HPRF-Esys, hpa1DriverMod2Measure4,	NotUsed, public, 0, hpa1-DrvM2:sInWtrT, 1, "°C", 0, hpa1-DrvM2:sOutWtrT, 1, "°C", 0, hpa1-DrvM2:sAmplV, 0.1, "V", 1,	hpa1-DrvM2}
+{HPRF-Esys, hpa1DriverMod3Measure4,	NotUsed, public, 0, hpa1-DrvM3:sInWtrT, 1, "°C", 0, hpa1-DrvM3:sOutWtrT, 1, "°C", 0, hpa1-DrvM3:sAmplV, 0.1, "V", 1,	hpa1-DrvM3}
+{HPRF-Esys, hpa2DriverMod1Measure4,	NotUsed, public, 0, hpa2-DrvM1:sInWtrT, 1, "°C", 0, hpa2-DrvM1:sOutWtrT, 1, "°C", 0, hpa2-DrvM1:sAmplV, 0.1, "V", 1,	hpa2-DrvM1}
+{HPRF-Esys, hpa2DriverMod2Measure4,	NotUsed, public, 0, hpa2-DrvM2:sInWtrT, 1, "°C", 0, hpa2-DrvM2:sOutWtrT, 1, "°C", 0, hpa2-DrvM2:sAmplV, 0.1, "V", 1,	hpa2-DrvM2}
+{HPRF-Esys, hpa2DriverMod3Measure4,	NotUsed, public, 0, hpa2-DrvM3:sInWtrT, 1, "°C", 0, hpa2-DrvM3:sOutWtrT, 1, "°C", 0, hpa2-DrvM3:sAmplV, 0.1, "V", 1,	hpa2-DrvM3}
+}
+
+file "write.template" { pattern
+{DEV,      SIG,		       HOST,	     PASSWD, PV_SIG,		EGU, ESLO, LOPR,	HOPR, PREC}
+{HPRF-Esys, SetScreenGridVhpa1, NotUsed, public,hpa1-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{HPRF-Esys, SetCtrlGridOVhpa1, NotUsed, public, hpa1-CGridOpV:cSetV,"V", 1, -400, -150, 0}
+{HPRF-Esys, SetCtrlGridBVhpa1, NotUsed, public, hpa1-CGridBlV:cSetV,"V", 1, -400, -150, 0}
+{HPRF-Esys, SetFilamentVhpa1, NotUsed,  public, hpa1-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{HPRF-Esys, SetScreenGridVhpa2, NotUsed, public,hpa2-SGridV:cSetV, "V", 1, 0, 1200, 0}
+{HPRF-Esys, SetCtrlGridOVhpa2, NotUsed, public, hpa2-CGridOpV:cSetV, "V", 1, -400, -150, 0}
+{HPRF-Esys, SetCtrlGridBVhpa2, NotUsed, public, hpa2-CGridBlV:cSetV, "V", 1, -400, -150, 0}
+{HPRF-Esys, SetFilamentVhpa2, NotUsed,  public, hpa2-FilV:cSetV, "V", 0.01, 0, 50, 2}
+{HPRF-Esys, SetHVpower, NotUsed, 	     public, Ampl-RFPwr:cSetV, "kW", 0.01, 0, 400, 2}
+{HPRF-Esys, SetHV, NotUsed, 	     public, Ampl-RFV:cSetV, "V", 1, 0, 18000, 0}
+}
+
+file "hlogtstamp.template" { pattern
+{DEV,      SIG,				PV_SIG,		HOST,	     PASSWD, CHAN}
+{HPRF-Esys, sysHLogRecord1timestart,	R1Tstart,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord1timestop,	R1Tstop,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord2timestart,	R2Tstart,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord2timestop,	R2Tstop,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord3timestart,	R3Tstart,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord3timestop,	R3Tstop,	NotUsed, public, 0}
+}
+
+file "hlogcode.template" { pattern
+{DEV,      SIG,			PV_SIG1, PV_SIG2,	HOST,	     PASSWD, CHAN}
+{HPRF-Esys, sysHLogRecord1code,	sR1code, sR1Msg,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord2code,	sR2code, sR2Msg,	NotUsed, public, 0}
+{HPRF-Esys, sysHLogRecord3code,	sR3code, sR3Msg,	NotUsed, public, 0}
+}
+
+file "esys-tubeid.template" { pattern
+{DEV,      SIG}
+{HPRF-Esys, hpa1}
+{HPRF-Esys, hpa2}
+}

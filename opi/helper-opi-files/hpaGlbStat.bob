@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>210</width>
+  <height>180</height>
+  <background_color>
+    <color name="BACKGROUND" red="220" green="225" blue="221">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="2.0.0">
+    <name>HPA$(nr)</name>
+    <width>207</width>
+    <height>178</height>
+    <style>1</style>
+    <foreground_color>
+      <color name="GRAY-BORDER" red="121" green="121" blue="121">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template</name>
+      <pv_name>$(P):hpa$(nr):sGlobStat</pv_name>
+      <x>3</x>
+      <y>3</y>
+      <width>198</width>
+      <height>26</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED Template_1</name>
+      <pv_name>$(P):hpa$(nr):sPwrOn</pv_name>
+      <bit>0</bit>
+      <x>102</x>
+      <y>60</y>
+      <width>102</width>
+      <height>26</height>
+      <off_label>Standby</off_label>
+      <off_color>
+        <color red="0" green="91" blue="255">
+        </color>
+      </off_color>
+      <on_label>Pwr On</on_label>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color name="GRAY" red="169" green="169" blue="169">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED Template_2</name>
+      <pv_name>$(P):hpa$(nr):sRF-Enbld</pv_name>
+      <bit>0</bit>
+      <y>60</y>
+      <width>102</width>
+      <height>26</height>
+      <off_label>RF Disabled</off_label>
+      <off_color>
+        <color name="LED-RED-ON" red="255" green="60" blue="46">
+        </color>
+      </off_color>
+      <on_label>RF Enabled</on_label>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color name="GRAY" red="169" green="169" blue="169">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_1</name>
+      <pv_name>$(P):hpa$(nr):sFwdPwr</pv_name>
+      <x>102</x>
+      <y>96</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template</name>
+      <text>Forward:</text>
+      <y>96</y>
+      <width>53</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label Template_1</name>
+      <text>Reflected:</text>
+      <y>119</y>
+      <width>59</width>
+      <height>19</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <actions>
+      </actions>
+      <border_color>
+        <color name="IO Border" red="215" green="215" blue="215">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_2</name>
+      <pv_name>$(P):hpa$(nr):sReflPwr</pv_name>
+      <x>102</x>
+      <y>121</y>
+      <width>96</width>
+      <height>16</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="13.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="WHITE" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_width>2</border_width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED Template_3</name>
+      <pv_name>$(P):hpa$(nr):sStart</pv_name>
+      <bit>0</bit>
+      <x>102</x>
+      <y>32</y>
+      <width>102</width>
+      <height>26</height>
+      <off_label>Not Running</off_label>
+      <off_color>
+        <color name="RED" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <on_label>Running</on_label>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color name="GRAY" red="169" green="169" blue="169">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED Template_4</name>
+      <pv_name>$(P):hpa$(nr):sCmdStart</pv_name>
+      <bit>0</bit>
+      <y>32</y>
+      <width>102</width>
+      <height>26</height>
+      <off_label>Stopped</off_label>
+      <off_color>
+        <color name="GRAY-BORDER" red="121" green="121" blue="121">
+        </color>
+      </off_color>
+      <on_label>Started</on_label>
+      <on_color>
+        <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+        </color>
+      </on_color>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="BLACK" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color name="GRAY" red="169" green="169" blue="169">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+</display>

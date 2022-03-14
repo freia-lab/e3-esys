@@ -1,0 +1,24 @@
+record(longin, "$(DEV):Log:$(PV_SIG)")
+{
+  field(DESC, "SNMP channel")
+  field(SCAN, "1 second")
+  field(DTYP, "Snmp")
+  field(FLNK, "$(DEV):Log:$(PV_SIG)-aSub")
+  field(INP, "@%(CCU_IPADDR) $(PASSWD) %(E)$(SIG).$(CHAN) INTEGER: 100 i")
+}
+
+record(aSub, "$(DEV):Log:$(PV_SIG)-aSub")
+{
+  field(DESC, "Time stamp decoding")
+  field(INPA, "$(DEV):Log:$(PV_SIG) MSI")
+  field(FTA, "ULONG")
+  field(FTVA, "STRING")
+  field(OUTA, "$(DEV):Log:s$(PV_SIG) MS")
+  field(FLNK, "$(DEV):Log:s$(PV_SIG) PP")
+  field(SNAM, "myAsubProcess")
+}
+
+record(stringin, "$(DEV):Log:s$(PV_SIG)")
+{
+  field(DESC, "Time stamp string")
+}

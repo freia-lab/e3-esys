@@ -31,4 +31,4 @@ devSnmpSetParam(SessionTimeout, 15000000)
 dbLoadRecords("snmp-freia.db","DEV=HPRF-Esys,HOST=$(CCU_IP),CHAN=0,GROUP=0")
 dbLoadRecords("esys-freia.db")
 
-#iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IOCDIR=esys")
+iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IOCDIR=esys")
